@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Header from './Header.jsx'
+import Slider from './Slider.jsx'
 
 const element =  <Header/>
+const slider = <Slider/>
 
-ReactDOM.render(element,document.getElementById('root'));
+ReactDOM.render(slider,document.getElementById('root'));
