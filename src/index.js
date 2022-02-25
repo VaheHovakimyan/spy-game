@@ -1,9 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Header from './Header.jsx'
-import Slider from './Slider.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Card from './Card.jsx';
+import Time from './Time.jsx'
+import './index.css';
 
-const element =  <Header/>
-const slider = <Slider/>
+function Main(){
+    return(
+        <>
+        <Time/>
+        </>
+    );
+}
 
-ReactDOM.render(slider,document.getElementById('root'));
+ReactDOM.render(
+    <React.StrictMode>
+        <Main/>
+    </React.StrictMode>,
+    document.getElementById('root')
+);
