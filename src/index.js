@@ -1,20 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Card from './Card.jsx';
-import Time from './Time.jsx'
-import './index.css';
+// import Main from './Main.jsx';
+import './App.css';
+import App  from './App.js';
 
-function Main(){
-    return(
-        <>
-        <Time/>
-        </>
-    );
-}
+
+
 
 ReactDOM.render(
     <React.StrictMode>
-        <Main/>
+        <App/>
     </React.StrictMode>,
     document.getElementById('root')
 );

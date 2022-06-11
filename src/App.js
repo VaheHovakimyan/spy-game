@@ -1,25 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import LessText from './LessText';
+import Back from './Back.jsx';
+import Burger from './Burger.jsx';
+import Test from './Test.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Burger/>
+  )
 }
 
 export default App;
