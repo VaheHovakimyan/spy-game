@@ -47,7 +47,7 @@ function Card(){
                 <div className='card' key={car.id}>
                     <h2>{car.name} {car.model}</h2>
                     <img src={car.picture} width="120px" height="120px" alt="car" />
-                    <h3>Price: {car.price} $</h3>
+                    <h3>Price: {car.price} dollar</h3>
                     <Counter/>
                 </div>
         );
