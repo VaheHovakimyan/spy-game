@@ -1,17 +1,21 @@
-import { useState } from 'react';
-import './App.css'
+import { useState } from "react";
+import './App.scss';
 
 function Burger(){
-    const [burger, setBurger] = useState(true);
+    const [bool, setBool] = useState(true);
     return(
-        <div className={burger ? "burger" : "x"} onClick={(evt) =>{
+        <div className={bool ? "burger" : "x"} onClick={(evt) => {
             evt.preventDefault();
-            setBurger(!burger);
-        }}>
-            <div className='flex'>
-                <div className='first'></div>
-                <div className='second'></div>
-                <div className='third'></div>
+            setBool((bool) => {
+                return !bool
+            });
+        }
+
+        }>
+            <div className="flex">
+                <div className="first"></div>
+                <div className="second"></div>
+                <div className="third"></div>
             </div>
         </div>
     )

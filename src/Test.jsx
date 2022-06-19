@@ -1,15 +1,16 @@
 import { useState } from 'react';
-import './App.css'
+import './App.scss';
 
 function Test(){
-    const [bool, setBool] = useState(true);
+    const [count, setCount] = useState(1);
     return(
-        <div className={bool ? "uxix" : "teq"} onClick={(evt) =>{
-            evt.preventDefault();
-            setBool(!bool);
-        }}>
-
-        </div>
+        <>
+            <h2>{count}</h2>
+            <div onClick={() => {
+                // evt.preventDefault();
+                setCount(count + 1);
+            }}>+</div>
+        </>
     )
 }
 

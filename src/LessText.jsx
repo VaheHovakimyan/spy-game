@@ -1,28 +1,21 @@
 import { useState } from "react";
 
-function LessText(props){
+function LessText({text, max = 55}){
+    const [isLess, setisLess] = useState(true);
 
-    const [showLess, setshowLess] = useState(true);
-
-    const text = props.text;
-    const max = 55;
-    
     if(text.length <= max){
-        return <h3>{text}</h3>;
+        return <h3>{text}</h3>
     }
 
     return(
-        <>
-            <h3>
-                {showLess ? `${text.substring(0, max)} ...` : text}
-            
-            <a href="#" onClick={(evt) => {
+        <h3 className="less">
+            {isLess ? `${text.substring(0, max)} ...` : text}
+            <button onClick={(evt) => {
                 evt.preventDefault();
-                setshowLess(!showLess);
-            }}>{showLess ? "more" : "less"}</a>
-            </h3>
-        </>
-        
+                setisLess(!isLess);
+            }
+            }>{isLess ? "More" : "Less"}</button>
+        </h3>
     )
 }
 
