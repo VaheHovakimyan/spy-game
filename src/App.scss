@@ -1,136 +1,135 @@
 // variables
 
-$backcolor: #0f1817;
-$elemwidth: 300px;
-$elemheight: 30px;
-$bordradius: 16px;
-$transition: all 0.2s linear;
-$elemcolor: white;
+// $backcolor: darkgreen;
+// $elemwidth: 300px;
+// $elemheight: 30px;
+// $bordradius: 16px;
+// $transition: all 0.2s linear;
+// $elemcolor: white;
 
-// templates
+// // templates
 
-%nullcss{
-  margin: auto;
-  cursor: pointer;
-}
+// %nullcss {
+//   margin: auto;
+//   cursor: pointer;
+// }
 
-%burgercss{
-  width: $elemwidth;
-  height: $elemheight;
-  background-color: $elemcolor;
-  transition: $transition;
-  border-radius: $bordradius;
-}
-
-
-// main 
-
-body{
-  background-color: $backcolor;
-  user-select: none;
-  color: white;
-}
-.App {
-  position: relative;
-  position: absolute;
-  top: 25%;
-  left: 25%; 
-  color: white;
-}
-.flex{
-  width: $elemwidth;
-  height: 180px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #333;
-}
-.burger{
-  @extend %nullcss;
-}
-.x{
-  @extend %nullcss;
-}
+// %burgercss {
+//   width: $elemwidth;
+//   height: $elemheight;
+//   background-color: $elemcolor;
+//   transition: $transition;
+//   border-radius: $bordradius;
+// }
 
 
-.burger{
-  .flex{
-    .first{
-      @extend %burgercss;
-    }
-  }
-}
+// // main 
 
 
-.burger{
-  .flex{
-    .second{
-      width: $elemwidth;
-      height: $elemheight;
-      background-color: $elemcolor;
-      display: block;
-      opacity: 1;
-      transition: $transition;
-      border-radius: $bordradius;
-    }
-  }
-}
+// .App {
+//   position: relative;
+//   position: absolute;
+//   top: 25%;
+//   left: 25%;
+//   color: white;
+// }
+
+// .flex {
+//   width: $elemwidth;
+//   height: 180px;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-evenly;
+//   align-items: center;
+//   background-color: #333;
+// }
+
+// .burger {
+//   @extend %nullcss;
+// }
+
+// .x {
+//   @extend %nullcss;
+// }
 
 
-.burger{
-  .flex{
-    .third{
-      @extend %burgercss;
-    }
-  }
-}
-
-/////////////////////////////////////////////////
-
-.x{
-  .flex{
-    .first{
-      width: $elemwidth;
-      height: $elemheight;
-      background-color: white;
-      transition: $transition;
-      border-radius: $bordradius;
-      transform: rotate(45deg);
-    }
-  }
-}
+// .burger {
+//   .flex {
+//     .first {
+//       @extend %burgercss;
+//     }
+//   }
+// }
 
 
-.x{
-  .flex{
-    .second{
-      width: $elemwidth;
-      height: 0px;
-      transition: $transition;
-      opacity: 0;
-    }
-  }
-}
+// .burger {
+//   .flex {
+//     .second {
+//       width: $elemwidth;
+//       height: $elemheight;
+//       background-color: $elemcolor;
+//       display: block;
+//       opacity: 1;
+//       transition: $transition;
+//       border-radius: $bordradius;
+//     }
+//   }
+// }
 
 
-.x{
-  .flex{
-    .third{
-      width: $elemwidth;
-      height: $elemheight;
-      background-color: white;
-      transition: $transition;
-      margin-top: -180px;
-      border-radius: $bordradius;
-      transform: rotate(-45deg);
-    }
-  }
-}
+// .burger {
+//   .flex {
+//     .third {
+//       @extend %burgercss;
+//     }
+//   }
+// }
+
+// /////////////////////////////////////////////////
+
+// .x {
+//   .flex {
+//     .first {
+//       width: $elemwidth;
+//       height: $elemheight;
+//       background-color: white;
+//       transition: $transition;
+//       border-radius: $bordradius;
+//       transform: rotate(45deg);
+//     }
+//   }
+// }
+
+
+// .x {
+//   .flex {
+//     .second {
+//       width: $elemwidth;
+//       height: 0px;
+//       transition: $transition;
+//       opacity: 0;
+//     }
+//   }
+// }
+
+
+// .x {
+//   .flex {
+//     .third {
+//       width: $elemwidth;
+//       height: $elemheight;
+//       background-color: white;
+//       transition: $transition;
+//       margin-top: -180px;
+//       border-radius: $bordradius;
+//       transform: rotate(-45deg);
+//     }
+//   }
+// }
 
 
 
@@ -188,37 +187,77 @@ body{
 
 
 
-.card_flex{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  .card{
-    width: 30%;
-    height: 300px;
-    background-color: #333;
-    text-align: center;
-    cursor: pointer;
-    .count_flex{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .minus{
-        width: 30px;
-        height: 30px;
-        font-size: 30px;
-        border-radius: 50%;
-        background-color: darkcyan;
-        text-align: center;
-      }
-      .plus{
-        width: 30px;
-        height: 30px;
-        font-size: 30px;
-        border-radius: 50%;
-        background-color: darkcyan;
-        text-align: center;
-      }
-    }
-  }
+// .card_flex {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-evenly;
+//   align-items: center;
+
+//   .card {
+//     width: 30%;
+//     height: 300px;
+//     background-color: #333;
+//     text-align: center;
+//     cursor: pointer;
+
+//     .count_flex {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+
+//       .minus {
+//         width: 30px;
+//         height: 30px;
+//         font-size: 30px;
+//         border-radius: 50%;
+//         background-color: darkcyan;
+//         text-align: center;
+//       }
+
+//       .plus {
+//         width: 30px;
+//         height: 30px;
+//         font-size: 30px;
+//         border-radius: 50%;
+//         background-color: darkcyan;
+//         text-align: center;
+//       }
+//     }
+//   }
+// }
+
+body {
+  background-image: url("./3fff27b5f7b75fc3f1e5537153b07f1b.jpg");
+  background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  user-select: none;
+  // color: white;
+  margin: 0;
 }
+
+// .blur {
+//   position: absolute;
+//   width: 100vw;
+//   height: 150%;
+//   margin-left: 0;
+//   filter: blur(10px);
+//   background-color: rgba($color: #ffffff, $alpha: 0.5);
+// }
+
+//.app {
+  // position: relative;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // height: 640px;
+  // margin: 0;
+  // background-image: url("./3fff27b5f7b75fc3f1e5537153b07f1b.jpg");
+  // z-index: 2;
+//}
+
+// .inp{
+//   width: 300px;
+//   height: 100px;
+//   background-color: red;
+// }

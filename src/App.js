@@ -1,35 +1,23 @@
-import './App.scss';
 import LessText from './LessText';
 import Back from './Back.jsx';
 import Burger from './Burger.jsx';
 import Test from './Test.jsx';
-import Card from './Card.jsx';
-import Result from './Card.jsx';
-import Todo from './Todo.jsx';
-import {useState} from 'react';
+import Todo from './Todo/Todo.jsx';
+import Resume from './Resume/Resume';
+import Card from './Card/Card.jsx';
+import Test_2 from './Test_2/Test_2.jsx';
+import Spy_game from './Spy_game/Spy_game.jsx';
+import { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import './App.scss';
 
 
-// const [todos, setTodos] = useState(
-//   {
-//       id: Math.random(),
-//       text: "Learn JS",
-//       isCompleted: false
-//   },
-//   {
-//       id: Math.random(),
-//       text: "Learn React js",
-//       isCompleted: false
-//   },
-//   {
-//       id: Math.random(),
-//       text: "Learn Node js",
-//       isCompleted: false
-//   }
-// );
 
 function App() {
   return (
-    <Card/>
+    <div className='app'>
+      <Spy_game />
+    </div>
   )
 }
 

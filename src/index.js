@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Main from './Main.jsx';
 import './App.scss';
-import App  from './App.js';
+import App from './App.js';
 
 
 
 
 ReactDOM.render(
     <React.StrictMode>
-        <App/>
+        <App />
     </React.StrictMode>,
     document.getElementById('root')
 );
