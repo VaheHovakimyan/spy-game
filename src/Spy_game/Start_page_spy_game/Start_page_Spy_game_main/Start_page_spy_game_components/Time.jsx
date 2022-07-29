@@ -16,10 +16,10 @@ export default function Time({ time, setTime }) {
 
             <p>Time: {time} minute</p>
 
-            <button className={time === 4 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
+            <button className={time === 10 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
                 e.preventDefault();
                 {
-                    time < 4 &&
+                    time < 10 &&
                     setTime(time + 1);
                 }
             }}></button>

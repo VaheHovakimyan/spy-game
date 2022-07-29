@@ -16,10 +16,10 @@ export default function Participians({ participians, setParticipians }) {
 
             <p>Participians: {participians}</p>
 
-            <button className={participians >= 10 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
+            <button className={participians >= 20 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
                 e.preventDefault();
                 {
-                    participians < 10 &&
+                    participians < 20 &&
                         setParticipians(participians + 1);
                 }
             }}></button>

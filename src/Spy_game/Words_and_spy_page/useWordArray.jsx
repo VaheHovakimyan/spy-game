@@ -3,10 +3,10 @@ import data from '../Spy_game.json';
 
 
 
-export default function(participians,countSpy, done_array, setDone_array) {
+export default function(participians,countSpy, done_array, setDone_array, time_value, cycle, setCycle) {
 
     let word_random_index = Math.ceil(Math.random() * data.length) - 1;
-    let start_array = [1,1,1,1,1,1,1,1,1,1];
+    let start_array = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
     start_array.length = participians;
     let spy_ran1 = Math.floor(Math.random() * participians);
     let spy_ran2;
@@ -16,7 +16,7 @@ export default function(participians,countSpy, done_array, setDone_array) {
     let finish_array;
     let lrtes_text = <span>Լրտես</span>
 
-
+    
     useEffect(() => {
 
         data.map((item) => {
@@ -30,14 +30,14 @@ export default function(participians,countSpy, done_array, setDone_array) {
         })
 
 
-        if (participians >= 4 && countSpy == 2) {
+        if (participians >= 4 && countSpy === 2) {
             spy_ran1 = Math.floor(Math.random() * participians);
             spy_ran2 = Math.floor(Math.random() * participians);
             arr = [spy_ran1,spy_ran2];
             if (spy_ran1 === spy_ran2) {
                 New_Rannumbers();
             }
-        } else if (participians >= 5 && countSpy == 3) {
+        } else if (participians >= 5 && countSpy === 3) {
             spy_ran1 = Math.floor(Math.random() * participians);
             spy_ran2 = Math.floor(Math.random() * participians);
             spy_ran3 = Math.floor(Math.random() * participians);
@@ -45,7 +45,7 @@ export default function(participians,countSpy, done_array, setDone_array) {
             if (spy_ran1 === spy_ran2 || spy_ran1 === spy_ran3 || spy_ran2 === spy_ran3) {
                 New_Rannumbers();
             }
-        } else if (participians >= 6 && countSpy == 4) {
+        } else if (participians >= 6 && countSpy === 4) {
             spy_ran1 = Math.floor(Math.random() * participians);
             spy_ran2 = Math.floor(Math.random() * participians);
             spy_ran3 = Math.floor(Math.random() * participians);
@@ -72,7 +72,7 @@ export default function(participians,countSpy, done_array, setDone_array) {
                 arr = [spy_ran1,spy_ran2,spy_ran3];
 
                 New_Rannumbers();
-            } else if (spy_ran1 === spy_ran2 || spy_ran1 === spy_ran3 || spy_ran1 === spy_ran4 || spy_ran2 === spy_ran3 || spy_ran2 === spy_ran4 || spy_ran3 === spy_ran4) {
+            } else if (spy_ran1 === spy_ran2 || spy_ran1 === spy_ran3 || spy_ran1 === spy_ran4 || spy_ran2 === spy_ran3 || spy_ran2 === spy_ran4 || spy_ran3 === spy_ran4 && (arr.length === 4)) {
                 spy_ran1 = Math.floor(Math.random() * participians);
                 spy_ran2 = Math.floor(Math.random() * participians);
                 spy_ran3 = Math.floor(Math.random() * participians);
@@ -88,31 +88,29 @@ export default function(participians,countSpy, done_array, setDone_array) {
 
 
         finish_array.forEach(() => {
-            if (countSpy === 1) {
-                finish_array[spy_ran1] = lrtes_text;
-            } else if (countSpy === 2) {
-                finish_array[spy_ran1] = lrtes_text;
-                finish_array[spy_ran2] = lrtes_text;
-            } else if (countSpy === 3) {
-                finish_array[spy_ran1] = lrtes_text;
-                finish_array[spy_ran2] = lrtes_text;
-                finish_array[spy_ran3] = lrtes_text;
-            } else {
-                finish_array[spy_ran1] = lrtes_text;
-                finish_array[spy_ran2] = lrtes_text;
-                finish_array[spy_ran3] = lrtes_text;
-                finish_array[spy_ran4] = lrtes_text;
-            }
+            arr.map((it) => {
+                if(it !== undefined){
+                    finish_array[it] = lrtes_text;
+                }
+            })
         })
 
+        // function AddSpy(){
+        //     arr.map((it) => {
+        //         if(it !== undefined){
+        //             finish_array[it] = lrtes_text;
+        //         }
+        //     })
+            
+        // }
 
-
+        console.log(`arr ${arr}`);
         console.log(finish_array);
 
         setDone_array(finish_array);
     
         
-    },[participians,countSpy])
+    },[participians,countSpy,cycle])
 
 
     return done_array;
