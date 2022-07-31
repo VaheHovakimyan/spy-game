@@ -4,28 +4,29 @@ import Words_and_Spy from './Words_and_spy_page/Words_Spy_page';
 import Time_page from './Time_page/Time_page';
 import useWordArray from './Words_and_spy_page/useWordArray.jsx';
 import useTimePage from './Time_page/useTimePage';
-import { Routes, Route } from 'react-router-dom';
+import { Routes,Route } from 'react-router-dom';
 import NotFound from './NotFound';
 import './Spy_game.scss';
 
 
 export default function Spy_game() {
 
-    const [participians, setParticipians] = useState(3);
-    const [countSpy, setCountSpy] = useState(1);
-    const [time, setTime] = useState(1);
-    const [time_value, setTime_value] = useState();
-    const [page, setPage] = useState(0);
-    const [warning, setWarning] = useState(true);
-    const [done_array, setDone_array] = useState();
-    const [word_index, setWord_index] = useState(0);
-    const [index, setIndex] = useState(0);
-    const [cycle, setCycle] = useState(0);
+    const [participians,setParticipians] = useState(3);
+    const [countSpy,setCountSpy] = useState(1);
+    const [time,setTime] = useState(1);
+    const [time_value,setTime_value] = useState();
+    const [page,setPage] = useState(0);
+    const [warning,setWarning] = useState(true);
+    const [done_array,setDone_array] = useState();
+    const [word_index,setWord_index] = useState(0);
+    const [index,setIndex] = useState(0);
+    const [cycle,setCycle] = useState(0);
+    const [time_bool, setTime_bool] = useState();
 
-    const ready_array = useWordArray(participians, countSpy, done_array, setDone_array, time_value, cycle, setCycle);
-    const time_current_value = useTimePage(time, time_value, setTime_value, word_index, participians, cycle, setCycle);
+    const ready_array = useWordArray(participians,countSpy,done_array,setDone_array,time_value,cycle,setCycle);
+    const time_current_value = useTimePage(time,time_value,setTime_value,word_index,participians,cycle,setCycle);
 
-    
+
 
     return (
         <>
@@ -33,9 +34,9 @@ export default function Spy_game() {
                 <div className='main'>
                     <h1 className="title">Spy game</h1>
 
-                        <Routes>
-                            <Route path="/" element={
-                                <Start_page
+                    <Routes>
+                        <Route path="/" element={
+                            <Start_page
                                 participians={participians}
                                 setParticipians={setParticipians}
                                 countSpy={countSpy}
@@ -49,9 +50,9 @@ export default function Spy_game() {
                                 cycle={cycle}
                                 setCycle={setCycle}
                             />
-                            }/>
-                            <Route path="/word" element={
-                                <Words_and_Spy
+                        } />
+                        <Route path="/word" element={
+                            <Words_and_Spy
                                 participians={participians}
                                 setParticipians={setParticipians}
                                 countSpy={countSpy}
@@ -64,9 +65,9 @@ export default function Spy_game() {
                                 time_value={time_value}
                                 setTime_value={setTime_value}
                             />
-                            }/>
-                            <Route path="/time" element={
-                                <Time_page 
+                        } />
+                        <Route path="/time" element={
+                            <Time_page
                                 participians={participians}
                                 setParticipians={setParticipians}
                                 warning={warning}
@@ -82,10 +83,12 @@ export default function Spy_game() {
                                 time_current_value={time_current_value}
                                 cycle={cycle}
                                 setCycle={setCycle}
+                                time_bool={time_bool}
+                                setTime_bool={setTime_bool}
                             />
-                            }/>
-                            <Route path='*' element={<NotFound />}/>
-                        </Routes>
+                        } />
+                        <Route path='*' element={<NotFound />} />
+                    </Routes>
 
                 </div>
             </div>

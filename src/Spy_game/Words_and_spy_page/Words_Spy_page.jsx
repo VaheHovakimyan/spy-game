@@ -1,4 +1,10 @@
-import data from '../Spy_game.json';
+// import data_arm_location from '../Words/Armenian_words/Arm_location.json';
+// import data_arm_funny_words from '../Words/Armenian_words/Arm_funny_words.json';
+
+// import data_rus_location from '../Words/Russian_words/Rus_location.json';
+
+// import data_eng_location from '../Words/English_words/Eng_location.json';
+
 import { useState,useEffect } from 'react';
 import { Routes, Route, Link} from 'react-router-dom';
 import Time_page from '../Time_page/Time_page';

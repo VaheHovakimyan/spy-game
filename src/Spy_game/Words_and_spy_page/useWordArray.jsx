@@ -1,11 +1,18 @@
+import data_arm_location from '../Words/Armenian_words/Arm_location.json';
+import data_arm_funny_words from '../Words/Armenian_words/Arm_funny_words.json';
+
+import data_rus_location from '../Words/Russian_words/Rus_location.json';
+
+import data_eng_location from '../Words/English_words/Eng_location.json';
+
 import { useEffect } from 'react';
-import data from '../Spy_game.json';
+
 
 
 
 export default function(participians,countSpy, done_array, setDone_array, time_value, cycle, setCycle) {
 
-    let word_random_index = Math.ceil(Math.random() * data.length) - 1;
+    let word_random_index = Math.ceil(Math.random() * data_arm_location.length) - 1;
     let start_array = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
     start_array.length = participians;
     let spy_ran1 = Math.floor(Math.random() * participians);
@@ -19,7 +26,7 @@ export default function(participians,countSpy, done_array, setDone_array, time_v
     
     useEffect(() => {
 
-        data.map((item) => {
+        data_arm_location.map((item) => {
 
             if (item.key === word_random_index) {
                 finish_array = start_array.map(() => {
