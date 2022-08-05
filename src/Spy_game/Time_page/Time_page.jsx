@@ -4,7 +4,7 @@ import useTimePage from "./useTimePage";
 import { Routes,Route,Link } from 'react-router-dom';
 
 
-export default function Time_page({ participians,setParticipians,word_index,setWord_index,time,time_value,setTime_value,warning,setWarning,index,setIndex,time_current_value,cycle,setCycle,time_bool,setTime_bool }) {
+export default function Time_page({ participians,word_index,setWord_index,time_value,setTime_value,setWarning,setIndex,time_current_value,setCycle,time_bool,setTime_bool, lang }) {
 
 
     let minute = Math.floor(time_current_value / 60);
@@ -30,7 +30,6 @@ export default function Time_page({ participians,setParticipians,word_index,setW
     return (
         <>
             <h1>
-                {/* {time_value} */}
                 {minute < 10 ? "0" + minute : minute} : {second < 10 ? "0" + second : second}
             </h1>
             <button
@@ -42,7 +41,7 @@ export default function Time_page({ participians,setParticipians,word_index,setW
                     { word_index >= participians * 2 ? setWord_index(0) : setWord_index(word_index + 1) }
                     setIndex(0);
                 }}
-            ><Link to="/" className="link"><div className="link_text"> End </div></Link></button>
+            ><Link to="/start_page" className="link"><div className="link_text"> {lang === 0 ? "Ավարտ" : lang === 1 ? "Конец" : "End"} </div></Link></button>
         </>
     )
 }

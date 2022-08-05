@@ -1,7 +1,7 @@
 import '../../../Spy_game.scss';
 
 
-export default function Spy_count({ countSpy, setCountSpy }) {
+export default function Spy_count({ countSpy, setCountSpy, lang }) {
 
 
 
@@ -15,7 +15,7 @@ export default function Spy_count({ countSpy, setCountSpy }) {
                 }
             }}></button>
 
-            <p>Count spy: {countSpy}</p>
+            <p>{lang === 0 ? "Լրտես: " : lang === 1 ? "Шпион: " : "Spy: "} {countSpy}</p>
 
             <button className={countSpy >= 4 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
                 e.preventDefault();

@@ -5,7 +5,7 @@ export default function NotFound(){
     return(
         <>
             <h1>
-                <Link to="/" element={<Spy_game />} >To Home</Link>
+                <Link to="/" element={<Spy_game />} > To home </Link>
             </h1>
         </>
     )

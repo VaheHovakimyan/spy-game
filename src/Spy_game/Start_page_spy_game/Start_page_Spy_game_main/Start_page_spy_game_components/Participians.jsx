@@ -1,7 +1,7 @@
 import '../../../Spy_game.scss';
 
 
-export default function Participians({ participians, setParticipians }) {
+export default function Participians({ participians, setParticipians, lang }) {
 
 
     return (
@@ -14,7 +14,7 @@ export default function Participians({ participians, setParticipians }) {
                 }
             }}></button>
 
-            <p>Participians: {participians}</p>
+            <p> {lang === 0 ? "Խաղացող: " : lang === 1 ? "Игрок: " : "Player: "} {participians}</p>
 
             <button className={participians >= 20 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
                 e.preventDefault();

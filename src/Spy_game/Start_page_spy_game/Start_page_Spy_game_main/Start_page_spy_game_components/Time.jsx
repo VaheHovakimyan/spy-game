@@ -1,7 +1,7 @@
 import '../../../Spy_game.scss';
 
 
-export default function Time({ time, setTime }) {
+export default function Time({ time, setTime, lang }) {
 
 
     return (
@@ -14,7 +14,7 @@ export default function Time({ time, setTime }) {
                 }
             }}></button>
 
-            <p>Time: {time} minute</p>
+            <p>{lang === 0 ? "Ժամանակ: " : lang === 1 ? "Время: " : "Time: "} {time} {lang === 0 ? "րոպե" : lang === 1 ? "минут" : "minute"}</p>
 
             <button className={time === 10 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
                 e.preventDefault();

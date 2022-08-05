@@ -12,7 +12,7 @@ import '../Spy_game.scss';
 
 
 
-export default function Words_and_Spy({ participians, setParticipians, countSpy, ready_array, word_index, setWord_index, index, setIndex, time_value, setTime_value }) {
+export default function Words_and_Spy({ participians, ready_array, word_index, setWord_index, index, setIndex, lang }) {
 
 
     let word = ready_array.map((item, i) => {
@@ -39,7 +39,7 @@ export default function Words_and_Spy({ participians, setParticipians, countSpy,
                     {word_index % 2 === 1 && setIndex(index + 1)}
                     setWord_index(word_index + 1);
                 }}
-            >{((participians * 2) - 1 === word_index) ? <Link to="/time" className="link"><div className="link_text"> Time </div></Link> : (word_index % 2 === 0) ? "Open" : "Close"} </button>
+            >{((participians * 2) - 1 === word_index) ? <Link to="/time" className="link"><div className="link_text"> {lang === 0 ? "Ժամանակ" : lang === 1 ? "Время" : "Time"}  </div></Link> : (word_index % 2 === 0) ? (lang === 0 ? "Բացել" : lang === 1 ? "Открыть" : "Open") : (lang === 0 ? "Փակել" : lang === 1 ? "Закрыть" : "Close")} </button>
                 <h1>{word_index}</h1>
         </div>
 

@@ -1,6 +1,6 @@
 import '../../../Spy_game.scss';
 
-export default function Warning({ warning, setWarning }) {
+export default function Warning({ warning, setWarning, lang }) {
 
 
     return (
@@ -16,7 +16,7 @@ export default function Warning({ warning, setWarning }) {
                             evt.preventDefault();
                             setWarning(!warning);
                         }}
-                    >Հասկացա</button>
+                    > {lang === 0 ? "Հասկացա" : lang === 1 ? "Понял" : "Okay"} </button>
                 </div>
             </div>
         </div>
