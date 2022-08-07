@@ -28,7 +28,7 @@ export default function Spy_game() {
     const [cycle,setCycle] = useState(0);
     const [time_bool,setTime_bool] = useState();
 
-    const ready_array = useWordArray(participians,countSpy,done_array,setDone_array,time_value,cycle,setCycle);
+    const ready_array = useWordArray(participians,countSpy,done_array,setDone_array,cycle,lang,categories);
     const time_current_value = useTimePage(time,time_value,setTime_value,word_index,participians,cycle,setCycle);
 
 
@@ -37,7 +37,7 @@ export default function Spy_game() {
         <>
             <div className='intro_main'>
                 <div className='main'>
-                    <h1 className="title">Spy game</h1>
+                    {/* <h1 className="title">Spy game</h1> */}
 
                     <Routes>
                         <Route path="/" element={
