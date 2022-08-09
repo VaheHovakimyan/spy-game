@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Time_page from "../../Time_page/Time_page";
 import Participians from "./Start_page_spy_game_components/Participians";
 import Spy_count from "./Start_page_spy_game_components/Spy_count";
 import Time from "./Start_page_spy_game_components/Time";
@@ -16,7 +15,7 @@ export default function Start_page({lang, setLang, categories, setCategories ,pa
     return (
         <>
 
-            <Link to="/categories" className="link"><button>To Categories</button></Link>
+            <Link to="/categories" className="link"><button> To Categories </button></Link>
 
             <Warning
                 warning={warning}

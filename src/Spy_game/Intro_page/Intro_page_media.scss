@@ -1,0 +1,271 @@
+//Imports
+@import '../Media_SCSS/Variables.scss';
+@import '../Media_SCSS/Breakpoints.scss';
+
+//Media
+
+@include desktop {
+    .intro_page_main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        .intro_image_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 60px;
+            .intro_page_title {
+                width: 40vw;
+                height: 7vh;
+                user-select: none;
+                font-size: 32px;
+                color: white;
+                font-family: cursive;
+            }
+            .intro_page_image_main {
+                width: 100px;
+                height: 100px;
+            }
+
+        }
+
+        .intro_button {
+            width: 15vw;
+            height: 12vh;
+            user-select: none;
+            font-size: 40px;
+            font-family: cursive;
+            background-color: rgb(25, 25, 25);
+            border: 1px solid white;
+            border-radius: 20px;
+            cursor: pointer;
+            .intro_page_link {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .ad {
+            width: 50vw;
+            height: 10vh;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+
+@include Ipad_pro {
+    .intro_page_main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw;
+        height: 100vh;
+        .intro_image_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 100px;
+            .intro_page_title {
+                width: 70vw;
+                height: 7vh;
+                user-select: none;
+                font-size: 45px;
+                color: white;
+                font-family: cursive;
+            }
+            .intro_page_image_main {
+                width: 150px;
+                height: 150px;
+            }
+
+        }
+
+        .intro_button {
+            width: 25vw;
+            height: 10vh;
+            user-select: none;
+            font-size: 43px;
+            font-family: cursive;
+            background-color: rgb(25, 25, 25);
+            border: 2px solid white;
+            border-radius: 30px;
+            cursor: pointer;
+            .intro_page_link {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .ad {
+            width: 50vw;
+            height: 10vh;
+            margin-top: 10px;
+        }
+    }
+}
+
+@include Laptop {
+    .intro_page_main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw;
+        height: 100vh;
+        .intro_image_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 100px;
+            .intro_page_title {
+                width: 65vw;
+                height: 7vh;
+                user-select: none;
+                font-size: 45px;
+                color: white;
+                font-family: cursive;
+            }
+            .intro_page_image_main {
+                width: 150px;
+                height: 150px;
+            }
+
+        }
+
+        .intro_button {
+            width: 25vw;
+            height: 10vh;
+            user-select: none;
+            font-size: 43px;
+            font-family: cursive;
+            background-color: rgb(25, 25, 25);
+            border: 2px solid white;
+            border-radius: 30px;
+            cursor: pointer;
+            .intro_page_link {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .ad {
+            width: 50vw;
+            height: 10vh;
+            margin-top: 10px;
+        }
+    }
+}
+
+@include Bg_mobile {
+    .intro_page_main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw;
+        height: 100vh;
+        .intro_image_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 100px;
+            .intro_page_title {
+                width: 100vw;
+                height: 7vh;
+                user-select: none;
+                font-size: 35px;
+                color: white;
+                font-family: cursive;
+            }
+            .intro_page_image_main {
+                width: 120px;
+                height: 120px;
+            }
+
+        }
+
+        .intro_button {
+            width: 30vw;
+            height: 15vh;
+            user-select: none;
+            font-size: 37px;
+            font-family: cursive;
+            background-color: rgb(25, 25, 25);
+            border: 2px solid white;
+            border-radius: 30px;
+            cursor: pointer;
+            .intro_page_link {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .ad {
+            width: 100vw;
+            height: 10vh;
+            margin-top: 10px;
+        }
+    }
+}
+
+@include St_mobile {
+    .intro_page_main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw;
+        height: 100vh;
+        .intro_image_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 90px;
+            .intro_page_title {
+                width: 100vw;
+                height: 8vh;
+                user-select: none;
+                font-size: 33px;
+                color: white;
+                font-family: cursive;
+            }
+            .intro_page_image_main {
+                width: 120px;
+                height: 120px;
+            }
+
+        }
+
+        .intro_button {
+            width: 50vw;
+            height: 12vh;
+            user-select: none;
+            font-size: 34px;
+            font-family: cursive;
+            background-color: rgb(25, 25, 25);
+            border: 2px solid white;
+            border-radius: 30px;
+            cursor: pointer;
+            .intro_page_link {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .ad {
+            width: 100vw;
+            height: 10vh;
+            margin-top: 10px;
+        }
+    }
+}

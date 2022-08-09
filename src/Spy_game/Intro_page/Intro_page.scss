@@ -1,47 +1,51 @@
-.intro_page_main{
+.intro_page_main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    width: 40vw;
     height: 100vh;
-
-    .intro_page_title{
-        width: 80vw;
-        height: 7vh;
-        user-select: none;
-        font-size: 60px;
-        color: white;
-        font-family: cursive;
-        // background-color: darkgreen;
-    }
-
-    .intro_page_image_main{
-        width: 200px;
-        height: 200px;
-    }
-
-
-    .intro_button{
-            width: 35vw;
-            height: 12vh;
+    .intro_image_title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+        .intro_page_title {
+            width: 80vw;
+            height: 7vh;
             user-select: none;
-            font-size: 60px;
+            font-size: 50px;
+            color: white;
             font-family: cursive;
-            background-color: rgb(25, 25, 25);
-            border: 2px solid white;
-            border-radius: 30px;
-            cursor: pointer;
-            margin-top: 60px;
-            .intro_page_link{
-                text-decoration: none;
-                color: white;
-            }
+        }
+        .intro_page_image_main {
+            width: 150px;
+            height: 150px;
+        }
+
     }
 
-    .ad{
-        width: 80vw;
+    .intro_button {
+        width: 35vw;
+        height: 12vh;
+        user-select: none;
+        font-size: 35px;
+        font-family: cursive;
+        background-color: rgb(25, 25, 25);
+        border: 2px solid white;
+        border-radius: 30px;
+        cursor: pointer;
+        color: white;
+        .intro_page_link {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    .ad {
+        width: 70vw;
         height: 10vh;
-        // background-color: black;
         margin-top: 10px;
     }
 }

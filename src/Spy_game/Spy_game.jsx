@@ -9,6 +9,7 @@ import useTimePage from './Time_page/useTimePage';
 import { Routes,Route } from 'react-router-dom';
 import NotFound from './NotFound';
 import './Spy_game.scss';
+import './Spy_game_media.scss';
 
 
 export default function Spy_game() {
@@ -37,7 +38,6 @@ export default function Spy_game() {
         <>
             <div className='intro_main'>
                 <div className='main'>
-                    {/* <h1 className="title">Spy game</h1> */}
 
                     <Routes>
                         <Route path="/" element={
