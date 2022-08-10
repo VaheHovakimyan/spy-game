@@ -1,35 +1,63 @@
 import { Link } from 'react-router-dom';
+import Back from './Categories_images_and_icons/Back.png';
 import './Categories.scss';
 
 
-export default function Categories({lang, setLang, categories, setCategories}) {
+export default function Categories({ lang,setLang,categories,setCategories }) {
 
 
     return (
         <>
-            <Link to="/" className="link"><button className='categories_div'> To intro </button></Link>
 
-            <div className='categories_main'>
+            <div className='categories'>
 
-                <Link to="/start_page" className="link"><div className='categories_div' onClick={() => {setCategories(0)}}
-                >{lang === 0 ? "Տեղանուն" : lang === 1 ? "Локация" : "Location"}</div></Link>
+                <div className='back_to_main_div'>
+                    <Link to="/"><img src={Back} alt="Back_icon" className='back_to_main' /></Link>
+                </div>
 
-                <Link to="/start_page" className="link"><div className='categories_div' onClick={() => {setCategories(1)}}
-                >{lang === 0 ? "Տեղանուն (հատուկ)" : lang === 1 ? "Локация (спец.)" : "Location (special)"}</div></Link>
 
-                <Link to="/start_page" className="link"><div className='categories_div' onClick={() => {setCategories(2)}}
-                >{lang === 0 ? "Ֆաունա" : lang === 1 ? "Фауна" : "Fauna"}</div></Link>
+                <div className='categories_main'>
 
-                <Link to="/start_page" className="link"><div className='categories_div' onClick={() => {setCategories(3)}}
-                >{lang === 0 ? "Ֆլորա" : lang === 1 ? "Флора" : "Flora"}</div></Link>
+                    <Link to="/start_page" className='categories_div'>
+                        <div className='location_block' onClick={() => { setCategories(0) }}>
+                            <div className='opacity_black'>
+                                <p className='categories_text'>
+                                    {lang === 0 ? "Տեղանուն" : lang === 1 ? "Локация" : "Location"}
+                                </p>
+                            </div>
+                        </div>
+                    </Link>
 
-                <Link to="/start_page" className="link"><div className='categories_div' onClick={() => {setCategories(4)}}
-                >{lang === 0 ? "Մասնագիտություն" : lang === 1 ? "Профессия" : "Profession"}</div></Link>
+                    <Link to="/start_page" className='categories_div'><div onClick={() => { setCategories(1) }}
+                    >{lang === 0 ? "Տեղանուն (հատուկ)" : lang === 1 ? "Локация (спец.)" : "Location (special)"}</div></Link>
 
-                <Link to="/start_page" className="link"><div className='categories_div' onClick={() => {setCategories(5)}}
-                >{lang === 0 ? "Հայտնի մարդիկ" : lang === 1 ? "Известные люди" : "Famous people"}</div></Link>
 
+
+                    <Link to="/start_page" className='categories_div'>
+                        <div className='fauna_block' onClick={() => { setCategories(2) }}>
+                            <div className='opacity_black'>
+                                <p className='categories_text'>
+                                    {lang === 0 ? "Ֆաունա" : lang === 1 ? "Фауна" : "Fauna"}
+                                </p>
+                            </div>
+                        </div>
+                    </Link>
+
+                    <Link to="/start_page" className='categories_div'><div onClick={() => { setCategories(3) }}
+                    >{lang === 0 ? "Ֆլորա" : lang === 1 ? "Флора" : "Flora"}</div></Link>
+
+                    <Link to="/start_page" className='categories_div'><div onClick={() => { setCategories(4) }}
+                    >{lang === 0 ? "Մասնագիտություն" : lang === 1 ? "Профессия" : "Profession"}</div></Link>
+
+                    <Link to="/start_page" className='categories_div'><div onClick={() => { setCategories(5) }}
+                    >{lang === 0 ? "Հայտնի մարդիկ" : lang === 1 ? "Известные люди" : "Famous people"}</div></Link>
+
+                </div>
+
+                <div className='ad'></div>
             </div>
+
+
         </>
     )
 }

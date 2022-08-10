@@ -3,19 +3,20 @@ import Participians from "./Start_page_spy_game_components/Participians";
 import Spy_count from "./Start_page_spy_game_components/Spy_count";
 import Time from "./Start_page_spy_game_components/Time";
 import Warning from "./Start_page_spy_game_components/Warning.jsx";
+import './Start_page_main.scss';
 
 
-
-export default function Start_page({lang, setLang, categories, setCategories ,participians,setParticipians,countSpy,setCountSpy,time,setTime,page,setPage,warning,setWarning,word_index,setWord_index,ready_array,index,setIndex,time_value,setTime_value, cycle, setCycle }) {
+export default function Start_page({ lang,setLang,categories,setCategories,participians,setParticipians,countSpy,setCountSpy,time,setTime,page,setPage,warning,setWarning,word_index,setWord_index,ready_array,index,setIndex,time_value,setTime_value,cycle,setCycle }) {
 
     console.log(`lang ${lang}`);
     console.log(`categories ${categories}`);
 
 
     return (
-        <>
-
-            <Link to="/categories" className="link"><button> To Categories </button></Link>
+        <div className="Start_page_div">
+            <div className='back_to_categories_div'>
+                <Link to="/categories"><button className='back_to_categories'> . </button></Link>
+            </div>
 
             <Warning
                 warning={warning}
@@ -53,8 +54,6 @@ export default function Start_page({lang, setLang, categories, setCategories ,pa
                     setWarning(!warning);
                 }
             }}><Link to="/word" className="link"><div className="link_text"> {lang === 0 ? "Գնացինք" : lang === 1 ? "Пошли" : "Let's go"} </div></Link></button>
-
-
-        </>
+        </div>
     )
 }
