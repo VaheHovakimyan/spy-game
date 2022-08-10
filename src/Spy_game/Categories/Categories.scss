@@ -41,7 +41,6 @@
             align-items: center;
             width: 150px;
             height: 150px;
-            // background-color: black;
             border: 2px solid rgb(190, 190, 190);
             border-radius: 8px;
             margin: 5px;
@@ -56,6 +55,26 @@
             .fauna_block {
                 @extend %Categories_image;
                 background-image: url('./Categories_images_and_icons/Fauna.png');
+            }
+
+            .flora_block {
+                @extend %Categories_image;
+                background-image: url('./Categories_images_and_icons/Flora.png');
+            }
+            
+            .profession_block {
+                @extend %Categories_image;
+                background-image: url('./Categories_images_and_icons/Professions.png');
+                .opacity_black{
+                    .categories_text{
+                        font-size: 16px;
+                     }
+                }
+            }
+
+            .famous_persons_block {
+                @extend %Categories_image;
+                background-image: url('./Categories_images_and_icons/Famous_persons.png');
             }
 
             .opacity_black {
@@ -74,10 +93,8 @@
                     font-size: 22px;
                     font-weight: 500;
                     letter-spacing: 1px;
-                    // font-family: fantasy;
                 }
             }
-
         }
     }
 

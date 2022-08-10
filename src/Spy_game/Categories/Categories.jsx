@@ -28,8 +28,10 @@ export default function Categories({ lang,setLang,categories,setCategories }) {
                         </div>
                     </Link>
 
-                    <Link to="/start_page" className='categories_div'><div onClick={() => { setCategories(1) }}
-                    >{lang === 0 ? "Տեղանուն (հատուկ)" : lang === 1 ? "Локация (спец.)" : "Location (special)"}</div></Link>
+                    <Link to="/start_page" className='categories_div'>
+                        <div onClick={() => { setCategories(1) }}
+                        >{lang === 0 ? "Տեղանուն (հատուկ)" : lang === 1 ? "Локация (спец.)" : "Location (special)"}</div>
+                    </Link>
 
 
 
@@ -43,14 +45,35 @@ export default function Categories({ lang,setLang,categories,setCategories }) {
                         </div>
                     </Link>
 
-                    <Link to="/start_page" className='categories_div'><div onClick={() => { setCategories(3) }}
-                    >{lang === 0 ? "Ֆլորա" : lang === 1 ? "Флора" : "Flora"}</div></Link>
+                    <Link to="/start_page" className='categories_div'>
+                        <div className='flora_block' onClick={() => { setCategories(3) }}>
+                            <div className='opacity_black'>
+                                <p className='categories_text'>
+                                    {lang === 0 ? "Ֆլորա" : lang === 1 ? "Флора" : "Flora"}
+                                </p>
+                            </div>
+                        </div>
+                    </Link>
 
-                    <Link to="/start_page" className='categories_div'><div onClick={() => { setCategories(4) }}
-                    >{lang === 0 ? "Մասնագիտություն" : lang === 1 ? "Профессия" : "Profession"}</div></Link>
+                    <Link to="/start_page" className='categories_div'>
+                        <div className='profession_block' onClick={() => { setCategories(4) }}>
+                            <div className='opacity_black'>
+                                <p className='categories_text'>
+                                    {lang === 0 ? "Մասնագիտություն" : lang === 1 ? "Профессия" : "Profession"}
+                                </p>
+                            </div>
+                        </div>
+                    </Link>
 
-                    <Link to="/start_page" className='categories_div'><div onClick={() => { setCategories(5) }}
-                    >{lang === 0 ? "Հայտնի մարդիկ" : lang === 1 ? "Известные люди" : "Famous people"}</div></Link>
+                    <Link to="/start_page" className='categories_div'>
+                        <div className='famous_persons_block' onClick={() => { setCategories(5) }}>
+                            <div className='opacity_black'>
+                                <p className='categories_text'>
+                                    {lang === 0 ? "Հայտնի մարդիկ" : lang === 1 ? "Известные люди" : "Famous people"}
+                                </p>
+                            </div>
+                        </div>
+                    </Link>
 
                 </div>
 
