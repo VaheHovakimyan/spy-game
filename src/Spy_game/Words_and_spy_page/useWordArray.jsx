@@ -51,7 +51,7 @@ export default function (participians,countSpy,done_array,setDone_array,cycle,la
                         data = data_arm_location;
                         break;
                     case 1:
-                        data = data_arm_famous_person;
+                        data = data_arm_funny_words;
                         break;
                     case 2:
                         data = data_arm_animal;
@@ -63,7 +63,7 @@ export default function (participians,countSpy,done_array,setDone_array,cycle,la
                         data = data_arm_profession;
                         break;
                     default:
-                        data = data_arm_location; 
+                        data = data_arm_famous_person; 
                         break;
                 }
                 console.log("Hesa Hayerena");

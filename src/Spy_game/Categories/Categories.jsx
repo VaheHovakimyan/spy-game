@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-// import Back from './Categories_images_and_icons/Back.png';
+import Back from './Categories_images_and_icons/Back.png';
 import './Categories.scss';
 
 
@@ -12,7 +12,7 @@ export default function Categories({ lang,setLang,categories,setCategories }) {
             <div className='categories'>
 
                 <div className='back_to_main_div'>
-                    <Link to="/">{/*<img src={Back} alt="Back_icon" className='back_to_main' />*/}</Link>
+                    <Link to="/"><img src={Back} alt="Back_icon" className='back_to_main' /></Link>
                 </div>
 
 
@@ -33,7 +33,7 @@ export default function Categories({ lang,setLang,categories,setCategories }) {
                         <div className='famous_persons_block' onClick={() => { setCategories(1) }}>
                             <div className='opacity_black'>
                                 <p className='categories_text'>
-                                    {lang === 0 ? "Հայտնի մարդիկ" : lang === 1 ? "Известные люди" : "Famous people"}
+                                    {lang === 0 ? "Տեղանուն (հատուկ)" : lang === 1 ? "Локация (спец.)" : "Location (special)"}
                                 </p>
                             </div>
                         </div>
@@ -75,7 +75,7 @@ export default function Categories({ lang,setLang,categories,setCategories }) {
                         <div className='famous_persons_block' onClick={() => { setCategories(5) }}>
                             <div className='opacity_black'>
                                 <p className='categories_text'>
-                                    {lang === 0 ? "Իմ բառերը" : lang === 1 ? "Мои слова" : "My words"}
+                                    {lang === 0 ? "Հայտնի մարդիկ" : lang === 1 ? "Известные люди" : "Famous people"}
                                 </p>
                             </div>
                         </div>

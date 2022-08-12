@@ -25,7 +25,7 @@ export default function Intro_page({ lang,setLang, showInfo, setShowInfo }) {
 
                 <div className='intro_image_title'>
                     <h1 className='intro_page_title'> Spy game </h1>
-                    <div className='intro_page_image_main'><img src={Main_image} alt="Main_image" className='intro_page_image_main' /></div>
+                    <div><img src={Main_image} alt="Main_image" className='intro_page_image_main' /></div>
                 </div>
 
                 <Link to="/categories" className="intro_page_link"><button className='intro_button'> Play </button></Link>
