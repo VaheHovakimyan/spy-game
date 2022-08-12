@@ -79,7 +79,7 @@
 
             .famous_persons_block {
                 @extend %Categories_image;
-                // background-image: url('./Categories_images_and_icons/Famous_persons.png');
+                background-image: url('./Categories_images_and_icons/Famous_persons.png');
                 background-color: rgba(0, 0, 0, 0.5);
             }
 

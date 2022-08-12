@@ -16,6 +16,7 @@ export default function Spy_game() {
 
 
     const [lang,setLang] = useState(0);
+    const [showInfo, setShowInfo] = useState(0);
     const [categories,setCategories] = useState(0);
     const [participians,setParticipians] = useState(3);
     const [countSpy,setCountSpy] = useState(1);
@@ -39,11 +40,15 @@ export default function Spy_game() {
             <div className='intro_main'>
                 <div className='main'>
 
+                    
+
                     <Routes>
                         <Route path="/" element={
                             <Intro_page
                                 lang={lang}
                                 setLang={setLang}
+                                showInfo={showInfo}
+                                setShowInfo={setShowInfo}
                             />
                         } />
                         <Route path='/categories' element={

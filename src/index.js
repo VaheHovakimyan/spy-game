@@ -6,7 +6,6 @@ import './App.scss';
 
 
 
-
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>

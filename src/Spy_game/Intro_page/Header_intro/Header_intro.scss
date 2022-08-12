@@ -1,16 +1,30 @@
-.Header_intro_main{
+.Header_intro_main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 60vw;
     height: 15vh;
     border-bottom: 0.7px rgb(172, 172, 172) solid;
+
+    .show_info{
+       margin-top: -100px;
+       transition: all 1s linear;
+    }
+
+    .info{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        transition: all 1s linear;
+        margin-top: 0;
+    }
     // background-color: navy;
-    .elem{
+    .elem {
         width: 105px;
         height: 105px;
         background-color: rgb(105, 125, 179);
         border-radius: 20px;
         border: 2px white;
+        cursor: pointer;
     }
 }
