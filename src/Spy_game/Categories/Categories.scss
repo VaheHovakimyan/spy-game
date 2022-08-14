@@ -49,25 +49,27 @@
 
             .location_block {
                 @extend %Categories_image;
-                // background-image: url('./Categories_images_and_icons/Location.png');
-                background-color: rgba(0, 0, 0, 0.5);
+                background-image: url('./Categories_images_and_icons/Location.png');
+            }
+
+            .sport_block{
+                @extend %Categories_image;
+                background-image: url('./Categories_images_and_icons/Sport.png');
             }
 
             .fauna_block {
                 @extend %Categories_image;
-                // background-image: url('./Categories_images_and_icons/Fauna.png');
-                background-color: rgba(0, 0, 0, 0.5);
+                background-image: url('./Categories_images_and_icons/Fauna.png');
             }
 
             .flora_block {
                 @extend %Categories_image;
-                // background-image: url('./Categories_images_and_icons/Flora.png');
-                background-color: rgba(0, 0, 0, 0.5);
+                background-image: url('./Categories_images_and_icons/Flora.png');
             }
             
             .profession_block {
                 @extend %Categories_image;
-                // background-image: url('./Categories_images_and_icons/Professions.png');
+                background-image: url('./Categories_images_and_icons/Professions.png');
                 background-color: rgba(0, 0, 0, 0.5);
                 .opacity_black{
                     .categories_text{
@@ -79,7 +81,6 @@
             .famous_persons_block {
                 @extend %Categories_image;
                 background-image: url('./Categories_images_and_icons/Famous_persons.png');
-                background-color: rgba(0, 0, 0, 0.5);
             }
 
             .opacity_black {

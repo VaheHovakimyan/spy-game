@@ -1,4 +1,5 @@
-import '../../../Spy_game.scss';
+// import '../../../Spy_game.scss';
+import '../Start_page_main.scss';
 
 export default function Warning({ warning, setWarning, lang }) {
 

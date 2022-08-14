@@ -1,12 +1,5 @@
-.Header_intro_main {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 60vw;
-    height: 15vh;
-    border-bottom: 0.7px rgb(172, 172, 172) solid;
-
-    .show_info {
+.Languages_div {
+    .show_languages {
         width: 40vw;
         height: 20vh;
         margin: -100vh 0px 0px 0px;
@@ -15,7 +8,7 @@
         color: white;
         position: absolute;
 
-        .close_div {
+        .close_div_languages {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -42,7 +35,7 @@
         }
     }
 
-    .info {
+    .languages {
         width: 40vw;
         height: 80vh;
         background-color: black;
@@ -51,7 +44,7 @@
         color: white;
         position: absolute;
 
-        .close_div {
+        .close_div_languages {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -76,14 +69,5 @@
                 }
             }
         }
-    }
-
-    .elem {
-        width: 100px;
-        height: 100px;
-        background-color: rgb(105, 125, 179);
-        border-radius: 20px;
-        border: 2px white;
-        cursor: pointer;
     }
 }

@@ -30,10 +30,10 @@ export default function Categories({ lang,setLang,categories,setCategories }) {
 
 
                     <Link to="/start_page" className='categories_div'>
-                        <div className='famous_persons_block' onClick={() => { setCategories(1) }}>
+                        <div className='sport_block' onClick={() => { setCategories(1) }}>
                             <div className='opacity_black'>
                                 <p className='categories_text'>
-                                    {lang === 0 ? "Տեղանուն (հատուկ)" : lang === 1 ? "Локация (спец.)" : "Location (special)"}
+                                    {lang === 0 ? "Սպորտ" : lang === 1 ? "Локация (спец.)" : "Location (special)"}
                                 </p>
                             </div>
                         </div>
@@ -85,8 +85,6 @@ export default function Categories({ lang,setLang,categories,setCategories }) {
 
                 <div className='ad'></div>
             </div >
-
-
         </>
     )
 }

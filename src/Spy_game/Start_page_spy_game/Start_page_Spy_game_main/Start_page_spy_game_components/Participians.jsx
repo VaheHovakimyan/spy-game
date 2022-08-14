@@ -1,4 +1,4 @@
-import '../../../Spy_game.scss';
+import '../Start_page_main.scss';
 
 
 export default function Participians({ participians, setParticipians, lang }) {

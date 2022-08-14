@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import Participians from "./Start_page_spy_game_components/Participians";
 import Spy_count from "./Start_page_spy_game_components/Spy_count";
 import Time from "./Start_page_spy_game_components/Time";
-import Warning from "./Start_page_spy_game_components/Warning.jsx";
+import Warning from ".//Start_page_spy_game_components/Warning.jsx";
+import Back from '../../Categories/Categories_images_and_icons/Back.png'
 import './Start_page_main.scss';
 
 
@@ -13,47 +14,52 @@ export default function Start_page({ lang,setLang,categories,setCategories,parti
 
 
     return (
-        <div className="Start_page_div">
-            <div className='back_to_categories_div'>
-                <Link to="/categories"><button className='back_to_categories'> . </button></Link>
+        <>
+            <div className="Start_page_div">
+
+                <div className='back_to_categories_div'>
+                    <Link to="/categories"><img src={Back} alt="Back_icon" className='back_to_categories' /></Link>
+                </div>
+
+                <Warning
+                    warning={warning}
+                    setWarning={setWarning}
+                />
+
+                <Participians
+                    participians={participians}
+                    setParticipians={setParticipians}
+                    lang={lang}
+                    setLang={setLang}
+                />
+
+                <Spy_count
+                    countSpy={countSpy}
+                    setCountSpy={setCountSpy}
+                    lang={lang}
+                    setLang={setLang}
+                />
+
+                <Time
+                    time={time}
+                    setTime={setTime}
+                    lang={lang}
+                    setLang={setLang}
+                />
+
+
+
+                <button className='button' onClick={(e) => {
+                    e.preventDefault();
+                    setPage(participians - countSpy);
+                    setCycle(0);
+                    if (participians - countSpy < 2) {
+                        setWarning(!warning);
+                    }
+                }}><Link to="/word" className="link"><div className="link_text"> {lang === 0 ? "Գնացինք" : lang === 1 ? "Пошли" : "Let's go"} </div></Link></button>
+
+                <div className='ad'>.</div>
             </div>
-
-            <Warning
-                warning={warning}
-                setWarning={setWarning}
-            />
-
-            <Participians
-                participians={participians}
-                setParticipians={setParticipians}
-                lang={lang}
-                setLang={setLang}
-            />
-
-            <Spy_count
-                countSpy={countSpy}
-                setCountSpy={setCountSpy}
-                lang={lang}
-                setLang={setLang}
-            />
-
-            <Time
-                time={time}
-                setTime={setTime}
-                lang={lang}
-                setLang={setLang}
-            />
-
-
-
-            <button className='button' onClick={(e) => {
-                e.preventDefault();
-                setPage(participians - countSpy);
-                setCycle(0);
-                if (participians - countSpy < 2) {
-                    setWarning(!warning);
-                }
-            }}><Link to="/word" className="link"><div className="link_text"> {lang === 0 ? "Գնացինք" : lang === 1 ? "Пошли" : "Let's go"} </div></Link></button>
-        </div>
+        </>
     )
 }

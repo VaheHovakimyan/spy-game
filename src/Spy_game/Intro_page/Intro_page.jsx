@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Intro_page.scss';
 import './Intro_page_media.scss';
 
-export default function Intro_page({ lang,setLang, showInfo, setShowInfo }) {
+export default function Intro_page({ lang, setLang, showInfo,setShowInfo,showLanguages,setShowLanguages,showRate,setShowRate,showRules,setShowRules }) {
 
     {/* <button className='intro_button' onClick={() => {setLang(0)}}>Hayeren</button>
 
@@ -19,8 +19,16 @@ export default function Intro_page({ lang,setLang, showInfo, setShowInfo }) {
             <div className='intro_page_main'>
 
                 <Header_Intro 
+                    lang={lang}
+                    setLang={setLang}
                     showInfo={showInfo}
                     setShowInfo={setShowInfo}
+                    showLanguages={showLanguages}
+                    setShowLanguages={setShowLanguages}
+                    showRate={showRate}
+                    setShowRate={setShowRate}
+                    showRules={showRules}
+                    setShowRules={setShowRules}
                 />
 
                 <div className='intro_image_title'>
@@ -28,7 +36,7 @@ export default function Intro_page({ lang,setLang, showInfo, setShowInfo }) {
                     <div><img src={Main_image} alt="Main_image" className='intro_page_image_main' /></div>
                 </div>
 
-                <Link to="/categories" className="intro_page_link"><button className='intro_button'> Play </button></Link>
+                <Link to="/categories" className="intro_page_link"><button className='intro_button'> {lang === 0 ? "Խաղալ" : lang === 1 ? "Играть" : "Play"} </button></Link>
 
                 <div className='ad'></div>
             </div>

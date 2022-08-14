@@ -14,20 +14,26 @@ import './Spy_game_media.scss';
 
 export default function Spy_game() {
 
-
-    const [lang,setLang] = useState(0);
     const [showInfo, setShowInfo] = useState(0);
+    const [showLanguages, setShowLanguages] = useState(0);
+    const [showRate, setShowRate] = useState(0);
+    const [showRules, setShowRules] = useState(0);
+    const [lang,setLang] = useState(0);
+
     const [categories,setCategories] = useState(0);
+
     const [participians,setParticipians] = useState(3);
     const [countSpy,setCountSpy] = useState(1);
     const [time,setTime] = useState(1);
     const [time_value,setTime_value] = useState();
     const [page,setPage] = useState(0);
     const [warning,setWarning] = useState(true);
+
     const [done_array,setDone_array] = useState();
     const [word_index,setWord_index] = useState(0);
     const [index,setIndex] = useState(0);
     const [cycle,setCycle] = useState(0);
+    
     const [time_bool,setTime_bool] = useState();
 
     const ready_array = useWordArray(participians,countSpy,done_array,setDone_array,cycle,lang,categories);
@@ -49,6 +55,12 @@ export default function Spy_game() {
                                 setLang={setLang}
                                 showInfo={showInfo}
                                 setShowInfo={setShowInfo}
+                                showLanguages={showLanguages}
+                                setShowLanguages={setShowLanguages}
+                                showRate={showRate}
+                                setShowRate={setShowRate}
+                                showRules={showRules}
+                                setShowRules={setShowRules}
                             />
                         } />
                         <Route path='/categories' element={

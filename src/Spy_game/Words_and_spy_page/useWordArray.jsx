@@ -1,21 +1,21 @@
 import data_arm_animal from '../Words/Armenian_words/Arm_animal.json';
 import data_arm_famous_person from '../Words/Armenian_words/Arm_famous_person.json';
 import data_arm_fruits_veg from '../Words/Armenian_words/Arm_fruits_veg.json';
-import data_arm_funny_words from '../Words/Armenian_words/Arm_funny_words.json';
+import data_arm_sport from '../Words/Armenian_words/Arm_sport.json';
 import data_arm_location from '../Words/Armenian_words/Arm_location.json';
 import data_arm_profession from '../Words/Armenian_words/Arm_profession.json';
 
 import data_rus_animal from '../Words/Russian_words/Rus_animal.json';
 import data_rus_famous_person from '../Words/Russian_words/Rus_famous_person.json';
 import data_rus_fruits_veg from '../Words/Russian_words/Rus_fruits_veg.json';
-import data_rus_funny_words from '../Words/Russian_words/Rus_funny_words.json';
+import data_rus_sport from '../Words/Russian_words/Rus_sport.json';
 import data_rus_location from '../Words/Russian_words/Rus_location.json';
 import data_rus_profession from '../Words/Russian_words/Rus_profession.json';
 
 import data_eng_animal from '../Words/English_words/Eng_animal.json';
 import data_eng_famous_person from '../Words/English_words/Eng_famous_person.json';
 import data_eng_fruits_veg from '../Words/English_words/Eng_fruits_veg.json';
-import data_eng_funny_words from '../Words/English_words/Eng_funny_words.json';
+import data_eng_sport from '../Words/English_words/Eng_sport.json';
 import data_eng_location from '../Words/English_words/Eng_location.json';
 import data_eng_profession from '../Words/English_words/Eng_profession.json';
 
@@ -51,7 +51,7 @@ export default function (participians,countSpy,done_array,setDone_array,cycle,la
                         data = data_arm_location;
                         break;
                     case 1:
-                        data = data_arm_funny_words;
+                        data = data_arm_sport;
                         break;
                     case 2:
                         data = data_arm_animal;
@@ -74,7 +74,7 @@ export default function (participians,countSpy,done_array,setDone_array,cycle,la
                         data = data_rus_location;
                         break;
                     case 1:
-                        data = data_rus_funny_words;
+                        data = data_rus_sport;
                         break;
                     case 2:
                         data = data_rus_animal;
@@ -97,7 +97,7 @@ export default function (participians,countSpy,done_array,setDone_array,cycle,la
                         data = data_eng_location;
                         break;
                     case 1:
-                        data = data_eng_funny_words;
+                        data = data_eng_sport;
                         break;
                     case 2:
                         data = data_eng_animal;
@@ -128,6 +128,10 @@ export default function (participians,countSpy,done_array,setDone_array,cycle,la
             }
 
         })
+
+        // function Spy_random_index_generator(){
+
+        // }
 
 
         if (participians >= 4 && countSpy === 2) {
