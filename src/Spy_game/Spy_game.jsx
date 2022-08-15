@@ -1,3 +1,5 @@
+import { Routes,Route } from 'react-router-dom';
+import NotFound from './NotFound';
 import { useState } from 'react';
 import Intro_page from './Intro_page/Intro_page.jsx';
 import Categories from './Categories/Categories.jsx';
@@ -6,8 +8,6 @@ import Words_and_Spy from './Words_and_spy_page/Words_Spy_page';
 import Time_page from './Time_page/Time_page';
 import useWordArray from './Words_and_spy_page/useWordArray.jsx';
 import useTimePage from './Time_page/useTimePage';
-import { Routes,Route } from 'react-router-dom';
-import NotFound from './NotFound';
 import './Spy_game.scss';
 import './Spy_game_media.scss';
 

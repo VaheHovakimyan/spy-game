@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
+import './Time_page.scss';
 
-
-export default function Time_page({ participians,word_index,setWord_index,time_value,setTime_value,setWarning,setIndex,time_current_value,setCycle,time_bool,setTime_bool, lang }) {
+export default function Time_page({ participians,word_index,setWord_index,time_value,setTime_value,setWarning,setIndex,time_current_value,setCycle,time_bool,setTime_bool,lang }) {
 
 
     let minute = Math.floor(time_current_value / 60);
@@ -17,7 +17,7 @@ export default function Time_page({ participians,word_index,setWord_index,time_v
         return () => {
             clearInterval(time_fun);
         }
-    },[time_value, time_bool]);
+    },[time_value,time_bool]);
 
 
 
@@ -26,19 +26,22 @@ export default function Time_page({ participians,word_index,setWord_index,time_v
 
     return (
         <>
-            <h1>
-                {minute < 10 ? "0" + minute : minute} : {second < 10 ? "0" + second : second}
-            </h1>
-            <button
-                className="button"
-                onClick={(e) => {
-                    e.preventDefault();
-                    setWarning(true);
-                    setCycle(1);
-                    { word_index >= participians * 2 ? setWord_index(0) : setWord_index(word_index + 1) }
-                    setIndex(0);
-                }}
-            ><Link to="/start_page" className="link"><div className="link_text"> {lang === 0 ? "Ավարտ" : lang === 1 ? "Конец" : "End"} </div></Link></button>
+            <div className="time_page">
+                <h1 className="time_text">
+                    {minute < 10 ? "0" + minute : minute} : {second < 10 ? "0" + second : second}
+                </h1>
+                <button
+                    className="button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        setWarning(true);
+                        setCycle(1);
+                        { word_index >= participians * 2 ? setWord_index(0) : setWord_index(word_index + 1) }
+                        setIndex(0);
+                    }}
+                ><Link to="/start_page" className="link"><div className="link_text"> {lang === 0 ? "Ավարտ" : lang === 1 ? "Конец" : "End"} </div></Link></button>
+            </div>
+
         </>
     )
 }

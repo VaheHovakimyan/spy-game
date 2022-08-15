@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../Spy_game.scss';
+import './Words_and_spy.scss';
 
 
 
@@ -19,9 +19,9 @@ export default function Words_and_Spy({ participians, ready_array, word_index, s
     return (
         <>
 
-        <div>
+        <div className='words_and_spy'>
 
-            {word}
+            <h1 className='word_text'>{word}</h1>
 
             <button
                 className="button"

@@ -1,6 +1,6 @@
 import Close from '../../../Intro_page_icons_and_image/Close.png';
 import '../../Header_intro.scss';
-// import './Info.scss';
+import './Info.scss';
 
 export default function Info_comp({ showInfo,setShowInfo }) {
 
@@ -19,13 +19,20 @@ export default function Info_comp({ showInfo,setShowInfo }) {
                 </div>
 
                 <div>
-                    Programming by ttt tttttt
+                     
                 </div>
-                <div>
-                    Design by ttt tttttt
+
+                <div className='info_elem'>
+                    Programming by Vaspur
                 </div>
-                <div>
-                    Translate by ttttttt ttttttt
+                <div className='info_elem'>
+                    Design by Vaspur
+                </div>
+                <div className='info_elem'>
+                    English words by Gayane Makaryan
+                </div>
+                <div className='info_elem'>
+                    Russian words by Edgar Gasparyan
                 </div>
             </div>
         </>
