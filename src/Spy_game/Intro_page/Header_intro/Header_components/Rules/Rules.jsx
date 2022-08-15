@@ -1,13 +1,13 @@
 import Close from '../../../Intro_page_icons_and_image/Close.png';
-// import '../../Header_intro.scss';
-import './Rules.scss';
+import '../../Header_intro.scss';
+// import './Rules.scss';
 
 export default function Rules_comp({ showRules, setShowRules }) {
 
 
     return (
         <>
-            <div className={showRules ? "rules" : "show_rules"}>
+            <div className={showRules ? "info" : "show_info"}>
 
                 <div className='close_div'>
                     <div className='close_div_empty'></div>
