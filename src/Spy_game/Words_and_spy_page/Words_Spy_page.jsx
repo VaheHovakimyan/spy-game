@@ -31,7 +31,7 @@ export default function Words_and_Spy({ participians, ready_array, word_index, s
                     setWord_index(word_index + 1);
                 }}
             >{((participians * 2) - 1 <= word_index) ? <Link to="/time" className="link"><div className="link_text"> {lang === 0 ? "Ժամանակ" : lang === 1 ? "Время" : "Time"}  </div></Link> : (word_index % 2 === 0) ? (lang === 0 ? "Բացել" : lang === 1 ? "Открыть" : "Open") : (lang === 0 ? "Փակել" : lang === 1 ? "Закрыть" : "Close")} </button>
-                <h1>{word_index}</h1>
+                {/* <h1>{word_index}</h1> */}
         </div>
 
         </>
