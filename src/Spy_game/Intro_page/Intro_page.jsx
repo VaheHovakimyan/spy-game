@@ -28,7 +28,7 @@ export default function Intro_page({ lang, setLang, showInfo,setShowInfo,showLan
                 />
 
                 <div className='intro_image_title'>
-                    <h1 className='intro_page_title'> Spy game </h1>
+                    <h1 className='intro_page_title'> {lang === 0 ? "Խաղ լրտես" : lang === 1 ? "Игра шпион" : "Spy game"} </h1>
                     <div><img src={Main_image} alt="Main_image" className='intro_page_image_main' /></div>
                 </div>
 

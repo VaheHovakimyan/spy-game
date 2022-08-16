@@ -33,7 +33,7 @@ export default function Categories({ lang,setLang,categories,setCategories }) {
                         <div className='sport_block' onClick={() => { setCategories(1) }}>
                             <div className='opacity_black'>
                                 <p className='categories_text'>
-                                    {lang === 0 ? "Սպորտ" : lang === 1 ? "Локация (спец.)" : "Location (special)"}
+                                    {lang === 0 ? "Սպորտ" : lang === 1 ? "Спорт" : "Sport"}
                                 </p>
                             </div>
                         </div>
@@ -65,7 +65,7 @@ export default function Categories({ lang,setLang,categories,setCategories }) {
                         <div className='profession_block' onClick={() => { setCategories(4) }}>
                             <div className='opacity_black'>
                                 <p className='categories_text'>
-                                    {lang === 0 ? "Մասնագիտություն" : lang === 1 ? "Профессия" : "Profession"}
+                                    {lang === 0 ? "Մասնագիտություն" : lang === 1 ? <span className='categories_profession_text'>Профессия</span> : <span className='categories_profession_text'>Profession</span>}
                                 </p>
                             </div>
                         </div>

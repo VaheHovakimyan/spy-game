@@ -25,11 +25,20 @@ export default function Languages_comp({ showLanguages,setShowLanguages,lang,set
 
                 <div className='languages_info_div'>
                     <div className='languages_buttons'>
-                        <div onClick={() => { setLang(0) }}> <img src={Armenian_language} className='language_button' alt="Armenian_language" /> </div>
+                        <div onClick={() => {
+                            setLang(0);
+                            setShowLanguages(!showLanguages);
+                        }}> <img src={Armenian_language} className='language_button' alt="Armenian_language" /> </div>
 
-                        <div onClick={() => { setLang(1) }}> <img src={Russian_language} className='language_button' alt="Russian_language" /> </div>
+                        <div onClick={() => {
+                            setLang(1);
+                            setShowLanguages(!showLanguages);
+                        }}> <img src={Russian_language} className='language_button' alt="Russian_language" /> </div>
 
-                        <div onClick={() => { setLang(2) }}> <img src={English_language} className='language_button' alt="English_language" /> </div>
+                        <div onClick={() => {
+                            setLang(2);
+                            setShowLanguages(!showLanguages);
+                        }}> <img src={English_language} className='language_button' alt="English_language" /> </div>
                     </div>
                 </div>
 

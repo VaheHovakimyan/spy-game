@@ -1,11 +1,16 @@
-.words_and_spy{
+.words_and_spy {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 60vh;
-    .word_text{
+    .word_text {
         font-size: 20px;
         color: whitesmoke;
+
+        .next_player_text {
+            font-size: 25px;
+            color: whitesmoke;
+        }
     }
 }

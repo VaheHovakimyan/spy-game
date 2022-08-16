@@ -1,11 +1,47 @@
-.time_page{
+.time_page {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 60vh;
-    .time_text{
+
+    .circle_animation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        animation: circle 10s linear;
+        transition: all 6s linear;
+        background: conic-gradient(darkgreen 0deg, #555 0deg);
+        z-index: 2;
+    }
+
+    .circle_animation::after{
+        position: absolute;
+        content: '';
+        width: 230px;
+        height: 230px;
+        background-color: #333;
+        border-radius: 50%;
+    }
+
+    .time_text {
         font-size: 55px;
         color: whitesmoke;
+        z-index: 2;
+    }
+}
+
+@keyframes circle {
+    from {
+        transition: all 6s linear;
+        background: conic-gradient(darkgreen 0deg, black 0deg);
+    }
+
+    to {
+        transition: all 6s linear;
+        background: conic-gradient(darkgreen 180deg, black 0deg);
     }
 }
