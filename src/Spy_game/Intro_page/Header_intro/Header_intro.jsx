@@ -9,7 +9,7 @@ import Rules_comp from './Header_components/Rules/Rules';
 import './Header_intro.scss';
 import './Header_intro_media.scss';
 
-export default function Header_Intro({ showInfo,setShowInfo,showLanguages,setShowLanguages,showRate,setShowRate,showRules,setShowRules }) {
+export default function Header_Intro({ showInfo,setShowInfo,showLanguages,setShowLanguages,showRate,setShowRate,showRules,setShowRules, lang, setLang }) {
 
 
 
@@ -68,6 +68,8 @@ export default function Header_Intro({ showInfo,setShowInfo,showLanguages,setSho
                 <Languages_comp
                     showLanguages={showLanguages}
                     setShowLanguages={setShowLanguages}
+                    lang={lang}
+                    setLang={setLang}
                 />
             </div>
         </>

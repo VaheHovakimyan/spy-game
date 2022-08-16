@@ -6,11 +6,7 @@ import './Intro_page_media.scss';
 
 export default function Intro_page({ lang, setLang, showInfo,setShowInfo,showLanguages,setShowLanguages,showRate,setShowRate,showRules,setShowRules }) {
 
-    {/* <button className='intro_button' onClick={() => {setLang(0)}}>Hayeren</button>
-
-                <button className='intro_button' onClick={() => {setLang(1)}}>Ruseren</button>
-
-                <button className='intro_button' onClick={() => {setLang(2)}}>Angleren</button> */}
+    
 
     console.log(lang);
 
