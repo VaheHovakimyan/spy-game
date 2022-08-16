@@ -31,9 +31,6 @@ export default function Languages_comp({ showLanguages,setShowLanguages,lang,set
 
                         <div onClick={() => { setLang(2) }}> <img src={English_language} className='language_button' alt="English_language" /> </div>
                     </div>
-                    <div>
-                        {lang === 0 ? "Ավարտ" : lang === 1 ? "Конец" : "End"}
-                    </div>
                 </div>
 
 
