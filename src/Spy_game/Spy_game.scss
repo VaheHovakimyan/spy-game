@@ -37,8 +37,6 @@
 
 
 
-
-
 /////////////////////////////////////////////
 
 
@@ -58,11 +56,12 @@ body {
         justify-content: center;
 
         .check_failed {
-            width: 600px;
-            height: 400px;
+            width: 60vw;
+            height: 20vh;
+            display: none;
             background-color: black;
-            margin: 0;
-            transition: ease-out 0.6s;
+            // margin: 0;
+            transition: all 0.6s ease-out;
             position: absolute;
             top: -70%;
             @extend %check_failed;
@@ -75,11 +74,12 @@ body {
         justify-content: center;
 
         .check_failed {
-            width: 600px;
-            height: 400px;
+            width: 60vw;
+            height: 60vh;
+            display: block;
             background-color: black;
-            margin: 0;
-            transition: ease-out 0.6s;
+            // margin-top: 300px;
+            transition: all 0.6s ease-out;
             position: absolute;
             top: 15%;
             @extend %check_failed;
@@ -206,61 +206,6 @@ body {
                     border-radius: 0px;
                     visibility: hidden;
                 }
-            }
-        }
-
-        .block_div {
-            display: flex;
-            justify-content: space-evenly;
-            text-align: center;
-            align-items: center;
-            font-size: 27px;
-            font-family: cursive;
-
-            .count_minus {
-                width: 30px;
-                height: 30px;
-                margin: 0;
-                background-image: url("./Start_page_spy_game/Start_page_Spy_game_main/Spy_game_images/minus_icon.png");
-                background-size: cover;
-                cursor: pointer;
-                border: 0;
-                background-color: rgba(0, 0, 0, 0);
-            }
-
-            .count_minus_opacity {
-                width: 30px;
-                height: 30px;
-                margin: 0;
-                background-image: url("./Start_page_spy_game/Start_page_Spy_game_main/Spy_game_images/minus_icon.png");
-                background-size: cover;
-                cursor: pointer;
-                border: 0;
-                background-color: rgba(0, 0, 0, 0);
-                opacity: 0.5;
-            }
-
-            .count_plus {
-                width: 30px;
-                height: 30px;
-                margin: 0;
-                background-image: url("./Start_page_spy_game/Start_page_Spy_game_main/Spy_game_images/plus_icon.png");
-                background-size: cover;
-                cursor: pointer;
-                border: 0;
-                background-color: rgba(0, 0, 0, 0);
-            }
-
-            .count_plus_opacity {
-                width: 30px;
-                height: 30px;
-                margin: 0;
-                background-image: url("./Start_page_spy_game/Start_page_Spy_game_main/Spy_game_images/plus_icon.png");
-                background-size: cover;
-                cursor: pointer;
-                border: 0;
-                background-color: rgba(0, 0, 0, 0);
-                opacity: 0.5;
             }
         }
 

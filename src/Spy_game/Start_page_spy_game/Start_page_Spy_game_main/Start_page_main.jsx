@@ -3,7 +3,8 @@ import Participians from "./Start_page_spy_game_components/Participians";
 import Spy_count from "./Start_page_spy_game_components/Spy_count";
 import Time from "./Start_page_spy_game_components/Time";
 import Warning from ".//Start_page_spy_game_components/Warning.jsx";
-import Back from '../../Categories/Categories_images_and_icons/Back.png'
+import Back from '../../Categories/Categories_images_and_icons/Back.png';
+import '../../Spy_game.scss';
 import './Start_page_main.scss';
 
 
@@ -24,6 +25,7 @@ export default function Start_page({ lang,setLang,categories,setCategories,parti
                 <Warning
                     warning={warning}
                     setWarning={setWarning}
+                    lang={lang}
                 />
 
                 <Participians
@@ -49,16 +51,16 @@ export default function Start_page({ lang,setLang,categories,setCategories,parti
 
 
 
-                <button className='button' onClick={(e) => {
-                    e.preventDefault();
-                    setPage(participians - countSpy);
-                    setCycle(0);
+                <button className='button' onClick={(evt) => {
+                    evt.preventDefault();
                     if (participians - countSpy < 2) {
                         setWarning(!warning);
                     }
-                }}><Link to="/word" className="link"><div className="link_text"> {lang === 0 ? "Գնացինք" : lang === 1 ? "Пошли" : "Let's go"} </div></Link></button>
+                    setPage(participians - countSpy);
+                    setCycle(0);
+                }}><div className="link_text"><Link to="/word" className="link"> {lang === 0 ? "Գնացինք" : lang === 1 ? "Пошли" : "Let's go"} </Link></div></button>
 
-                <div className='ad'>.</div>
+                {/* <div className='ad'>.</div> */}
             </div>
         </>
     )
