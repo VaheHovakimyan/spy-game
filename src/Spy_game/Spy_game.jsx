@@ -27,6 +27,7 @@ export default function Spy_game() {
     const [time,setTime] = useState(1);
     const [time_value,setTime_value] = useState();
     const [time_animation,setTime_animation] = useState(0);
+    const [deg, setDeg] = useState(0);
     const [page,setPage] = useState(0);
     const [warning,setWarning] = useState(true);
 
@@ -132,6 +133,8 @@ export default function Spy_game() {
                                 setTime_bool={setTime_bool}
                                 time_animation={time_animation}
                                 setTime_animation={setTime_animation}
+                                deg={deg}
+                                setDeg={setDeg}
                             />
                         } />
                         <Route path='*' element={<NotFound />} />
