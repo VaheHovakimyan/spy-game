@@ -69,10 +69,6 @@
 
 @include Ipad_pro {
     .intro_page_main {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
         width: 50vw;
         height: 100vh;
 
@@ -93,7 +89,6 @@
                     border-radius: 50%;
                     margin: 0;
                     padding: 20px 20px 20px 0px;
-                    cursor: pointer;
 
                     .close_icon {
                         width: 40px;
@@ -101,7 +96,6 @@
                         margin: 0;
                         padding: 0;
                         background-color: white;
-                        border-radius: 50%;
                     }
                 }
             }
@@ -133,19 +127,12 @@
         }
 
         .intro_image_title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             margin-bottom: 100px;
 
             .intro_page_title {
                 width: 70vw;
                 height: 7vh;
-                user-select: none;
                 font-size: 45px;
-                color: white;
-                font-family: cursive;
             }
 
             .intro_page_image_main {
@@ -158,34 +145,15 @@
         .intro_button {
             width: 25vw;
             height: 10vh;
-            user-select: none;
             font-size: 43px;
-            font-family: cursive;
-            background-color: rgb(25, 25, 25);
             border: 2px solid white;
             border-radius: 30px;
-            cursor: pointer;
-
-            .intro_page_link {
-                text-decoration: none;
-                color: white;
-            }
-        }
-
-        .ad {
-            width: 50vw;
-            height: 10vh;
-            margin-top: 10px;
         }
     }
 }
 
 @include Laptop {
     .intro_page_main {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
         width: 50vw;
         height: 100vh;
 
@@ -195,9 +163,6 @@
             margin-top: 67.7vh;
 
             .close_div {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
                 width: 65vw;
 
                 .close_button {
@@ -220,10 +185,6 @@
             }
 
             .rate_div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 height: 60vh;
                 width: 70vw;
 
@@ -246,43 +207,20 @@
         }
 
         .intro_image_title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: 100px;
-
-
             .intro_page_title {
                 width: 65vw;
                 height: 7vh;
                 user-select: none;
                 font-size: 45px;
-                color: white;
-                font-family: cursive;
-            }
-
-            .intro_page_image_main {
-                width: 150px;
-                height: 150px;
             }
         }
 
         .intro_button {
             width: 25vw;
             height: 10vh;
-            user-select: none;
             font-size: 43px;
-            font-family: cursive;
-            background-color: rgb(25, 25, 25);
             border: 2px solid white;
             border-radius: 30px;
-            cursor: pointer;
-
-            .intro_page_link {
-                text-decoration: none;
-                color: white;
-            }
         }
 
         .ad {
@@ -297,10 +235,6 @@
 
 @include Bg_mobile {
     .intro_page_main {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
         width: 50vw;
         height: 100vh;
         border: 0px;
@@ -312,9 +246,6 @@
             border-radius: 0px;
 
             .close_div {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
                 width: 100vw;
 
                 .close_button {
@@ -337,10 +268,6 @@
             }
 
             .rate_div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 height: 60vh;
                 width: 100vw;
 
@@ -363,19 +290,11 @@
         }
 
         .intro_image_title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: 100px;
 
             .intro_page_title {
                 width: 100vw;
                 height: 7vh;
-                user-select: none;
                 font-size: 35px;
-                color: white;
-                font-family: cursive;
             }
 
             .intro_page_image_main {
@@ -388,18 +307,9 @@
         .intro_button {
             width: 30vw;
             height: 15vh;
-            user-select: none;
             font-size: 37px;
-            font-family: cursive;
-            background-color: rgb(25, 25, 25);
             border: 2px solid white;
             border-radius: 30px;
-            cursor: pointer;
-
-            .intro_page_link {
-                text-decoration: none;
-                color: white;
-            }
         }
 
         .ad {
@@ -414,10 +324,6 @@
 
 @include St_mobile {
     .intro_page_main {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
         width: 50vw;
         height: 100vh;
 
@@ -428,10 +334,6 @@
             border-radius: 0px;
 
             .rate_div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 height: 60vh;
                 width: 100vw;
 
@@ -454,49 +356,25 @@
         }
 
         .intro_image_title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             margin-bottom: 90px;
 
             .intro_page_title {
                 width: 100vw;
                 height: 8vh;
-                user-select: none;
                 font-size: 33px;
-                color: white;
-                font-family: cursive;
             }
-
-            .intro_page_image_main {
-                width: 120px;
-                height: 120px;
-            }
-
         }
 
         .intro_button {
             width: 50vw;
             height: 12vh;
-            user-select: none;
             font-size: 34px;
-            font-family: cursive;
-            background-color: rgb(25, 25, 25);
             border: 2px solid white;
             border-radius: 30px;
-            cursor: pointer;
-
-            .intro_page_link {
-                text-decoration: none;
-                color: white;
-            }
         }
 
         .ad {
             width: 100vw;
-            height: 10vh;
-            margin-top: 10px;
         }
     }
 }
@@ -504,10 +382,6 @@
 
 @include Sm_mobile {
     .intro_page_main {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
         width: 50vw;
         height: 100vh;
 
@@ -517,13 +391,14 @@
             margin-top: 84vh;
             border-radius: 0px;
 
-            .info_div{
+            .info_div {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 height: 60vh;
-                .info_elem{
+
+                .info_elem {
                     font-size: 13.2px;
                     margin: 16px;
                     font-family: Lato, sans-serif;
@@ -532,10 +407,6 @@
             }
 
             .rate_div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 height: 60vh;
                 width: 100vw;
 
@@ -555,52 +426,31 @@
                 margin: 8px;
                 font-size: 12px;
             }
+
+            .languages_info_div {
+                .languages_buttons {
+                    .language_button {
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+            }
         }
 
         .intro_image_title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: 90px;
-
             .intro_page_title {
                 width: 100vw;
                 height: 8vh;
-                user-select: none;
                 font-size: 33px;
-                color: white;
-                font-family: cursive;
             }
-
-            .intro_page_image_main {
-                width: 120px;
-                height: 120px;
-            }
-
         }
 
         .intro_button {
             width: 50vw;
             height: 12vh;
-            user-select: none;
             font-size: 34px;
-            font-family: cursive;
-            background-color: rgb(25, 25, 25);
             border: 2px solid white;
             border-radius: 30px;
-            cursor: pointer;
-
-            .intro_page_link {
-                text-decoration: none;
-                color: white;
-            }
-        }
-
-        .ad {
-            width: 100vw;
-            height: 10vh;
-            margin-top: 10px;
         }
     }
 }

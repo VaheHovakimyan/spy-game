@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import './Words_and_spy.scss';
 
 
-
 export default function Words_and_Spy({ participians,ready_array,word_index,setWord_index,index,setIndex,lang }) {
 
 

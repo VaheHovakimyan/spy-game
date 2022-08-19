@@ -1,5 +1,6 @@
 import '../Start_page_main.scss';
 
+
 export default function Warning({ warning,setWarning,lang }) {
 
 

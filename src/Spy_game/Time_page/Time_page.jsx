@@ -31,7 +31,7 @@ export default function Time_page({ participians,word_index,setWord_index,time_v
                 <div className="circle_animation_div">
                     <div className="circle_animation" style={{
                         background: `conic-gradient(rgb(230, 145, 67) ${deg}deg, gray 0deg)`,
-                        transition: `all ${time_animation}s linear;`
+                        transition: `all ${time_animation}s linear`
                     }}>
 
                         <h1 className="time_text">

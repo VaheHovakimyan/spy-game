@@ -6,6 +6,7 @@ import Warning from ".//Start_page_spy_game_components/Warning.jsx";
 import Back from '../../Categories/Categories_images_and_icons/Back.png';
 import '../../Spy_game.scss';
 import './Start_page_main.scss';
+import './Start_page_main_media.scss';
 
 
 export default function Start_page({ lang,setLang,categories,setCategories,participians,setParticipians,countSpy,setCountSpy,time,setTime,page,setPage,warning,setWarning,word_index,setWord_index,ready_array,index,setIndex,time_value,setTime_value,cycle,setCycle }) {
@@ -50,8 +51,7 @@ export default function Start_page({ lang,setLang,categories,setCategories,parti
                 />
 
 
-
-                <button className='button' onClick={(evt) => {
+                <button className='button_lets_go' onClick={(evt) => {
                     evt.preventDefault();
                     if (participians - countSpy < 2) {
                         setWarning(!warning);
