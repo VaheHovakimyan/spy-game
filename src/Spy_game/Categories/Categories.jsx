@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Back from './Categories_images_and_icons/Back.png';
-import './Categories_media.scss'
 import './Categories.scss';
+import './Categories_media.scss';
 
 
 export default function Categories({ lang,setLang,categories,setCategories }) {
