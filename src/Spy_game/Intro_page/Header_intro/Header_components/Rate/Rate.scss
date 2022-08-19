@@ -1,0 +1,12 @@
+.rate_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 40vw;
+    .rate_text{
+        width: 30vw;
+        font-size: 20px;
+    }
+}

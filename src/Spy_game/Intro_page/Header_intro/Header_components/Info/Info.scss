@@ -1,6 +1,13 @@
-.info_elem{
-    font-family: cursive;
-    font-size: 20px;
-    margin: 16px;
-    color: whitesmoke;
+.info_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    .info_elem{
+        font-size: 20px;
+        margin: 16px;
+        font-family: Lato, sans-serif;
+        color: whitesmoke;
+    }
 }

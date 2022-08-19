@@ -19,7 +19,7 @@ export default function Start_page({ lang,setLang,categories,setCategories,parti
             <div className="Start_page_div">
 
                 <div className='back_to_categories_div'>
-                    <Link to="/categories"><img src={Back} alt="Back_icon" className='back_to_categories' /></Link>
+                    <Link to="/categories"><img src={Back} alt="Back_icon" className='back_to_categories' /><div></div></Link>
                 </div>
 
                 <Warning
@@ -58,9 +58,9 @@ export default function Start_page({ lang,setLang,categories,setCategories,parti
                     }
                     setPage(participians - countSpy);
                     setCycle(0);
-                }}><div className="link_text"><Link to="/word" className="link"> {lang === 0 ? "Գնացինք" : lang === 1 ? "Пошли" : "Let's go"} </Link></div></button>
+                }}><Link to="/word" className="link"><div className="link_text"> {lang === 0 ? "Գնացինք" : lang === 1 ? "Пошли" : "Let's go"} </div></Link></button>
 
-                {/* <div className='ad'>.</div> */}
+                <div className='ad'></div>
             </div>
         </>
     )

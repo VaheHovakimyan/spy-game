@@ -11,25 +11,25 @@
 }
 
 
-
-
 /////////////////////////////////// Style ///////////////////////////////////
 
 
 
 .Start_page_div {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 60vh;
+    height: 100vh;
     color: aliceblue;
 
     .back_to_categories_div {
-        width: 8vw;
-        padding-top: 15px;
+        display: flex;
+        align-items: flex-start;
+        width: 40vw;
+        padding-top: 25px;
+        padding-left: 50px;
         text-decoration-line: none;
-        background-color: darkgreen;
 
         .back_to_categories {
             width: 50px;
@@ -72,9 +72,9 @@
 
 
 
-    // .ad {
-    //     width: 40;
-    //     height: 400px;
-    //     background-color: purple;
-    // }
+    .ad {
+        width: 40vw;
+        height: 8vh;
+        // background-color: rgba(0, 0, 0, 0.5);
+    }
 }

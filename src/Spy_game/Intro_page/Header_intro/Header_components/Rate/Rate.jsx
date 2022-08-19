@@ -1,8 +1,8 @@
 import Close from '../../../Intro_page_icons_and_image/Close.png';
 import '../../Header_intro.scss';
-// import './Rate.scss';
+import './Rate.scss';
 
-export default function Rate_comp({ showRate, setShowRate }) {
+export default function Rate_comp({ showRate, setShowRate, lang }) {
 
 
     return (
@@ -18,8 +18,8 @@ export default function Rate_comp({ showRate, setShowRate }) {
                 </div>
 
 
-                <div>
-                    Gnahateq xaxy
+                <div className='rate_div'>
+                    <span className='rate_text'> {lang === 0 ? "Խաղի այս հատվածը օգտագորվելու է երբ խաղը կտեղադրվի Google Play-ում" : lang === 1 ? "Эта часть игры будет использоваться при загрузке игры в Google Play" : "This part of the game will be used when the game is uploaded to Google Play"} </span>
                 </div>
             </div>
         </>

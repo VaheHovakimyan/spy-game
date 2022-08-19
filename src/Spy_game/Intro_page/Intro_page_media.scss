@@ -11,12 +11,19 @@
         align-items: center;
         flex-direction: column;
         height: 100vh;
+
+        .info {
+            width: 40vw;
+            height: 80vh;
+        }
+
         .intro_image_title {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin-bottom: 60px;
+
             .intro_page_title {
                 width: 40vw;
                 height: 7vh;
@@ -25,6 +32,7 @@
                 color: white;
                 font-family: cursive;
             }
+
             .intro_page_image_main {
                 width: 100px;
                 height: 100px;
@@ -42,6 +50,7 @@
             border: 1px solid white;
             border-radius: 20px;
             cursor: pointer;
+
             .intro_page_link {
                 text-decoration: none;
                 color: white;
@@ -66,12 +75,70 @@
         flex-direction: column;
         width: 50vw;
         height: 100vh;
+
+        .info {
+            width: 70vw;
+            height: 65vh;
+            margin-top: 50.7vh;
+
+            .close_div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 70vw;
+
+                .close_button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin: 0;
+                    padding: 20px 20px 20px 0px;
+                    cursor: pointer;
+
+                    .close_icon {
+                        width: 40px;
+                        height: 40px;
+                        margin: 0;
+                        padding: 0;
+                        background-color: white;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .rate_div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 60vh;
+                width: 70vw;
+
+                .rate_text {
+                    width: 50vw;
+                    font-size: 20px;
+                }
+            }
+
+            .rules_title {
+                margin-top: 0px;
+                margin-bottom: 25px;
+                font-size: 28px;
+            }
+
+            .rules_text {
+                margin: 8px;
+                font-size: 23px;
+            }
+        }
+
         .intro_image_title {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin-bottom: 100px;
+
             .intro_page_title {
                 width: 70vw;
                 height: 7vh;
@@ -80,6 +147,7 @@
                 color: white;
                 font-family: cursive;
             }
+
             .intro_page_image_main {
                 width: 150px;
                 height: 150px;
@@ -97,6 +165,7 @@
             border: 2px solid white;
             border-radius: 30px;
             cursor: pointer;
+
             .intro_page_link {
                 text-decoration: none;
                 color: white;
@@ -119,12 +188,71 @@
         flex-direction: column;
         width: 50vw;
         height: 100vh;
+
+        .info {
+            width: 65vw;
+            height: 85vh;
+            margin-top: 67.7vh;
+
+            .close_div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 65vw;
+
+                .close_button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin: 0;
+                    padding: 20px 20px 20px 0px;
+                    cursor: pointer;
+
+                    .close_icon {
+                        width: 40px;
+                        height: 40px;
+                        margin: 0;
+                        padding: 0;
+                        background-color: white;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .rate_div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 60vh;
+                width: 70vw;
+
+                .rate_text {
+                    width: 50vw;
+                    font-size: 25px;
+                }
+            }
+
+            .rules_title {
+                margin-top: 0px;
+                margin-bottom: 25px;
+                font-size: 28px;
+            }
+
+            .rules_text {
+                margin: 8px;
+                font-size: 20px;
+            }
+        }
+
         .intro_image_title {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin-bottom: 100px;
+
+
             .intro_page_title {
                 width: 65vw;
                 height: 7vh;
@@ -133,11 +261,11 @@
                 color: white;
                 font-family: cursive;
             }
+
             .intro_page_image_main {
                 width: 150px;
                 height: 150px;
             }
-
         }
 
         .intro_button {
@@ -150,6 +278,7 @@
             border: 2px solid white;
             border-radius: 30px;
             cursor: pointer;
+
             .intro_page_link {
                 text-decoration: none;
                 color: white;
@@ -164,6 +293,8 @@
     }
 }
 
+
+
 @include Bg_mobile {
     .intro_page_main {
         display: flex;
@@ -172,12 +303,72 @@
         flex-direction: column;
         width: 50vw;
         height: 100vh;
+        border: 0px;
+
+        .info {
+            width: 100vw;
+            height: 100vh;
+            margin-top: 83vh;
+            border-radius: 0px;
+
+            .close_div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100vw;
+
+                .close_button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin: 0;
+                    padding: 20px 20px 20px 0px;
+                    cursor: pointer;
+
+                    .close_icon {
+                        width: 40px;
+                        height: 40px;
+                        margin: 0;
+                        padding: 0;
+                        background-color: white;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .rate_div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 60vh;
+                width: 100vw;
+
+                .rate_text {
+                    width: 80vw;
+                    font-size: 27px;
+                }
+            }
+
+            .rules_title {
+                margin-top: 0px;
+                margin-bottom: 25px;
+                font-size: 28px;
+            }
+
+            .rules_text {
+                margin: 8px;
+                font-size: 18px;
+            }
+        }
+
         .intro_image_title {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin-bottom: 100px;
+
             .intro_page_title {
                 width: 100vw;
                 height: 7vh;
@@ -186,6 +377,7 @@
                 color: white;
                 font-family: cursive;
             }
+
             .intro_page_image_main {
                 width: 120px;
                 height: 120px;
@@ -203,6 +395,7 @@
             border: 2px solid white;
             border-radius: 30px;
             cursor: pointer;
+
             .intro_page_link {
                 text-decoration: none;
                 color: white;
@@ -217,6 +410,8 @@
     }
 }
 
+
+
 @include St_mobile {
     .intro_page_main {
         display: flex;
@@ -225,12 +420,46 @@
         flex-direction: column;
         width: 50vw;
         height: 100vh;
+
+        .info {
+            width: 100vw;
+            height: 100vh;
+            margin-top: 84vh;
+            border-radius: 0px;
+
+            .rate_div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 60vh;
+                width: 100vw;
+
+                .rate_text {
+                    width: 80vw;
+                    font-size: 27px;
+                }
+            }
+
+            .rules_title {
+                margin-top: 0px;
+                margin-bottom: 25px;
+                font-size: 28px;
+            }
+
+            .rules_text {
+                margin: 8px;
+                font-size: 14px;
+            }
+        }
+
         .intro_image_title {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin-bottom: 90px;
+
             .intro_page_title {
                 width: 100vw;
                 height: 8vh;
@@ -239,6 +468,7 @@
                 color: white;
                 font-family: cursive;
             }
+
             .intro_page_image_main {
                 width: 120px;
                 height: 120px;
@@ -256,6 +486,111 @@
             border: 2px solid white;
             border-radius: 30px;
             cursor: pointer;
+
+            .intro_page_link {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .ad {
+            width: 100vw;
+            height: 10vh;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+@include Sm_mobile {
+    .intro_page_main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw;
+        height: 100vh;
+
+        .info {
+            width: 100vw;
+            height: 100vh;
+            margin-top: 84vh;
+            border-radius: 0px;
+
+            .info_div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 60vh;
+                .info_elem{
+                    font-size: 13.2px;
+                    margin: 16px;
+                    font-family: Lato, sans-serif;
+                    color: whitesmoke;
+                }
+            }
+
+            .rate_div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 60vh;
+                width: 100vw;
+
+                .rate_text {
+                    width: 80vw;
+                    font-size: 23px;
+                }
+            }
+
+            .rules_title {
+                margin-top: 0px;
+                margin-bottom: 25px;
+                font-size: 24px;
+            }
+
+            .rules_text {
+                margin: 8px;
+                font-size: 12px;
+            }
+        }
+
+        .intro_image_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 90px;
+
+            .intro_page_title {
+                width: 100vw;
+                height: 8vh;
+                user-select: none;
+                font-size: 33px;
+                color: white;
+                font-family: cursive;
+            }
+
+            .intro_page_image_main {
+                width: 120px;
+                height: 120px;
+            }
+
+        }
+
+        .intro_button {
+            width: 50vw;
+            height: 12vh;
+            user-select: none;
+            font-size: 34px;
+            font-family: cursive;
+            background-color: rgb(25, 25, 25);
+            border: 2px solid white;
+            border-radius: 30px;
+            cursor: pointer;
+
             .intro_page_link {
                 text-decoration: none;
                 color: white;

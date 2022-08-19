@@ -14,7 +14,7 @@
         // background: conic-gradient(darkgreen 198deg, gray 0deg);
         border-radius: 50%;
         // animation: circle 6s linear;
-        // transition: all 6s linear;
+        // transition: all 60s linear;
         z-index: 2;
     }
 
@@ -23,7 +23,8 @@
         content: '';
         width: 230px;
         height: 230px;
-        background-color: #333;
+        // background-color: rgb(230, 145, 67);
+        background-color: rgb(35, 35, 35);
         border-radius: 50%;
     }
 
@@ -33,16 +34,3 @@
         z-index: 2;
     }
 }
-
-// @keyframes circle {
-
-//     from {
-//         transition: all 6s linear;
-//         background: conic-gradient(darkgreen 0deg, black 0deg);
-//     }
-
-//     to {
-//         transition: all 6s linear;
-//         background: conic-gradient(darkgreen 180deg, black 0deg);
-//     }
-// }

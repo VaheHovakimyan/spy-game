@@ -28,6 +28,7 @@ export default function Header_Intro({ showInfo,setShowInfo,showLanguages,setSho
                 <Info_comp
                     showInfo={showInfo}
                     setShowInfo={setShowInfo}
+                    lang={lang}
                 />
 
 
@@ -41,6 +42,7 @@ export default function Header_Intro({ showInfo,setShowInfo,showLanguages,setSho
                 <Rules_comp
                     showRules={showRules}
                     setShowRules={setShowRules}
+                    lang={lang}
                 />
 
 
@@ -55,6 +57,7 @@ export default function Header_Intro({ showInfo,setShowInfo,showLanguages,setSho
                 <Rate_comp
                     showRate={showRate}
                     setShowRate={setShowRate}
+                    lang={lang}
                 />
 
 

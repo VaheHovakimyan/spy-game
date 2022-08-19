@@ -1,14 +1,14 @@
-//Templates 
+///////////////////////////// Templates /////////////////////////////
 %Categories_image {
     width: 150px;
     height: 150px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    // border-radius: 8px;
 }
 
-//Style and position blocks
+///////////////////// Style and position blocks /////////////////////
+
 .categories {
     display: flex;
     justify-content: space-between;
@@ -73,7 +73,7 @@
                 background-color: rgba(0, 0, 0, 0.5);
                 .opacity_black{
                     .categories_text{
-                        font-size: 16px;
+                        font-size: 15px;
                      }
                 }
             }
