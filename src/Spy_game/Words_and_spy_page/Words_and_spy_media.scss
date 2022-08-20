@@ -1,0 +1,113 @@
+//Imports
+
+@import '../Media_SCSS/Variables.scss';
+@import '../Media_SCSS/Breakpoints.scss';
+
+
+//Media 
+
+@include desktop {
+    .words_and_spy {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 60vh;
+        .word_text {
+            font-size: 20px;
+            color: whitesmoke;
+            .spy_text{
+                color: rgb(211, 34, 34);
+            }
+            .next_player_text {
+                font-size: 25px;
+                color: whitesmoke;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+@include Ipad_pro {
+    .words_and_spy {
+        height: 60vh;
+        .word_text {
+            font-size: 20px;
+            .next_player_text {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+@include Laptop {
+    .words_and_spy {
+        height: 60vh;
+        .word_text {
+            font-size: 20px;
+            .next_player_text {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+@include Bg_mobile {
+    .words_and_spy {
+        height: 60vh;
+        .word_text {
+            font-size: 16px;
+            color: whitesmoke;
+            .spy_text{
+                color: rgb(211, 34, 34);
+            }
+            .next_player_text {
+                font-size: 25px;
+                color: whitesmoke;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+@include St_mobile {
+    .words_and_spy {
+        height: 60vh;
+        .word_text {
+            font-size: 13px;
+            color: whitesmoke;
+            .spy_text{
+                color: rgb(211, 34, 34);
+            }
+            .next_player_text {
+                font-size: 25px;
+                color: whitesmoke;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+@include Sm_mobile {
+    .words_and_spy {
+        height: 60vh;
+        .word_text {
+            font-size: 12px;
+            color: whitesmoke;
+            .spy_text{
+                color: rgb(211, 34, 34);
+            }
+            .next_player_text {
+                font-size: 22px;
+                color: whitesmoke;
+            }
+        }
+    }
+}

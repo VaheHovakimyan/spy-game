@@ -25,8 +25,6 @@ export default function Time_page({ participians,word_index,setWord_index,time_v
     setDeg((360 / time_animation) * (time_animation - time_value));
 
 
-    //${(time_animation - time_value) * 3.6}
-
     return (
         <>
             <div className="time_page">

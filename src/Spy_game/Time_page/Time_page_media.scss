@@ -3,22 +3,8 @@
 @import '../Media_SCSS/Variables.scss';
 @import '../Media_SCSS/Breakpoints.scss';
 
+
 //Media 
-
-// .button_time {
-//     width: 210px;
-//     height: 80px;
-//     font-size: 30px;
-
-//     .link {
-//         width: 100%;
-//         height: 80px;
-
-//         .link_text {
-//             height: 50px;
-//         }
-//     }
-// }
 
 @include desktop {
     .time_page {
