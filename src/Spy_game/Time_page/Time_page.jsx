@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import './Time_page.scss';
+import './Time_page_media.scss';
+
 
 export default function Time_page({ participians,word_index,setWord_index,time_value,setTime_value,setWarning,setIndex,time_current_value,setCycle,time_bool,setTime_bool,lang,time,time_animation,setTime_animation,deg,setDeg }) {
 
@@ -40,7 +42,7 @@ export default function Time_page({ participians,word_index,setWord_index,time_v
                     </div>
                 </div>
                 <button
-                    className="button"
+                    className="button_time"
                     onClick={(e) => {
                         e.preventDefault();
                         setWarning(true);
