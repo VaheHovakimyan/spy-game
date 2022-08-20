@@ -27,7 +27,7 @@
     }
 }
 
-/////////////////////////////////////////////////////////////////////////////////
+////////////////////////////
 
 @include Ipad_pro {
     .words_and_spy {
@@ -41,7 +41,7 @@
     }
 }
 
-/////////////////////////////////////////////////////////////////////////////////
+////////////////////////////
 
 @include Laptop {
     .words_and_spy {
@@ -55,58 +55,43 @@
     }
 }
 
-/////////////////////////////////////////////////////////////////////////////////
+////////////////////////////
 
 @include Bg_mobile {
     .words_and_spy {
         height: 60vh;
         .word_text {
             font-size: 16px;
-            color: whitesmoke;
-            .spy_text{
-                color: rgb(211, 34, 34);
-            }
             .next_player_text {
                 font-size: 25px;
-                color: whitesmoke;
             }
         }
     }
 }
 
-/////////////////////////////////////////////////////////////////////////////////
+////////////////////////////
 
 @include St_mobile {
     .words_and_spy {
         height: 60vh;
         .word_text {
             font-size: 13px;
-            color: whitesmoke;
-            .spy_text{
-                color: rgb(211, 34, 34);
-            }
             .next_player_text {
                 font-size: 25px;
-                color: whitesmoke;
             }
         }
     }
 }
 
-/////////////////////////////////////////////////////////////////////////////////
+////////////////////////////
 
 @include Sm_mobile {
     .words_and_spy {
         height: 60vh;
         .word_text {
             font-size: 12px;
-            color: whitesmoke;
-            .spy_text{
-                color: rgb(211, 34, 34);
-            }
             .next_player_text {
                 font-size: 22px;
-                color: whitesmoke;
             }
         }
     }
