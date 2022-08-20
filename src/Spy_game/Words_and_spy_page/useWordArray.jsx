@@ -27,7 +27,8 @@ import { useEffect } from 'react';
 export default function (participians,countSpy,done_array,setDone_array,cycle,lang,categories) {
 
 
-    let start_array = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+    let start_array = [1,1,1,1,1,1,1,1,1,1,
+                       1,1,1,1,1,1,1,1,1,1];
     start_array.length = participians;
     let spy_ran1 = Math.floor(Math.random() * participians);
     let spy_ran2;
@@ -35,7 +36,7 @@ export default function (participians,countSpy,done_array,setDone_array,cycle,la
     let spy_ran4;
     let arr = [spy_ran1];
     let finish_array;
-    let lrtes_text = <span>{lang === 0 ? "Լրտես" : lang === 1 ? "Шпион" : "Spy"}</span>
+    let lrtes_text = <span>{lang === 0 ? <span className='spy_text'>Դուք լրտես եք</span> : lang === 1 ? <span className='spy_text'>Вы шпион</span> : <span className='spy_text'>You are a spy</span> } </span>
     let data;
 
 

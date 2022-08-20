@@ -20,7 +20,7 @@ export default function Words_and_Spy({ participians,ready_array,word_index,setW
 
             <div className='words_and_spy'>
 
-                <div className='test'>
+                <div className='text'>
                     <h1 className='word_text'>{word}</h1>
                 </div>
 
