@@ -1,4 +1,5 @@
 //Imports
+
 @import '../Media_SCSS/Variables.scss';
 @import '../Media_SCSS/Breakpoints.scss';
 
@@ -89,6 +90,7 @@
                     border-radius: 50%;
                     margin: 0;
                     padding: 20px 20px 20px 0px;
+                    cursor: pointer;
 
                     .close_icon {
                         width: 40px;
@@ -166,19 +168,12 @@
                 width: 65vw;
 
                 .close_button {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    margin: 0;
                     padding: 20px 20px 20px 0px;
                     cursor: pointer;
 
                     .close_icon {
                         width: 40px;
                         height: 40px;
-                        margin: 0;
-                        padding: 0;
-                        background-color: white;
                         border-radius: 50%;
                     }
                 }
@@ -219,8 +214,6 @@
             width: 25vw;
             height: 10vh;
             font-size: 43px;
-            border: 2px solid white;
-            border-radius: 30px;
         }
 
         .ad {
@@ -249,19 +242,11 @@
                 width: 100vw;
 
                 .close_button {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    margin: 0;
                     padding: 20px 20px 20px 0px;
-                    cursor: pointer;
 
                     .close_icon {
                         width: 40px;
                         height: 40px;
-                        margin: 0;
-                        padding: 0;
-                        background-color: white;
                         border-radius: 50%;
                     }
                 }
@@ -308,8 +293,6 @@
             width: 30vw;
             height: 15vh;
             font-size: 37px;
-            border: 2px solid white;
-            border-radius: 30px;
         }
 
         .ad {
@@ -369,8 +352,6 @@
             width: 50vw;
             height: 12vh;
             font-size: 34px;
-            border: 2px solid white;
-            border-radius: 30px;
         }
 
         .ad {
@@ -449,8 +430,6 @@
             width: 50vw;
             height: 12vh;
             font-size: 34px;
-            border: 2px solid white;
-            border-radius: 30px;
         }
     }
 }

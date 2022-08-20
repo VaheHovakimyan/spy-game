@@ -41,7 +41,6 @@
 
 
 body {
-    // background-image: url("./Intro_page/Intro_page_icons_and_image/Background.png");
     background-image: linear-gradient(360deg, rgb(46, 32, 13), rgb(35, 112, 54));
     background-size: cover;
     // background-repeat: no-repeat;
@@ -83,8 +82,6 @@ body {
             @extend %check_failed;
         }
     }
-
-
 
     .intro_main {
         display: flex;
