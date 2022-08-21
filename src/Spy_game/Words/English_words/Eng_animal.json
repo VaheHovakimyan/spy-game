@@ -146,5 +146,45 @@
     {
         "key": 36,
         "word": "panda"
+    },
+    {
+        "key": 37,
+        "word": "sparrow"
+    },
+    {
+        "key": 38,
+        "word": "koala"
+    },
+    {
+        "key": 39,
+        "word": "shark"
+    },
+    {
+        "key": 40,
+        "word": "whale"
+    },
+    {
+        "key": 41,
+        "word": "octopus"
+    },
+    {
+        "key": 42,
+        "word": "spider"
+    },
+    {
+        "key": 43,
+        "word": "dolphin"
+    },
+    {
+        "key": 44,
+        "word": "marten"
+    },
+    {
+        "key": 45,
+        "word": "vulture"
+    },
+    {
+        "key": 46,
+        "word": "rat"
     }
 ]
