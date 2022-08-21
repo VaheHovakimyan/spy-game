@@ -5,7 +5,7 @@ export default function NotFound(){
     return(
         <>
             <h1>
-                <Link to="/" element={<Spy_game />} > To home </Link>
+                <Link to="/" element={<Spy_game />} > {lang === 0 ? "Հետ գլխավոր էջ" : lang === 1 ? "Вернуться на главную страницу" : "To home page"} </Link>
             </h1>
         </>
     )

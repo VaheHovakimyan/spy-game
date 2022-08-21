@@ -14,7 +14,6 @@ export default function Words_and_Spy({ participians,ready_array,word_index,setW
     })
 
 
-
     return (
         <>
 
