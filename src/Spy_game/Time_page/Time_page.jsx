@@ -35,7 +35,12 @@ export default function Time_page({ participians,word_index,setWord_index,time_v
                     }}>
 
                         <h1 className="time_text">
-                            <span> <span>{minute < 10 ? "0" + minute : minute}</span> : {second < 10 ? "0" + second : second} </span>
+
+                            {time_value === 0 ?
+                                <span className="spy_win_text">{lang === 0 ? "Հաղթեց լրտեսը" : lang === 1 ? "Шпион выиграл" : "The spy won"}</span> :
+                                <span> <span>{minute < 10 ? "0" + minute : minute}</span> : <span>{second < 10 ? "0" + second : second}</span> </span>
+                            }
+
                         </h1>
                     </div>
                 </div>

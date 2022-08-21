@@ -28,5 +28,11 @@
         font-size: 55px;
         color: whitesmoke;
         z-index: 2;
+        .spy_win_text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
     }
 }
