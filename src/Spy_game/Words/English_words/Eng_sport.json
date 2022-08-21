@@ -1,14 +1,142 @@
 [
     {
         "key": 0,
-        "word": "refrigator"
+        "word": "boxing"
     },
     {
         "key": 1,
-        "word": "reactor"
+        "word": "karate"
     },
     {
         "key": 2,
-        "word": "stove"
+        "word": "biathlon"
+    },
+    {
+        "key": 3,
+        "word": "handball"
+    },
+    {
+        "key": 4,
+        "word": "soccer"
+    },
+    {
+        "key": 5,
+        "word": "basketball"
+    },
+    {
+        "key": 6,
+        "word": "hockey"
+    },
+    {
+        "key": 7,
+        "word": "weightlifting"
+    },
+    {
+        "key": 8,
+        "word": "american football"
+    },
+    {
+        "key": 9,
+        "word": "athletics"
+    },
+    {
+        "key": 10,
+        "word": "chess"
+    },
+    {
+        "key": 11,
+        "word": "triple jump"
+    },
+    {
+        "key": 12,
+        "word": "running"
+    },
+    {
+        "key": 13,
+        "word": "swimming"
+    },
+    {
+        "key": 14,
+        "word": "shooting"
+    },
+    {
+        "key": 15,
+        "word": "cycling"
+    },
+    {
+        "key": 16,
+        "word": "mountain climbing"
+    },
+    {
+        "key": 17,
+        "word": "acrobatics"
+    },
+    {
+        "key": 18,
+        "word": "arm wrestling"
+    },
+    {
+        "key": 19,
+        "word": "tennis"
+    },
+    {
+        "key": 20,
+        "word": "ping-pong"
+    },
+    {
+        "key": 21,
+        "word": "archery"
+    },
+    {
+        "key": 22,
+        "word": "fencing"
+    },
+    {
+        "key": 23,
+        "word": "figure skating"
+    },
+    {
+        "key": 24,
+        "word": "skiing"
+    },
+    {
+        "key": 25,
+        "word": "equestrian sport"
+    },
+    {
+        "key": 26,
+        "word": "snowboard"
+    },
+    {
+        "key": 27,
+        "word": "wrestling"
+    },
+    {
+        "key": 28,
+        "word": "volleyball"
+    },
+    {
+        "key": 29,
+        "word": "car racing"
+    },
+    {
+        "key": 30,
+        "word": "baseball"
+    },
+    {
+        "key": 31,
+        "word": "curling"
+    },
+    {
+        "key": 32,
+        "word": "motor sport"
+    },
+    {
+        "key": 33,
+        "word": "golf"
+    },
+    {
+        "key": 34,
+        "word": "surfing"
     }
 ]
