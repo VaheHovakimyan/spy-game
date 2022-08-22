@@ -8,7 +8,7 @@ export default function Words_and_Spy({ participians,ready_array,word_index,setW
     let word = ready_array.map((item,i) => {
         if (index === i) {
             return (
-                <h1 key={Math.random()} > {word_index % 2 === 0 ? <span className='next_player_text'>{lang === 0 ? "Փոխանցեք հաջորդ խաղացողին" : lang === 1 ? "Передать следующему игроку" : "Pass to the next player"}</span> : item} </h1>
+                <h1 key={Math.random()} > {word_index % 2 === 0 ? <span className='next_player_text'>{lang === 0 ? <span className='next_player_text'>{word_index === 0 ? "Բացեք բառը" : "Փոխանցեք հաջորդ խաղացողին"}</span> : lang === 1 ? <span className='next_player_text'>{word_index === 0 ? "Открывайте слова" : "Передайте следующему игроку"}</span> : <span className='next_player_text'>{word_index === 0 ? "Open a word" : "Pass to the next player"}</span>}</span> : item} </h1>
             )
         }
     })
