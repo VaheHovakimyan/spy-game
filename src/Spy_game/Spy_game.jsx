@@ -1,5 +1,5 @@
 import { Routes,Route } from 'react-router-dom';
-import NotFound from './NotFound';
+import NotFound from './NotFound/NotFound.jsx';
 import { useState } from 'react';
 import Intro_page from './Intro_page/Intro_page.jsx';
 import Categories from './Categories/Categories.jsx';
