@@ -256,7 +256,7 @@
 
                 .rate_text {
                     width: 80vw;
-                    font-size: 27px;
+                    font-size: 26px;
                 }
             }
 
@@ -267,7 +267,7 @@
             }
 
             .rules_text {
-                font-size: 16px;
+                font-size: 15px;
             }
         }
 
@@ -304,10 +304,11 @@
 
 @include St_mobile {
     .intro_page_main {
-        width: 50vw;
+        width: 100vw;
         height: 100vh;
 
         .info {
+            // opacity: 0.5;
             margin-top: 84vh;
 
             .rate_div {
@@ -327,7 +328,7 @@
             }
 
             .rules_text {
-                font-size: 12px;
+                font-size: 11px;
             }
         }
 
@@ -392,7 +393,7 @@
             }
 
             .rules_text {
-                font-size: 10px;
+                font-size: 9px;
             }
 
             .languages_info_div {

@@ -19,7 +19,7 @@ export default function Rate_comp({ showRate, setShowRate, lang }) {
 
 
                 <div className='rate_div'>
-                    <span className='rate_text'> {lang === 0 ? "Խաղի այս հատվածը օգտագորվելու է երբ խաղը կտեղադրվի Google Play-ում" : lang === 1 ? "Эта часть игры будет использоваться при загрузке игры в Google Play" : "This part of the game will be used when the game is uploaded to Google Play"} </span>
+                    <span className='rate_text'> {lang === 0 ? "Խաղի այս հատվածը օգտագործվելու է երբ խաղը կտեղադրվի Google Play-ում" : lang === 1 ? "Эта часть игры будет использоваться при загрузке игры в Google Play" : "This part of the game will be used when the game is uploaded to Google Play"} </span>
                 </div>
             </div>
         </>
