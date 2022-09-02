@@ -1,4 +1,4 @@
-import { Routes,Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import NotFound from './NotFound/NotFound.jsx';
 import { useState } from 'react';
 import Intro_page from './Intro_page/Intro_page.jsx';
@@ -14,32 +14,32 @@ import './Spy_game_media.scss';
 
 export default function Spy_game() {
 
-    const [showInfo,setShowInfo] = useState(0);
-    const [showLanguages,setShowLanguages] = useState(0);
-    const [showRate,setShowRate] = useState(0);
-    const [showRules,setShowRules] = useState(0);
-    const [lang,setLang] = useState(0);
+    const [showInfo, setShowInfo] = useState(0);
+    const [showLanguages, setShowLanguages] = useState(0);
+    const [showRate, setShowRate] = useState(0);
+    const [showRules, setShowRules] = useState(0);
+    const [lang, setLang] = useState(0);
 
-    const [categories,setCategories] = useState(0);
+    const [categories, setCategories] = useState(0);
 
-    const [participians,setParticipians] = useState(3);
-    const [countSpy,setCountSpy] = useState(1);
-    const [time,setTime] = useState(1);
-    const [time_value,setTime_value] = useState();
-    const [time_animation,setTime_animation] = useState(0);
-    const [deg,setDeg] = useState(0);
-    const [page,setPage] = useState(0);
-    const [warning,setWarning] = useState(true);
+    const [participians, setParticipians] = useState(3);
+    const [countSpy, setCountSpy] = useState(1);
+    const [time, setTime] = useState(1);
+    const [time_value, setTime_value] = useState();
+    const [time_animation, setTime_animation] = useState(0);
+    const [deg, setDeg] = useState(0);
+    const [page, setPage] = useState(0);
+    const [warning, setWarning] = useState(true);
 
-    const [done_array,setDone_array] = useState();
-    const [word_index,setWord_index] = useState(0);
-    const [index,setIndex] = useState(0);
-    const [cycle,setCycle] = useState(0);
+    const [done_array, setDone_array] = useState();
+    const [word_index, setWord_index] = useState(0);
+    const [index, setIndex] = useState(0);
+    const [cycle, setCycle] = useState(0);
 
-    const [time_bool,setTime_bool] = useState();
+    const [time_bool, setTime_bool] = useState();
 
-    const ready_array = useWordArray(participians,countSpy,done_array,setDone_array,cycle,lang,categories);
-    const time_current_value = useTimePage(time,time_value,setTime_value,word_index,participians,cycle,time_animation,setTime_animation);
+    const ready_array = useWordArray(participians, countSpy, done_array, setDone_array, cycle, lang, categories);
+    const time_current_value = useTimePage(time, time_value, setTime_value, word_index, participians, cycle, time_animation, setTime_animation);
 
 
 
@@ -138,7 +138,7 @@ export default function Spy_game() {
                             />
                         } />
                         <Route path='*' element={<NotFound
-                                lang={lang}
+                            lang={lang}
                         />} />
                     </Routes>
 
