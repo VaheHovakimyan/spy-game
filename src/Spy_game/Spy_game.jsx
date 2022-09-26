@@ -49,7 +49,6 @@ export default function Spy_game() {
                 <div className='main'>
 
 
-
                     <Routes>
                         <Route path="/" element={
                             <Intro_page
@@ -141,6 +140,7 @@ export default function Spy_game() {
                             lang={lang}
                         />} />
                     </Routes>
+
 
                 </div>
             </div>

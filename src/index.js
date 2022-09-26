@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App.js';
 import './App.scss';
-
+// import store from "./Spy_game/Redux/Store/Store.jsx";
+// import { Provider } from 'react-redux';
 
 
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App />
+            {/* <Provider store={store}> */}
+                <App />
+            {/* </Provider> */}
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
