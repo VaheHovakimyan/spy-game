@@ -1,0 +1,476 @@
+//Imports
+
+@import '../Media_SCSS/Variables.scss';
+@import '../Media_SCSS/Breakpoints.scss';
+
+//Media
+
+
+@include desktop {
+    .categories {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100vh;
+
+        .back_to_main_div {
+            width: 8vw;
+            padding-top: 15px;
+            text-decoration-line: none;
+
+            .back_to_main {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: aliceblue;
+            }
+        }
+
+        .categories_main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            text-decoration: none;
+
+            .categories_div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 150px;
+                border: 2px solid rgb(190, 190, 190);
+                border-radius: 8px;
+                margin: 5px;
+                color: white;
+                text-decoration: none;
+
+                .location_block {
+                    width: 150px;
+                    height: 150px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url('./CategoriesImagesAndIcons/Location.png');
+                }
+
+                .sport_block {
+                    width: 150px;
+                    height: 150px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url('./CategoriesImagesAndIcons/Sport.png');
+                }
+
+                .fauna_block {
+                    width: 150px;
+                    height: 150px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url('./CategoriesImagesAndIcons/Fauna.png');
+                }
+
+                .flora_block {
+                    width: 150px;
+                    height: 150px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url('./CategoriesImagesAndIcons/Flora.png');
+                }
+
+                .profession_block {
+                    width: 150px;
+                    height: 150px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url('./CategoriesImagesAndIcons/Professions.png');
+
+                    .opacity_black {
+                        .categories_text {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .famous_persons_block {
+                    width: 150px;
+                    height: 150px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url('./CategoriesImagesAndIcons/Famous_persons.png');
+                }
+
+                .opacity_black {
+                    width: 150px;
+                    height: 150px;
+                    background-color: rgba(0, 0, 0, 0.36);
+
+                    .categories_text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        color: rgb(240, 240, 240);
+                        font-size: 22px;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                    }
+
+                    .categories_profession_text {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+
+        .ad {
+            width: 40vw;
+            height: 10vh;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+////////////////////////////
+
+@include Ipad_pro {
+    .categories {
+        .back_to_main_div {
+            width: 8vw;
+            padding: 20px 0px 0px 10px;
+
+            .back_to_main {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .categories_main {
+
+            .categories_div {
+                width: 200px;
+                height: 200px;
+                margin: 8px;
+
+                .location_block {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .sport_block {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .fauna_block {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .flora_block {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .profession_block {
+                    width: 200px;
+                    height: 200px;
+
+                    .opacity_black {
+                        .categories_text {
+                            font-size: 21px;
+                        }
+                    }
+                }
+
+                .famous_persons_block {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .opacity_black {
+                    width: 200px;
+                    height: 200px;
+
+                    .categories_text {
+                        margin: 0;
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+
+        .ad {
+            width: 70vw;
+        }
+    }
+}
+
+////////////////////////////
+
+@include Laptop {
+    .categories {
+        .back_to_main_div {
+            width: 8vw;
+            padding: 20px 0px 0px 12px;
+
+            .back_to_main {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .categories_main {
+            .categories_div {
+                .profession_block {
+                    .opacity_black {
+                        .categories_text {
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                .opacity_black {
+                    .categories_text {
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+
+        .ad {
+            width: 65vw;
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+}
+
+////////////////////////////
+
+@include Bg_mobile {
+    .categories {
+        .back_to_main_div {
+            width: 8vw;
+            padding: 20px 0px 0px 18px;
+
+            .back_to_main {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .categories_main {
+
+            .categories_div {
+                width: 170px;
+                height: 170px;
+                margin: 8px;
+
+                .location_block {
+                    width: 170px;
+                    height: 170px;
+                }
+
+                .sport_block {
+                    width: 170px;
+                    height: 170px;
+                }
+
+                .fauna_block {
+                    width: 170px;
+                    height: 170px;
+                }
+
+                .flora_block {
+                    width: 170px;
+                    height: 170px;
+                }
+
+                .profession_block {
+                    width: 170px;
+                    height: 170px;
+
+                    .opacity_black {
+                        .categories_text {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .famous_persons_block {
+                    width: 170px;
+                    height: 170px;
+                }
+
+                .opacity_black {
+                    width: 170px;
+                    height: 170px;
+
+                    .categories_text {
+                        margin: 0;
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+
+        .ad {
+            width: 65vw;
+        }
+    }
+}
+
+////////////////////////////
+
+@include St_mobile {
+    .categories {
+        .back_to_main_div {
+            width: 8vw;
+            height: 0vh;
+            padding: 20px 0px 50px 15px;
+
+            .back_to_main {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        .categories_main {
+
+            .categories_div {
+                width: 135px;
+                height: 135px;
+                margin: 7px;
+
+                .location_block {
+                    width: 135px;
+                    height: 135px;
+                }
+
+                .sport_block {
+                    width: 135px;
+                    height: 135px;
+                }
+
+                .fauna_block {
+                    width: 135px;
+                    height: 135px;
+                }
+
+                .flora_block {
+                    width: 135px;
+                    height: 135px;
+                }
+
+                .profession_block {
+                    width: 135px;
+                    height: 135px;
+
+                    .opacity_black {
+                        .categories_text {
+                            font-size: 11px;
+                        }
+                    }
+                }
+
+                .famous_persons_block {
+                    width: 135px;
+                    height: 135px;
+                }
+
+                .opacity_black {
+                    width: 135px;
+                    height: 135px;
+
+                    .categories_text {
+                        margin: 0;
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+
+        .ad {
+            width: 100vw;
+        }
+    }
+}
+
+////////////////////////////
+
+@include Sm_mobile {
+    .categories {
+        .back_to_main_div {
+            width: 8vw;
+            padding: 20px 0px 50px 15px;
+
+            .back_to_main {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        .categories_main {
+            .categories_div {
+                width: 110px;
+                height: 110px;
+
+                .location_block {
+                    width: 110px;
+                    height: 110px;
+                }
+
+                .sport_block {
+                    width: 110px;
+                    height: 110px;
+                }
+
+                .fauna_block {
+                    width: 110px;
+                    height: 110px;
+                }
+
+                .flora_block {
+                    width: 110px;
+                    height: 110px;
+                }
+
+                .profession_block {
+                    width: 110px;
+                    height: 110px;
+
+                    .opacity_black {
+                        .categories_text {
+                            font-size: 10.5px;
+                        }
+                    }
+                }
+
+                .famous_persons_block {
+                    width: 110px;
+                    height: 110px;
+                }
+
+                .opacity_black {
+                    width: 110px;
+                    height: 110px;
+
+                    .categories_text {
+                        margin: 0;
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+    }
+}

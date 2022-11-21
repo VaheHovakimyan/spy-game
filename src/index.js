@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App.js';
 import './App.scss';
-// import store from "./Spy_game/Redux/Store/Store.jsx";
+// import store from "./SpyGame/Redux/Store/Store.jsx";
 // import { Provider } from 'react-redux';
 
 

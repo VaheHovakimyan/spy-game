@@ -1,0 +1,115 @@
+// Templates
+%Categories_image {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// Style and position blocks
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+
+    .back_to_main_div {
+        width: 8vw;
+        padding-top: 15px;
+        text-decoration-line: none;
+
+        .back_to_main {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: aliceblue;
+        }
+    }
+
+    .categories_main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-decoration: none;
+
+        .categories_div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            border: 2px solid rgb(190, 190, 190);
+            border-radius: 8px;
+            margin: 5px;
+            color: white;
+            text-decoration: none;
+
+            .location_block {
+                @extend %Categories_image;
+                background-image: url('./CategoriesImagesAndIcons/Location.png');
+            }
+
+            .sport_block{
+                @extend %Categories_image;
+                background-image: url('./CategoriesImagesAndIcons/Sport.png');
+            }
+
+            .fauna_block {
+                @extend %Categories_image;
+                background-image: url('./CategoriesImagesAndIcons/Fauna.png');
+            }
+
+            .flora_block {
+                @extend %Categories_image;
+                background-image: url('./CategoriesImagesAndIcons/Flora.png');
+            }
+            
+            .profession_block {
+                @extend %Categories_image;
+                background-image: url('./CategoriesImagesAndIcons/Professions.png');
+                background-color: rgba(0, 0, 0, 0.5);
+                .opacity_black{
+                    .categories_text{
+                        font-size: 15px;
+                     }
+                }
+            }
+
+            .famous_persons_block {
+                @extend %Categories_image;
+                background-image: url('./CategoriesImagesAndIcons/Famous_persons.png');
+            }
+
+            .opacity_black {
+                width: 150px;
+                height: 150px;
+                background-color: rgba(0, 0, 0, 0.36);
+
+                .categories_text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    color: rgb(240, 240, 240);
+                    font-size: 22px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                }
+                .categories_profession_text{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .ad {
+        width: 40vw;
+        height: 10vh;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}

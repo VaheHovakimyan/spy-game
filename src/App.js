@@ -1,4 +1,4 @@
-import Spy_game from './Spy_game/Spy_game.jsx';
+import SpyGame from './SpyGame/SpyGame.jsx';
 // import { useDispatch, useSelector } from 'react-redux';
 import './App.scss';
 
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className='app'>
-      <Spy_game />
+      <SpyGame />
     </div>
   )
 }
