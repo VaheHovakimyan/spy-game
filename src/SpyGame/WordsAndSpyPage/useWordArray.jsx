@@ -27,14 +27,24 @@ import { useEffect } from 'react';
 export default function (participians, countSpy, done_array, setDone_array, cycle, lang, categories) {
 
 
-    let start_array = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    // let start_array =
+    //     [
+    //         1, 1, 1, 1, 1,
+    //         1, 1, 1, 1, 1,
+    //         1, 1, 1, 1, 1,
+    //         1, 1, 1, 1, 1
+    //     ];
+    let start_array = [];
     start_array.length = participians;
+
+    // console.log(`Start array ${start_array}`);
+
     let spy_ran1 = Math.floor(Math.random() * participians);
     let spy_ran2;
     let spy_ran3;
     let spy_ran4;
     let arr = [spy_ran1];
+    // console.log(`Arr ${arr}`);
     let finish_array;
     let lrtes_text = <span>{lang === 0 ? <span className='spy_text'> Դուք լրտես եք </span> :
         lang === 1 ? <span className='spy_text'>Вы шпион</span> :
@@ -69,7 +79,7 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
                         data = data_arm_famous_person;
                         break;
                 }
-                console.log("Armenian");
+                // console.log("Armenian");
                 break;
             case 1:
                 switch (categories) {
@@ -92,7 +102,7 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
                         data = data_rus_famous_person;
                         break;
                 }
-                console.log("Russian");
+                // console.log("Russian");
                 break;
             default:
                 switch (categories) {
@@ -115,7 +125,7 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
                         data = data_eng_famous_person;
                         break;
                 }
-                console.log("English");
+                // console.log("English");
                 break;
         }
 
@@ -132,15 +142,21 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
 
         })
 
+        // console.log(`Start array ${finish_array}`);
+
         // function Spy_random_index_generator(){
 
         // }
+
+        // console.log(start_array);
+        // finish_array.any()
 
 
         if (participians >= 4 && countSpy === 2) {
             spy_ran1 = Math.floor(Math.random() * participians);
             spy_ran2 = Math.floor(Math.random() * participians);
             arr = [spy_ran1, spy_ran2];
+
             if (spy_ran1 === spy_ran2) {
                 New_Rannumbers();
             }
@@ -149,6 +165,7 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
             spy_ran2 = Math.floor(Math.random() * participians);
             spy_ran3 = Math.floor(Math.random() * participians);
             arr = [spy_ran1, spy_ran2, spy_ran3];
+
             if (spy_ran1 === spy_ran2 || spy_ran1 === spy_ran3 || spy_ran2 === spy_ran3) {
                 New_Rannumbers();
             }
@@ -158,6 +175,7 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
             spy_ran3 = Math.floor(Math.random() * participians);
             spy_ran4 = Math.floor(Math.random() * participians);
             arr = [spy_ran1, spy_ran2, spy_ran3, spy_ran4];
+
             if (spy_ran1 === spy_ran2 || spy_ran1 === spy_ran3 || spy_ran1 === spy_ran4 || spy_ran2 === spy_ran3 || spy_ran2 === spy_ran4 || spy_ran3 === spy_ran4) {
                 New_Rannumbers();
             }
@@ -203,8 +221,8 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
         })
 
 
-        console.log(`arr ${arr}`);
-        console.log(finish_array);
+        // console.log(`arr ${arr}`);
+        // console.log(finish_array);
 
         setDone_array(finish_array);
 

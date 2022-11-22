@@ -11,8 +11,8 @@ import './StartPageMainMedia.scss';
 
 export default function StartPage({ lang,setLang,categories,setCategories,participians,setParticipians,countSpy,setCountSpy,time,setTime,page,setPage,warning,setWarning,word_index,setWord_index,ready_array,index,setIndex,time_value,setTime_value,cycle,setCycle }) {
 
-    console.log(`lang ${lang}`);
-    console.log(`categories ${categories}`);
+    // console.log(`lang ${lang}`);
+    // console.log(`categories ${categories}`);
 
 
     return (
@@ -32,6 +32,8 @@ export default function StartPage({ lang,setLang,categories,setCategories,partic
                 <Participians
                     participians={participians}
                     setParticipians={setParticipians}
+                    countSpy={countSpy}
+                    setCountSpy={setCountSpy}
                     lang={lang}
                     setLang={setLang}
                 />
@@ -39,6 +41,7 @@ export default function StartPage({ lang,setLang,categories,setCategories,partic
                 <SpyCount
                     countSpy={countSpy}
                     setCountSpy={setCountSpy}
+                    participians={participians}
                     lang={lang}
                     setLang={setLang}
                 />

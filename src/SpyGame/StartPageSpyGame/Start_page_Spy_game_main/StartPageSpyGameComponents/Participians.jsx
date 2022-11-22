@@ -1,7 +1,7 @@
 import '../StartPageMain.scss';
 
 
-export default function Participians({ participians, setParticipians, lang }) {
+export default function Participians({ participians, setParticipians, countSpy, setCountSpy, lang }) {
 
 
     return (
@@ -11,6 +11,8 @@ export default function Participians({ participians, setParticipians, lang }) {
                 {
                     participians > 3 &&
                         setParticipians(participians - 1);
+                    (participians - countSpy <= 2 && countSpy > 1) &&
+                        setCountSpy(countSpy - 1)
                 }
             }}></button>
 

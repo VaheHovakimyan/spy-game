@@ -7,7 +7,7 @@ import './Languages.scss';
 
 export default function LanguagesComp({ showLanguages,setShowLanguages,lang,setLang }) {
 
-    console.log(`Lang ${lang}`);
+    // console.log(`Lang ${lang}`);
 
     return (
         <>

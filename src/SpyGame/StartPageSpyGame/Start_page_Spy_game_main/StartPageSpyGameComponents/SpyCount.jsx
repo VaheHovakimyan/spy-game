@@ -1,7 +1,7 @@
 import '../StartPageMain.scss';
 
 
-export default function SpyCount({ countSpy, setCountSpy, lang }) {
+export default function SpyCount({ countSpy, participians, setCountSpy, lang }) {
 
 
     return (
@@ -16,13 +16,17 @@ export default function SpyCount({ countSpy, setCountSpy, lang }) {
 
             <p>{lang === 0 ? "Լրտես: " : lang === 1 ? "Шпион: " : "Spy: "} {countSpy}</p>
 
-            <button className={countSpy >= 4 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
+            <button className={participians - countSpy <= 2 || countSpy >= 4 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
                 e.preventDefault();
                 {
                     countSpy < 4 &&
                     setCountSpy(countSpy + 1);
                 }
-            }}></button>
+                // {participians - countSpy >= 2 ? alert("yes") : alert("no")}
+            }}
+            disabled={participians - countSpy <= 2}
+            // style={{opacity: }}
+            ></button>
         </div>
     )
 }
