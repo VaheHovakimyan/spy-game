@@ -16,10 +16,10 @@ export default function SpyCount({ countSpy, participians, setCountSpy, lang }) 
 
             <p>{lang === 0 ? "Լրտես: " : lang === 1 ? "Шпион: " : "Spy: "} {countSpy}</p>
 
-            <button className={participians - countSpy <= 2 || countSpy >= 4 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
+            <button className={participians - countSpy <= 2 || countSpy >= 28 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
                 e.preventDefault();
                 {
-                    countSpy < 4 &&
+                    countSpy < 28 &&
                     setCountSpy(countSpy + 1);
                 }
                 // {participians - countSpy >= 2 ? alert("yes") : alert("no")}

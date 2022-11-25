@@ -5,6 +5,7 @@ import English_language from '../../../IntroPageIconsAndImage/English_language.p
 import '../../HeaderIntro.scss';
 import './Languages.scss';
 
+
 export default function LanguagesComp({ showLanguages,setShowLanguages,lang,setLang }) {
 
     // console.log(`Lang ${lang}`);

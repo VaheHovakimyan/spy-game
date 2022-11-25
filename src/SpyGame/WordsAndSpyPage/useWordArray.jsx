@@ -23,19 +23,10 @@ import { useEffect } from 'react';
 
 
 
-
 export default function (participians, countSpy, done_array, setDone_array, cycle, lang, categories) {
 
-    // let start_array =
-    //     [
-    //         1, 1, 1, 1, 1,
-    //         1, 1, 1, 1, 1,
-    //         1, 1, 1, 1, 1,
-    //         1, 1, 1, 1, 1
-    //     ];
 
     let word_array = Array(participians);
-
     let spy_ran = Math.floor(Math.random() * participians);
     let ran_num;
     let ran_array = [spy_ran];
@@ -119,6 +110,7 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
                 break;
         }
 
+
         // Generating random index for select word
 
         let word_random_index = Math.ceil(Math.random() * data.length) - 1;
@@ -130,6 +122,7 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
             }
 
         })
+
 
         // Creating array with unique numbers
 
@@ -152,6 +145,7 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
             ran_array[i] = ran_num;
         }
 
+
         // Adding "You are spy" word(s) in array
 
         word_array.forEach(() => {
@@ -163,13 +157,11 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
         })
 
 
-        console.log(word_array);
-
         setDone_array(word_array);
 
     }, [participians, countSpy, cycle, lang, categories])
 
-
+    
     return done_array;
 
 }

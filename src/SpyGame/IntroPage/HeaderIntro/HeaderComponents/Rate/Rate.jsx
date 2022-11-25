@@ -2,6 +2,7 @@ import Close from '../../../IntroPageIconsAndImage/Close.png';
 import '../../HeaderIntro.scss';
 import './Rate.scss';
 
+
 export default function RateComp({ showRate, setShowRate, lang }) {
 
 

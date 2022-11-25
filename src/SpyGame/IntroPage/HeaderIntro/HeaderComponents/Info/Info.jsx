@@ -2,6 +2,7 @@ import Close from '../../../IntroPageIconsAndImage/Close.png';
 import '../../HeaderIntro.scss';
 import './Info.scss';
 
+
 export default function InfoComp({ showInfo,setShowInfo,lang }) {
 
 

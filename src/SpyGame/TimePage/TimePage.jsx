@@ -4,7 +4,7 @@ import './TimePage.scss';
 import './TimePageMedia.scss';
 
 
-export default function TimePage({ participians,word_index,setWord_index,time_value,setTime_value,setWarning,setIndex,time_current_value,setCycle,time_bool,setTime_bool,lang,time,time_animation,setTime_animation,deg,setDeg }) {
+export default function TimePage({ participians, word_index, setWord_index, time_value, setTime_value, setWarning, setIndex, time_current_value, setCycle, time_bool, setTime_bool, lang, time, time_animation, setTime_animation, deg, setDeg }) {
 
 
     let minute = Math.floor(time_current_value / 60);
@@ -13,14 +13,17 @@ export default function TimePage({ participians,word_index,setWord_index,time_va
     setTime_bool(word_index >= (participians * 2) - 1);
 
     useEffect(() => {
+        
         const time_fun = setInterval(() => {
             time_bool &&
                 setTime_value((time_value) => (time_value >= 1 ? time_value - 1 : 0));
-        },1000);
+        }, 1000);
+
         return () => {
             clearInterval(time_fun);
         }
-    },[time_value,time_bool]);
+
+    }, [time_value, time_bool]);
 
     setDeg((360 / time_animation) * (time_animation - time_value));
 
@@ -38,7 +41,10 @@ export default function TimePage({ participians,word_index,setWord_index,time_va
 
                             {time_value === 0 ?
                                 <span className="spy_win_text">{lang === 0 ? "Հաղթեց լրտեսը" : lang === 1 ? "Шпион выиграл" : "The spy won"}</span> :
-                                <span> <span>{minute < 10 ? "0" + minute : minute}</span> : <span>{second < 10 ? "0" + second : second}</span> </span>
+                                <span>
+                                    <span>{minute < 10 ? "0" + minute : minute}</span> :
+                                    <span>{second < 10 ? "0" + second : second}</span>
+                                </span>
                             }
 
                         </h1>
@@ -52,8 +58,13 @@ export default function TimePage({ participians,word_index,setWord_index,time_va
                         setCycle(1);
                         { word_index >= participians * 2 ? setWord_index(0) : setWord_index(word_index + 1) }
                         setIndex(0);
-                    }}
-                ><Link to="/start_page" className="link"><div className="link_text"> {lang === 0 ? "Ավարտ" : lang === 1 ? "Конец" : "End"} </div></Link></button>
+                    }}>
+
+                    <Link to="/start_page" className="link">
+                        <div className="link_text"> {lang === 0 ? "Ավարտ" : lang === 1 ? "Конец" : "End"} </div>
+                    </Link>
+
+                </button>
             </div>
 
         </>

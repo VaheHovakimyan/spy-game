@@ -4,7 +4,7 @@ import './Categories.scss';
 import './CategoriesMedia.scss';
 
 
-export default function Categories({ lang,setLang,categories,setCategories }) {
+export default function Categories({ lang, setLang, categories, setCategories }) {
 
 
     return (
@@ -66,7 +66,9 @@ export default function Categories({ lang,setLang,categories,setCategories }) {
                         <div className='profession_block' onClick={() => { setCategories(4) }}>
                             <div className='opacity_black'>
                                 <p className='categories_text'>
-                                    {lang === 0 ? "Մասնագիտություն" : lang === 1 ? <span className='categories_profession_text'>Профессия</span> : <span className='categories_profession_text'>Profession</span>}
+                                    {lang === 0 ? "Մասնագիտություն" : lang === 1 ?
+                                        <span className='categories_profession_text'>Профессия</span> :
+                                        <span className='categories_profession_text'>Profession</span>}
                                 </p>
                             </div>
                         </div>

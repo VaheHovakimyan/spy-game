@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import Participians from "./StartPageSpyGameComponents/Participians";
 import SpyCount from "./StartPageSpyGameComponents/SpyCount";
 import Time from "./StartPageSpyGameComponents/Time";
-import Warning from "./StartPageSpyGameComponents/Warning";
 import Back from '../../Categories/CategoriesImagesAndIcons/Back.png';
 import '../../SpyGame.scss';
 import './StartPageMain.scss';
@@ -22,12 +21,6 @@ export default function StartPage({ lang,setLang,categories,setCategories,partic
                 <div className='back_to_categories_div'>
                     <Link to="/categories"><img src={Back} alt="Back_icon" className='back_to_categories' /><div></div></Link>
                 </div>
-
-                <Warning
-                    warning={warning}
-                    setWarning={setWarning}
-                    lang={lang}
-                />
 
                 <Participians
                     participians={participians}

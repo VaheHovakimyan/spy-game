@@ -18,10 +18,10 @@ export default function Participians({ participians, setParticipians, countSpy, 
 
             <p> {lang === 0 ? "Խաղացող: " : lang === 1 ? "Игрок: " : "Player: "} {participians}</p>
 
-            <button className={participians >= 20 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
+            <button className={participians >= 30 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
                 e.preventDefault();
                 {
-                    participians < 20 &&
+                    participians < 30 &&
                         setParticipians(participians + 1);
                 }
             }}></button>
