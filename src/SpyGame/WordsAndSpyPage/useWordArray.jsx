@@ -26,7 +26,6 @@ import { useEffect } from 'react';
 
 export default function (participians, countSpy, done_array, setDone_array, cycle, lang, categories) {
 
-
     // let start_array =
     //     [
     //         1, 1, 1, 1, 1,
@@ -34,28 +33,22 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
     //         1, 1, 1, 1, 1,
     //         1, 1, 1, 1, 1
     //     ];
-    let start_array = [];
-    start_array.length = participians;
 
-    // console.log(`Start array ${start_array}`);
+    let word_array = Array(participians);
 
-    let spy_ran1 = Math.floor(Math.random() * participians);
-    let spy_ran2;
-    let spy_ran3;
-    let spy_ran4;
-    let arr = [spy_ran1];
-    // console.log(`Arr ${arr}`);
-    let finish_array;
+    let spy_ran = Math.floor(Math.random() * participians);
+    let ran_num;
+    let ran_array = [spy_ran];
+    ran_array.length = countSpy;
     let lrtes_text = <span>{lang === 0 ? <span className='spy_text'> Դուք լրտես եք </span> :
         lang === 1 ? <span className='spy_text'>Вы шпион</span> :
             <span className='spy_text'>You are a spy</span>} </span>
     let data;
 
 
-
-
     useEffect(() => {
 
+        // Select language
 
         switch (lang) {
             case 0:
@@ -79,7 +72,6 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
                         data = data_arm_famous_person;
                         break;
                 }
-                // console.log("Armenian");
                 break;
             case 1:
                 switch (categories) {
@@ -102,7 +94,6 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
                         data = data_rus_famous_person;
                         break;
                 }
-                // console.log("Russian");
                 break;
             default:
                 switch (categories) {
@@ -125,107 +116,56 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
                         data = data_eng_famous_person;
                         break;
                 }
-                // console.log("English");
                 break;
         }
 
+        // Generating random index for select word
 
         let word_random_index = Math.ceil(Math.random() * data.length) - 1;
 
         data.map((item) => {
 
             if (item.key === word_random_index) {
-                finish_array = start_array.map(() => {
-                    return item.word;
-                })
+                word_array.fill(item.word);
             }
 
         })
 
-        // console.log(`Start array ${finish_array}`);
+        // Creating array with unique numbers
 
-        // function Spy_random_index_generator(){
+        let bool;
 
-        // }
+        for (let i = 0; i < ran_array.length; i++) {
+            do {
 
-        // console.log(start_array);
-        // finish_array.any()
+                ran_num = Math.floor(Math.random() * participians);
+                bool = true;
 
+                for (let j = 0; j < i; j++) {
+                    if (ran_array[j] === ran_num) {
+                        bool = false;
+                    }
+                }
 
-        if (participians >= 4 && countSpy === 2) {
-            spy_ran1 = Math.floor(Math.random() * participians);
-            spy_ran2 = Math.floor(Math.random() * participians);
-            arr = [spy_ran1, spy_ran2];
+            } while (!bool);
 
-            if (spy_ran1 === spy_ran2) {
-                New_Rannumbers();
-            }
-        } else if (participians >= 5 && countSpy === 3) {
-            spy_ran1 = Math.floor(Math.random() * participians);
-            spy_ran2 = Math.floor(Math.random() * participians);
-            spy_ran3 = Math.floor(Math.random() * participians);
-            arr = [spy_ran1, spy_ran2, spy_ran3];
-
-            if (spy_ran1 === spy_ran2 || spy_ran1 === spy_ran3 || spy_ran2 === spy_ran3) {
-                New_Rannumbers();
-            }
-        } else if (participians >= 6 && countSpy === 4) {
-            spy_ran1 = Math.floor(Math.random() * participians);
-            spy_ran2 = Math.floor(Math.random() * participians);
-            spy_ran3 = Math.floor(Math.random() * participians);
-            spy_ran4 = Math.floor(Math.random() * participians);
-            arr = [spy_ran1, spy_ran2, spy_ran3, spy_ran4];
-
-            if (spy_ran1 === spy_ran2 || spy_ran1 === spy_ran3 || spy_ran1 === spy_ran4 || spy_ran2 === spy_ran3 || spy_ran2 === spy_ran4 || spy_ran3 === spy_ran4) {
-                New_Rannumbers();
-            }
+            ran_array[i] = ran_num;
         }
 
+        // Adding "You are spy" word(s) in array
 
-        function New_Rannumbers() {
-
-            if (spy_ran1 === spy_ran2 && spy_ran3 === undefined && spy_ran4 === undefined) {
-                spy_ran1 = Math.floor(Math.random() * participians);
-                spy_ran2 = Math.floor(Math.random() * participians);
-                arr = [spy_ran1, spy_ran2];
-
-                New_Rannumbers();
-            } else if ((spy_ran1 === spy_ran2 || spy_ran1 === spy_ran3 || spy_ran2 === spy_ran3) && (arr.length === 3 && spy_ran4 === undefined)) {
-                spy_ran1 = Math.floor(Math.random() * participians);
-                spy_ran2 = Math.floor(Math.random() * participians);
-                spy_ran3 = Math.floor(Math.random() * participians);
-                arr = [spy_ran1, spy_ran2, spy_ran3];
-
-                New_Rannumbers();
-            } else if (spy_ran1 === spy_ran2 || spy_ran1 === spy_ran3 || spy_ran1 === spy_ran4 || spy_ran2 === spy_ran3 || spy_ran2 === spy_ran4 || spy_ran3 === spy_ran4 && (arr.length === 4)) {
-                spy_ran1 = Math.floor(Math.random() * participians);
-                spy_ran2 = Math.floor(Math.random() * participians);
-                spy_ran3 = Math.floor(Math.random() * participians);
-                spy_ran4 = Math.floor(Math.random() * participians);
-                arr = [spy_ran1, spy_ran2, spy_ran3, spy_ran4];
-
-                New_Rannumbers();
-            } else {
-                return arr;
-            }
-
-        }
-
-
-        finish_array.forEach(() => {
-            arr.map((it) => {
+        word_array.forEach(() => {
+            ran_array.map((it) => {
                 if (it !== undefined) {
-                    finish_array[it] = lrtes_text;
+                    word_array[it] = lrtes_text;
                 }
             })
         })
 
 
-        // console.log(`arr ${arr}`);
-        // console.log(finish_array);
+        console.log(word_array);
 
-        setDone_array(finish_array);
-
+        setDone_array(word_array);
 
     }, [participians, countSpy, cycle, lang, categories])
 
