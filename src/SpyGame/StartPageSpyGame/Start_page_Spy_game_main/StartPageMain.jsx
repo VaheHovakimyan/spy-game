@@ -1,4 +1,11 @@
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+    selectStartPageParticipians,
+    selectStartPageSpy
+} from '../../Data/Feautures/StartPageState/StartPageSlice';
+import { selectIntroPageLang } from '../../Data/Feautures/IntroPageState/IntroPageSlice';
+import { timePagePageValue } from "../../Data/Feautures/TimePageState/TimePageSlice";
 import Participians from "./StartPageSpyGameComponents/Participians";
 import SpyCount from "./StartPageSpyGameComponents/SpyCount";
 import Time from "./StartPageSpyGameComponents/Time";
@@ -8,10 +15,15 @@ import './StartPageMain.scss';
 import './StartPageMainMedia.scss';
 
 
-export default function StartPage({ lang,setLang,categories,setCategories,participians,setParticipians,countSpy,setCountSpy,time,setTime,page,setPage,warning,setWarning,word_index,setWord_index,ready_array,index,setIndex,time_value,setTime_value,cycle,setCycle }) {
+export default function StartPage({ page, setPage, word_index, setWord_index, ready_array, index, setIndex, time_value, setTime_value, cycle, setCycle }) {
 
-    // console.log(`lang ${lang}`);
-    // console.log(`categories ${categories}`);
+
+    const dispatch = useDispatch();
+
+
+    const lang = useSelector(selectIntroPageLang);
+    const participians = useSelector(selectStartPageParticipians);
+    const countSpy = useSelector(selectStartPageSpy);
 
 
     return (
@@ -19,42 +31,32 @@ export default function StartPage({ lang,setLang,categories,setCategories,partic
             <div className="Start_page_div">
 
                 <div className='back_to_categories_div'>
-                    <Link to="/categories"><img src={Back} alt="Back_icon" className='back_to_categories' /><div></div></Link>
+                    <Link to="/categories">
+                        <img src={Back} alt="Back_icon" className='back_to_categories' /><div></div></Link>
                 </div>
 
-                <Participians
-                    participians={participians}
-                    setParticipians={setParticipians}
-                    countSpy={countSpy}
-                    setCountSpy={setCountSpy}
-                    lang={lang}
-                    setLang={setLang}
-                />
+                <Participians />
 
-                <SpyCount
-                    countSpy={countSpy}
-                    setCountSpy={setCountSpy}
-                    participians={participians}
-                    lang={lang}
-                    setLang={setLang}
-                />
+                <SpyCount />
 
-                <Time
-                    time={time}
-                    setTime={setTime}
-                    lang={lang}
-                    setLang={setLang}
-                />
+                <Time />
 
 
                 <button className='button_lets_go' onClick={(evt) => {
                     evt.preventDefault();
-                    if (participians - countSpy < 2) {
-                        setWarning(!warning);
-                    }
+                    // dispatch(timePagePageValue(participians - countSpy));
                     setPage(participians - countSpy);
                     setCycle(0);
-                }}><Link to="/word" className="link"><div className="link_text"> {lang === 0 ? "Գնացինք" : lang === 1 ? "Пошли" : "Let's go"} </div></Link></button>
+                }}>
+                    <Link to="/word" className="link">
+                        <div className="link_text">
+                            {
+                                lang === 0 ? "Գնացինք" :
+                                    lang === 1 ? "Пошли" :
+                                        "Let's go"
+                            } </div>
+                    </Link>
+                </button>
 
                 <div className='ad'></div>
             </div>

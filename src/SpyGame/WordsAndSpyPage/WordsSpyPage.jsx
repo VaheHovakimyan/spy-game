@@ -1,9 +1,20 @@
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import {
+    selectStartPageParticipians,
+} from '../Data/Feautures/StartPageState/StartPageSlice';
+import {
+    selectIntroPageLang
+} from '../Data/Feautures/IntroPageState/IntroPageSlice';
 import './WordsAndSpy.scss';
 import './WordsAndSpyMedia.scss';
 
 
-export default function Words_and_Spy({ participians, ready_array, word_index, setWord_index, index, setIndex, lang }) {
+export default function Words_and_Spy({ ready_array, word_index, setWord_index, index, setIndex }) {
+
+
+    const lang = useSelector(selectIntroPageLang); 
+    const participians = useSelector(selectStartPageParticipians);
 
 
     let word = ready_array.map((item, i) => {

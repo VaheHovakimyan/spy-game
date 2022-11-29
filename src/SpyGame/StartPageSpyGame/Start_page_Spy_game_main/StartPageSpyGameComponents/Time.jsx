@@ -1,8 +1,18 @@
+import { useDispatch, useSelector } from 'react-redux';
+import {
+    startPageTimeValue,
+    selectStartPageTime
+} from '../../../Data/Feautures/StartPageState/StartPageSlice';
+import { selectIntroPageLang } from '../../../Data/Feautures/IntroPageState/IntroPageSlice';
 import '../StartPageMain.scss';
 
 
-export default function Time({ time, setTime, lang }) {
+export default function Time() {
 
+    const dispatch = useDispatch();
+
+    const lang = useSelector(selectIntroPageLang); 
+    const time = useSelector(selectStartPageTime);
 
     return (
         <div className="block_div">
@@ -10,7 +20,8 @@ export default function Time({ time, setTime, lang }) {
                 e.preventDefault();
                 {
                     time > 1 &&
-                    setTime(time - 1);
+                    dispatch(startPageTimeValue(time - 1));
+                    // setTime(time - 1);
                 }
             }}></button>
 
@@ -20,7 +31,8 @@ export default function Time({ time, setTime, lang }) {
                 e.preventDefault();
                 {
                     time < 10 &&
-                    setTime(time + 1);
+                    dispatch(startPageTimeValue(time + 1));
+                    // setTime(time + 1);
                 }
             }}></button>
         </div>

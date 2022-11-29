@@ -1,3 +1,14 @@
+import { useDispatch, useSelector } from 'react-redux';
+import {
+    selectIntroPageShowInfo,
+    introPageShowInfoValue,
+    selectIntroPageShowLanguages,
+    introPageShowLanguagesValue,
+    selectIntroPageShowRate,
+    introPageShowRateValue,
+    selectIntroPageShowRules,
+    introPageShowRulesValue
+} from '../../Data/Feautures/IntroPageState/IntroPageSlice';
 import Rules from '../IntroPageIconsAndImage/Rules.png';
 import Rate from '../IntroPageIconsAndImage/Rate.png';
 import Languages from '../IntroPageIconsAndImage/Languages.png';
@@ -9,8 +20,17 @@ import RulesComp from './HeaderComponents/Rules/Rules';
 import './HeaderIntro.scss';
 import './HeaderIntroMedia.scss';
 
-export default function HeaderIntro({ showInfo,setShowInfo,showLanguages,setShowLanguages,showRate,setShowRate,showRules,setShowRules, lang, setLang }) {
 
+
+export default function HeaderIntro() {
+
+    const dispatch = useDispatch();
+
+
+    const showInfo = useSelector(selectIntroPageShowInfo);
+    const showRules = useSelector(selectIntroPageShowRules);
+    const showRate = useSelector(selectIntroPageShowRate);
+    const showLanguages = useSelector(selectIntroPageShowLanguages);
 
 
     return (
@@ -20,60 +40,48 @@ export default function HeaderIntro({ showInfo,setShowInfo,showLanguages,setShow
 
                 <div onClick={(evt) => {
                     evt.preventDefault();
-                    setShowInfo(!showInfo);
+                    dispatch(introPageShowInfoValue(!showInfo));
                 }}>
                     <img src={Info} alt="Info icon" className='elem' />
                 </div>
 
-                <InfoComp
-                    showInfo={showInfo}
-                    setShowInfo={setShowInfo}
-                    lang={lang}
-                />
+
+                <InfoComp />
 
 
                 <div className='ruless' onClick={(evt) => {
                     evt.preventDefault();
-                    setShowRules(!showRules);
+                    dispatch(introPageShowRulesValue(!showRules))
                 }}>
                     <img src={Rules} alt="Rules icon" className='elem' />
                 </div>
 
-                <RulesComp
-                    showRules={showRules}
-                    setShowRules={setShowRules}
-                    lang={lang}
-                />
 
+                <RulesComp />
 
 
                 <div onClick={(evt) => {
                     evt.preventDefault();
-                    setShowRate(!showRate);
+                    dispatch(introPageShowRateValue(!showRate));
                 }}>
                     <img src={Rate} alt="Rate icon" className='elem' />
                 </div>
 
-                <RateComp
-                    showRate={showRate}
-                    setShowRate={setShowRate}
-                    lang={lang}
-                />
+
+                <RateComp />
 
 
                 <div onClick={(evt) => {
                     evt.preventDefault();
-                    setShowLanguages(!showLanguages);
+                    dispatch(introPageShowLanguagesValue(!showLanguages));
                 }}>
                     <img src={Languages} alt="Languages icon" className='elem' />
                 </div>
 
-                <LanguagesComp
-                    showLanguages={showLanguages}
-                    setShowLanguages={setShowLanguages}
-                    lang={lang}
-                    setLang={setLang}
-                />
+
+                <LanguagesComp />
+
+
             </div>
         </>
     )

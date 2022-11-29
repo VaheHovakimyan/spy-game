@@ -1,7 +1,21 @@
+import { useDispatch, useSelector } from 'react-redux';
+import {
+    startPageParticipiansValue,
+    selectStartPageParticipians,
+    startPageSpyValue,
+    selectStartPageSpy
+} from '../../../Data/Feautures/StartPageState/StartPageSlice';
+import { selectIntroPageLang } from '../../../Data/Feautures/IntroPageState/IntroPageSlice';
 import '../StartPageMain.scss';
 
 
-export default function Participians({ participians, setParticipians, countSpy, setCountSpy, lang }) {
+export default function Participians() {
+
+    const dispatch = useDispatch();
+
+    const lang = useSelector(selectIntroPageLang);
+    const participians = useSelector(selectStartPageParticipians);
+    const countSpy = useSelector(selectStartPageSpy);
 
 
     return (
@@ -10,9 +24,11 @@ export default function Participians({ participians, setParticipians, countSpy, 
                 e.preventDefault();
                 {
                     participians > 3 &&
-                        setParticipians(participians - 1);
+                        dispatch(startPageParticipiansValue(participians - 1));
+                    // setParticipians(participians - 1);
                     (participians - countSpy <= 2 && countSpy > 1) &&
-                        setCountSpy(countSpy - 1)
+                        dispatch(startPageSpyValue(countSpy - 1));
+                    // setCountSpy(countSpy - 1)
                 }
             }}></button>
 
@@ -22,7 +38,8 @@ export default function Participians({ participians, setParticipians, countSpy, 
                 e.preventDefault();
                 {
                     participians < 30 &&
-                        setParticipians(participians + 1);
+                        dispatch(startPageParticipiansValue(participians + 1));
+                        // setParticipians(participians + 1);
                 }
             }}></button>
         </div>

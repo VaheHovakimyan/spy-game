@@ -1,39 +1,37 @@
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { selectIntroPageLang } from '../Data/Feautures/IntroPageState/IntroPageSlice';
 import HeaderIntro from './HeaderIntro/HeaderIntro';
 import Main_image from './IntroPageIconsAndImage/Main_image.png';
-import { Link } from 'react-router-dom';
 import './IntroPage.scss';
 import './IntroPageMedia.scss';
 
-export default function Intro_page({ lang,setLang,showInfo,setShowInfo,showLanguages,setShowLanguages,showRate,setShowRate,showRules,setShowRules }) {
 
+
+export default function Intro_page() {
+
+
+    const lang = useSelector(selectIntroPageLang);
 
 
     return (
         <>
             <div className='intro_page_main'>
 
-                <HeaderIntro 
-                    lang={lang}
-                    setLang={setLang}
-                    showInfo={showInfo}
-                    setShowInfo={setShowInfo}
-                    showLanguages={showLanguages}
-                    setShowLanguages={setShowLanguages}
-                    showRate={showRate}
-                    setShowRate={setShowRate}
-                    showRules={showRules}
-                    setShowRules={setShowRules}
-                />
+                <HeaderIntro />
 
                 <div className='intro_image_title'>
                     <h1 className='intro_page_title'> {lang === 0 ? "Խաղ լրտես" : lang === 1 ? "Игра шпион" : "Spy game"} </h1>
                     <div><img src={Main_image} alt="Main_image" className='intro_page_image_main' /></div>
                 </div>
 
-        
 
 
-                <Link to="/categories" className="intro_page_link"><button className='intro_button'> {lang === 0 ? "Խաղալ" : lang === 1 ? "Играть" : "Play"} </button></Link>
+                <Link to="/categories" className="intro_page_link">
+                    <button className='intro_button'>
+                        {lang === 0 ? "Խաղալ" : lang === 1 ? "Играть" : "Play"}
+                    </button>
+                </Link>
 
                 <div className='ad'></div>
             </div>

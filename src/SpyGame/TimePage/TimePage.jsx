@@ -1,31 +1,67 @@
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+    selectStartPageParticipians,
+    selectStartPageTime
+} from '../Data/Feautures/StartPageState/StartPageSlice';
+import { selectIntroPageLang } from '../Data/Feautures/IntroPageState/IntroPageSlice';
+import {
+    selectTimePageTimeValue,
+    timePageTimeValueValue,
+    selectTimePageTimeAnimation,
+    timePageTimeAnimationValue,
+    selectTimePageDeg,
+    timePageDegValue,
+    // selectTimePagePage,
+    // timePagePageValue
+} from '../Data/Feautures/TimePageState/TimePageSlice';
 import { Link } from 'react-router-dom';
 import './TimePage.scss';
 import './TimePageMedia.scss';
 
 
-export default function TimePage({ participians, word_index, setWord_index, time_value, setTime_value, setWarning, setIndex, time_current_value, setCycle, time_bool, setTime_bool, lang, time, time_animation, setTime_animation, deg, setDeg }) {
+export default function TimePage({ time_animation, setTime_animation, time_value, setTime_value, deg,  setDeg, word_index, setWord_index, setIndex, time_current_value, setCycle, time_bool, setTime_bool }) {
+
+    
+
+    const dispatch = useDispatch();
+
+
+    const lang = useSelector(selectIntroPageLang);
+    const participians = useSelector(selectStartPageParticipians);
+    const time = useSelector(selectStartPageTime);
+
+
+    // const time_value = useSelector(selectTimePageTimeValue);
+    // const time_animation = useSelector(selectTimePageTimeAnimation);
+    // const deg = useSelector(selectTimePageDeg);
+    // const page = useSelector(selectTimePagePage);
 
 
     let minute = Math.floor(time_current_value / 60);
     let second = time_value % 60;
+
+    // dispatch(timePageTimeAnimationValue(time * 60));
     setTime_animation(time * 60);
     setTime_bool(word_index >= (participians * 2) - 1);
 
+
     useEffect(() => {
-        
         const time_fun = setInterval(() => {
             time_bool &&
+                // dispatch(timePageTimeValueValue((time_value) => (time_value >= 1 ? time_value - 1 : 0)));
                 setTime_value((time_value) => (time_value >= 1 ? time_value - 1 : 0));
         }, 1000);
 
         return () => {
             clearInterval(time_fun);
         }
-
     }, [time_value, time_bool]);
 
+
+    // dispatch(timePageDegValue((360 / time_animation) * (time_animation - time_value)));
     setDeg((360 / time_animation) * (time_animation - time_value));
+
 
 
     return (
@@ -42,8 +78,7 @@ export default function TimePage({ participians, word_index, setWord_index, time
                             {time_value === 0 ?
                                 <span className="spy_win_text">{lang === 0 ? "Հաղթեց լրտեսը" : lang === 1 ? "Шпион выиграл" : "The spy won"}</span> :
                                 <span>
-                                    <span>{minute < 10 ? "0" + minute : minute}</span> :
-                                    <span>{second < 10 ? "0" + second : second}</span>
+                                    <span>{minute < 10 ? "0" + minute : minute}</span> : <span>{second < 10 ? "0" + second : second}</span>
                                 </span>
                             }
 
@@ -54,14 +89,19 @@ export default function TimePage({ participians, word_index, setWord_index, time
                     className="button_time"
                     onClick={(e) => {
                         e.preventDefault();
-                        setWarning(true);
                         setCycle(1);
-                        { word_index >= participians * 2 ? setWord_index(0) : setWord_index(word_index + 1) }
+                        {
+                            word_index >= participians * 2 ?
+                                setWord_index(0) :
+                                setWord_index(word_index + 1)
+                        }
                         setIndex(0);
                     }}>
 
                     <Link to="/start_page" className="link">
-                        <div className="link_text"> {lang === 0 ? "Ավարտ" : lang === 1 ? "Конец" : "End"} </div>
+                        <div className="link_text">
+                            {lang === 0 ? "Ավարտ" : lang === 1 ? "Конец" : "End"}
+                        </div>
                     </Link>
 
                 </button>
