@@ -27,10 +27,10 @@ export default function Time() {
 
             <p>{lang === 0 ? "Ժամանակ: " : lang === 1 ? "Время: " : "Time: "} {time} {lang === 0 ? "րոպե" : lang === 1 ? "минут" : "minute"}</p>
 
-            <button className={time === 10 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
+            <button className={time === 30 ? "count_plus_opacity" : "count_plus"} onClick={(e) => {
                 e.preventDefault();
                 {
-                    time < 10 &&
+                    time < 30 &&
                     dispatch(startPageTimeValue(time + 1));
                     // setTime(time + 1);
                 }

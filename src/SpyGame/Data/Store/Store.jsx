@@ -2,7 +2,8 @@ import { configureStore } from "@reduxjs/toolkit";
 import IntroPageReducer from "../Feautures/IntroPageState/IntroPageSlice";
 import StartPageReducer from '../Feautures/StartPageState/StartPageSlice';
 import CategoriesPageReducer from "../Feautures/CategoriesPageState/CategoriesPageSlice";
-import TimePageReducer from "../Feautures/TimePageState/TimePageSlice";
+import WordPageReducer from "../Feautures/WordPageState/WordPageSlice";
+// import TimePageReducer from "../Feautures/TimePageState/TimePageSlice";
 
 
 
@@ -11,6 +12,7 @@ export const store = configureStore({
         introPage: IntroPageReducer,
         startPage: StartPageReducer,
         categoriesPage: CategoriesPageReducer,
-        timePage: TimePageReducer
+        wordPage: WordPageReducer
+        // timePage: TimePageReducer
     },
 });

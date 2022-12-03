@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import {
     selectStartPageParticipians,
@@ -6,15 +6,27 @@ import {
 import {
     selectIntroPageLang
 } from '../Data/Feautures/IntroPageState/IntroPageSlice';
+import {
+    selectWordPageWordIndexValue,
+    wordPageWordIndexValue,
+    selectWordPageIndexValue,
+    wordPageIndexValue
+} from "../Data/Feautures/WordPageState/WordPageSlice";
 import './WordsAndSpy.scss';
 import './WordsAndSpyMedia.scss';
 
 
-export default function Words_and_Spy({ ready_array, word_index, setWord_index, index, setIndex }) {
+export default function Words_and_Spy({ ready_array }) {
 
+
+    const dispatch = useDispatch();
 
     const lang = useSelector(selectIntroPageLang); 
     const participians = useSelector(selectStartPageParticipians);
+
+
+    const word_index = useSelector(selectWordPageWordIndexValue);
+    const index = useSelector(selectWordPageIndexValue);
 
 
     let word = ready_array.map((item, i) => {
@@ -33,6 +45,7 @@ export default function Words_and_Spy({ ready_array, word_index, setWord_index, 
     })
 
 
+
     return (
         <>
 
@@ -46,8 +59,10 @@ export default function Words_and_Spy({ ready_array, word_index, setWord_index, 
                     className="button"
                     onClick={(e) => {
                         e.preventDefault();
-                        { word_index % 2 === 1 && setIndex(index + 1) }
-                        setWord_index(word_index + 1);
+                        { word_index % 2 === 1 && dispatch(wordPageIndexValue(index + 1)) }
+                        // { word_index % 2 === 1 && setIndex(index + 1) }
+                        dispatch(wordPageWordIndexValue(word_index + 1));
+                        // setWord_index(word_index + 1);
                     }}>
 
                     {

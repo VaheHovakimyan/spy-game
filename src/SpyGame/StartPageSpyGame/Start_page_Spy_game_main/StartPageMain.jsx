@@ -5,6 +5,10 @@ import {
     selectStartPageSpy
 } from '../../Data/Feautures/StartPageState/StartPageSlice';
 import { selectIntroPageLang } from '../../Data/Feautures/IntroPageState/IntroPageSlice';
+import {
+    selectWordPageCycleValue,
+    wordPageCycleValue
+} from '../../Data/Feautures/WordPageState/WordPageSlice';
 import { timePagePageValue } from "../../Data/Feautures/TimePageState/TimePageSlice";
 import Participians from "./StartPageSpyGameComponents/Participians";
 import SpyCount from "./StartPageSpyGameComponents/SpyCount";
@@ -15,7 +19,7 @@ import './StartPageMain.scss';
 import './StartPageMainMedia.scss';
 
 
-export default function StartPage({ page, setPage, word_index, setWord_index, ready_array, index, setIndex, time_value, setTime_value, cycle, setCycle }) {
+export default function StartPage({ page, setPage, ready_array, time_value, setTime_value }) {
 
 
     const dispatch = useDispatch();
@@ -46,7 +50,8 @@ export default function StartPage({ page, setPage, word_index, setWord_index, re
                     evt.preventDefault();
                     // dispatch(timePagePageValue(participians - countSpy));
                     setPage(participians - countSpy);
-                    setCycle(0);
+                    // setCycle(0);
+                    dispatch(wordPageCycleValue(0));
                 }}>
                     <Link to="/word" className="link">
                         <div className="link_text">

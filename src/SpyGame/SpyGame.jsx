@@ -9,6 +9,7 @@ import {
     selectStartPageTime
 } from './Data/Feautures/StartPageState/StartPageSlice';
 import { selectCategoriesPageCategories } from './Data/Feautures/CategoriesPageState/CategoriesPageSlice.jsx';
+import { selectWordPageCycleValue } from './Data/Feautures/WordPageState/WordPageSlice.jsx';
 import {
     selectTimePageTimeValue
 } from './Data/Feautures/TimePageState/TimePageSlice';
@@ -48,9 +49,12 @@ export default function SpyGame() {
     // Word page and array values
 
     const [done_array, setDone_array] = useState();
-    const [word_index, setWord_index] = useState(0);
-    const [index, setIndex] = useState(0);
-    const [cycle, setCycle] = useState(0);
+
+    const cycle = useSelector(selectWordPageCycleValue);
+
+    // const [word_index, setWord_index] = useState(0);
+    // const [index, setIndex] = useState(0);
+    // const [cycle, setCycle] = useState(0);
 
     const [time_bool, setTime_bool] = useState();
 
@@ -84,31 +88,19 @@ export default function SpyGame() {
                             <StartPage
                                 page={page}
                                 setPage={setPage}
-                                cycle={cycle}
-                                setCycle={setCycle}
                             />
                         } />
                         <Route path="/word" element={
                             <WordsAndSpy
                                 page={page}
-                                word_index={word_index}
-                                setWord_index={setWord_index}
                                 ready_array={ready_array}
-                                index={index}
-                                setIndex={setIndex}
                                 time_value={time_value}
                                 setTime_value={setTime_value}
                             />
                         } />
                         <Route path="/time" element={
                             <TimePage
-                                word_index={word_index}
-                                setWord_index={setWord_index}
-                                index={index}
-                                setIndex={setIndex}
                                 time_current_value={time_current_value}
-                                cycle={cycle}
-                                setCycle={setCycle}
                                 time_bool={time_bool}
                                 setTime_bool={setTime_bool}
                                 time_value={time_value}

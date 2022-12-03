@@ -6,6 +6,14 @@ import {
 } from '../Data/Feautures/StartPageState/StartPageSlice';
 import { selectIntroPageLang } from '../Data/Feautures/IntroPageState/IntroPageSlice';
 import {
+    selectWordPageWordIndexValue,
+    wordPageWordIndexValue,
+    selectWordPageIndexValue,
+    wordPageIndexValue,
+    selectWordPageCycleValue,
+    wordPageCycleValue
+} from "../Data/Feautures/WordPageState/WordPageSlice";
+import {
     selectTimePageTimeValue,
     timePageTimeValueValue,
     selectTimePageTimeAnimation,
@@ -20,9 +28,9 @@ import './TimePage.scss';
 import './TimePageMedia.scss';
 
 
-export default function TimePage({ time_animation, setTime_animation, time_value, setTime_value, deg,  setDeg, word_index, setWord_index, setIndex, time_current_value, setCycle, time_bool, setTime_bool }) {
+export default function TimePage({ time_animation, setTime_animation, time_value, setTime_value, deg, setDeg, time_current_value, time_bool, setTime_bool }) {
 
-    
+
 
     const dispatch = useDispatch();
 
@@ -32,10 +40,16 @@ export default function TimePage({ time_animation, setTime_animation, time_value
     const time = useSelector(selectStartPageTime);
 
 
+    const word_index = useSelector(selectWordPageWordIndexValue);
+    const index = useSelector(selectWordPageIndexValue);
+    const cycle = useSelector(selectWordPageCycleValue);
+
+
     // const time_value = useSelector(selectTimePageTimeValue);
     // const time_animation = useSelector(selectTimePageTimeAnimation);
     // const deg = useSelector(selectTimePageDeg);
     // const page = useSelector(selectTimePagePage);
+
 
 
     let minute = Math.floor(time_current_value / 60);
@@ -89,13 +103,18 @@ export default function TimePage({ time_animation, setTime_animation, time_value
                     className="button_time"
                     onClick={(e) => {
                         e.preventDefault();
-                        setCycle(1);
+                        dispatch(wordPageCycleValue(1));
+                        // setCycle(1);
                         {
                             word_index >= participians * 2 ?
-                                setWord_index(0) :
-                                setWord_index(word_index + 1)
+
+                                dispatch(wordPageWordIndexValue(0)) : 
+                                dispatch(wordPageWordIndexValue(word_index + 1));
+                                // setWord_index(0) :
+                                // setWord_index(word_index + 1)
                         }
-                        setIndex(0);
+                        dispatch(wordPageIndexValue(0));
+                        // setIndex(0);
                     }}>
 
                     <Link to="/start_page" className="link">
