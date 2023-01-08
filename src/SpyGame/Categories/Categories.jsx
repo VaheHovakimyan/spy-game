@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     // selectCategoriesPageCategories,
@@ -8,9 +9,16 @@ import { Link } from 'react-router-dom';
 import Back from './CategoriesImagesAndIcons/Back.png';
 import './Categories.scss';
 import './CategoriesMedia.scss';
+import LoaderComp from './LoaderComponent/LoaderComponent';
 
 
 export default function Categories() {
+
+    const [onload, setOnload] = useState(false);
+
+    const onDivLoaded = () => {
+        setOnload(false);
+    }
 
     const dispatch = useDispatch();
 
@@ -34,11 +42,12 @@ export default function Categories() {
                         <div className='location_block' onClick={() => {
                             dispatch(categoriesPageCategoriesValue(0));
                         }}>
-                            <div className='opacity_black'>
+                            <div className='opacity_black' onLoad={onDivLoaded}>
                                 <p className='categories_text'>
                                     {lang === 0 ? "Տեղանուն" : lang === 1 ? "Локация" : "Location"}
                                 </p>
                             </div>
+                            {onload && <LoaderComp />}
                         </div>
                     </Link>
 
@@ -101,6 +110,7 @@ export default function Categories() {
                         }}>
                             <div className='opacity_black'>
                                 <p className='categories_text'>
+                                {/* <LoaderComp /> */}
                                     {lang === 0 ? "Հայտնի մարդիկ" : lang === 1 ? "Известные люди" : "Famous people"}
                                 </p>
                             </div>
