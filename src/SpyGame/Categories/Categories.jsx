@@ -16,8 +16,8 @@ export default function Categories() {
 
     const [onload, setOnload] = useState(false);
 
-    const onDivLoaded = () => {
-        setOnload(false);
+    let onDivLoaded = () => {
+        setOnload(true);
     }
 
     const dispatch = useDispatch();
@@ -42,12 +42,18 @@ export default function Categories() {
                         <div className='location_block' onClick={() => {
                             dispatch(categoriesPageCategoriesValue(0));
                         }}>
-                            <div className='opacity_black' onLoad={onDivLoaded}>
+                            {/* <div className='opacity_black' onLoad={onDivLoaded}>
                                 <p className='categories_text'>
                                     {lang === 0 ? "Տեղանուն" : lang === 1 ? "Локация" : "Location"}
                                 </p>
-                            </div>
-                            {onload && <LoaderComp />}
+                            </div> */}
+                            {
+                                onload ? <LoaderComp /> : <div className='opacity_black' onLoad={onDivLoaded}>
+                                    <p className='categories_text'>
+                                        {lang === 0 ? "Տեղանուն" : lang === 1 ? "Локация" : "Location"}
+                                    </p>
+                                </div>
+                            }
                         </div>
                     </Link>
 
@@ -110,7 +116,7 @@ export default function Categories() {
                         }}>
                             <div className='opacity_black'>
                                 <p className='categories_text'>
-                                {/* <LoaderComp /> */}
+                                    {/* <LoaderComp /> */}
                                     {lang === 0 ? "Հայտնի մարդիկ" : lang === 1 ? "Известные люди" : "Famous people"}
                                 </p>
                             </div>
