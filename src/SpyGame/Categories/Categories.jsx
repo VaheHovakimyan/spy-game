@@ -14,12 +14,6 @@ import LoaderComp from './LoaderComponent/LoaderComponent';
 
 export default function Categories() {
 
-    const [onload, setOnload] = useState(false);
-
-    let onDivLoaded = () => {
-        setOnload(true);
-    }
-
     const dispatch = useDispatch();
 
     // const categories = useSelector(selectCategoriesPageCategories);
@@ -39,18 +33,15 @@ export default function Categories() {
                 <div className='categories_main'>
 
                     <Link to="/start_page" className='categories_div'>
-                        {
-                            onload ? <LoaderComp /> :
-                                <div className='location_block' onClick={() => {
-                                    dispatch(categoriesPageCategoriesValue(0));
-                                }}>
-                                    <div className='opacity_black' onLoad={onDivLoaded}>
-                                        <p className='categories_text'>
-                                            {lang === 0 ? "Տեղանուն" : lang === 1 ? "Локация" : "Location"}
-                                        </p>
-                                    </div>
-                                </div>
-                        }
+                        <div className='location_block' onClick={() => {
+                            dispatch(categoriesPageCategoriesValue(0));
+                        }}>
+                            <div className='opacity_black'>
+                                <p className='categories_text'>
+                                    {lang === 0 ? "Տեղանուն" : lang === 1 ? "Локация" : "Location"}
+                                </p>
+                            </div>
+                        </div>
                     </Link>
 
 
