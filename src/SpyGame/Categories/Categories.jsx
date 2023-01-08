@@ -39,22 +39,18 @@ export default function Categories() {
                 <div className='categories_main'>
 
                     <Link to="/start_page" className='categories_div'>
-                        <div className='location_block' onClick={() => {
-                            dispatch(categoriesPageCategoriesValue(0));
-                        }}>
-                            {/* <div className='opacity_black' onLoad={onDivLoaded}>
-                                <p className='categories_text'>
-                                    {lang === 0 ? "Տեղանուն" : lang === 1 ? "Локация" : "Location"}
-                                </p>
-                            </div> */}
-                            {
-                                onload ? <LoaderComp /> : <div className='opacity_black' onLoad={onDivLoaded}>
-                                    <p className='categories_text'>
-                                        {lang === 0 ? "Տեղանուն" : lang === 1 ? "Локация" : "Location"}
-                                    </p>
+                        {
+                            onload ? <LoaderComp /> :
+                                <div className='location_block' onClick={() => {
+                                    dispatch(categoriesPageCategoriesValue(0));
+                                }}>
+                                    <div className='opacity_black' onLoad={onDivLoaded}>
+                                        <p className='categories_text'>
+                                            {lang === 0 ? "Տեղանուն" : lang === 1 ? "Локация" : "Location"}
+                                        </p>
+                                    </div>
                                 </div>
-                            }
-                        </div>
+                        }
                     </Link>
 
 
