@@ -117,8 +117,8 @@ export default function TimePage({ time_animation, setTime_animation, time_value
                         // setIndex(0);
                     }}>
 
-                    <Link to="/start_page" className="link">
-                        <div className="link_text">
+                    <Link to="/start_page" className="time_link">
+                        <div className="time_link_text">
                             {lang === 0 ? "Ավարտ" : lang === 1 ? "Конец" : "End"}
                         </div>
                     </Link>
