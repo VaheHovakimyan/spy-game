@@ -31,137 +31,142 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
     let ran_num;
     let ran_array = [spy_ran];
     ran_array.length = countSpy;
-    let lrtes_text = <span>{lang === 0 ? <span className='spy_text'> Դուք լրտես եք </span> :
-        lang === 1 ? <span className='spy_text'>Вы шпион</span> :
-            <span className='spy_text'>You are a spy</span>} </span>
-    let data;
+
+    let lrtes_text =  lang === 0 ? "Դուք լրտես եք" :
+            lang === 1 ? "Вы шпион" :
+                "You are a spy"
 
 
-    useEffect(() => {
+let data;
 
-        // Select language
 
-        switch (lang) {
-            case 0:
-                switch (categories) {
-                    case 0:
-                        data = data_arm_location;
-                        break;
-                    case 1:
-                        data = data_arm_sport;
-                        break;
-                    case 2:
-                        data = data_arm_animal;
-                        break;
-                    case 3:
-                        data = data_arm_fruits_veg;
-                        break;
-                    case 4:
-                        data = data_arm_profession;
-                        break;
-                    default:
-                        data = data_arm_famous_person;
-                        break;
-                }
-                break;
-            case 1:
-                switch (categories) {
-                    case 0:
-                        data = data_rus_location;
-                        break;
-                    case 1:
-                        data = data_rus_sport;
-                        break;
-                    case 2:
-                        data = data_rus_animal;
-                        break;
-                    case 3:
-                        data = data_rus_fruits_veg;
-                        break;
-                    case 4:
-                        data = data_rus_profession;
-                        break;
-                    default:
-                        data = data_rus_famous_person;
-                        break;
-                }
-                break;
-            default:
-                switch (categories) {
-                    case 0:
-                        data = data_eng_location;
-                        break;
-                    case 1:
-                        data = data_eng_sport;
-                        break;
-                    case 2:
-                        data = data_eng_animal;
-                        break;
-                    case 3:
-                        data = data_eng_fruits_veg;
-                        break;
-                    case 4:
-                        data = data_eng_profession;
-                        break;
-                    default:
-                        data = data_eng_famous_person;
-                        break;
-                }
-                break;
+useEffect(() => {
+
+    // Select language
+
+    switch (lang) {
+        case 0:
+            switch (categories) {
+                case 0:
+                    data = data_arm_location;
+                    break;
+                case 1:
+                    data = data_arm_sport;
+                    break;
+                case 2:
+                    data = data_arm_animal;
+                    break;
+                case 3:
+                    data = data_arm_fruits_veg;
+                    break;
+                case 4:
+                    data = data_arm_profession;
+                    break;
+                default:
+                    data = data_arm_famous_person;
+                    break;
+            }
+            break;
+        case 1:
+            switch (categories) {
+                case 0:
+                    data = data_rus_location;
+                    break;
+                case 1:
+                    data = data_rus_sport;
+                    break;
+                case 2:
+                    data = data_rus_animal;
+                    break;
+                case 3:
+                    data = data_rus_fruits_veg;
+                    break;
+                case 4:
+                    data = data_rus_profession;
+                    break;
+                default:
+                    data = data_rus_famous_person;
+                    break;
+            }
+            break;
+        default:
+            switch (categories) {
+                case 0:
+                    data = data_eng_location;
+                    break;
+                case 1:
+                    data = data_eng_sport;
+                    break;
+                case 2:
+                    data = data_eng_animal;
+                    break;
+                case 3:
+                    data = data_eng_fruits_veg;
+                    break;
+                case 4:
+                    data = data_eng_profession;
+                    break;
+                default:
+                    data = data_eng_famous_person;
+                    break;
+            }
+            break;
+    }
+
+
+    // Generating random index for select word
+
+    let word_random_index = Math.ceil(Math.random() * data.length) - 1;
+
+    data.map((item) => {
+
+        if (item.key === word_random_index) {
+            word_array.fill(item.word);
         }
 
+    })
 
-        // Generating random index for select word
 
-        let word_random_index = Math.ceil(Math.random() * data.length) - 1;
+    // Creating array with unique numbers
 
-        data.map((item) => {
+    let bool;
 
-            if (item.key === word_random_index) {
-                word_array.fill(item.word);
+    for (let i = 0; i < ran_array.length; i++) {
+        do {
+
+            ran_num = Math.floor(Math.random() * participians);
+            bool = true;
+
+            for (let j = 0; j < i; j++) {
+                if (ran_array[j] === ran_num) {
+                    bool = false;
+                }
             }
 
+        } while (!bool);
+
+        ran_array[i] = ran_num;
+    }
+
+
+    // Adding "You are spy" word(s) in array
+
+    word_array.forEach(() => {
+        ran_array.map((it) => {
+            if (it !== undefined) {
+                word_array[it] = lrtes_text;
+            }
         })
+    })
 
 
-        // Creating array with unique numbers
+    localStorage.setItem("word_array", JSON.stringify(word_array));
 
-        let bool;
+    setDone_array(word_array);
 
-        for (let i = 0; i < ran_array.length; i++) {
-            do {
-
-                ran_num = Math.floor(Math.random() * participians);
-                bool = true;
-
-                for (let j = 0; j < i; j++) {
-                    if (ran_array[j] === ran_num) {
-                        bool = false;
-                    }
-                }
-
-            } while (!bool);
-
-            ran_array[i] = ran_num;
-        }
+}, [participians, countSpy, cycle, lang, categories])
 
 
-        // Adding "You are spy" word(s) in array
-
-        word_array.forEach(() => {
-            ran_array.map((it) => {
-                if (it !== undefined) {
-                    word_array[it] = lrtes_text;
-                }
-            })
-        })
-
-
-        setDone_array(word_array);
-
-    }, [participians, countSpy, cycle, lang, categories])
-
-    
-    return done_array;
+return done_array;
 
 }

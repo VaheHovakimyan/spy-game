@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     // selectCategoriesPageCategories,
@@ -9,7 +8,6 @@ import { Link } from 'react-router-dom';
 import Back from './CategoriesImagesAndIcons/Back.png';
 import './Categories.scss';
 import './CategoriesMedia.scss';
-import LoaderComp from './LoaderComponent/LoaderComponent';
 
 
 export default function Categories() {

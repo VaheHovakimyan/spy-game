@@ -1,11 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import {
-    selectStartPageParticipians,
-} from '../Data/Feautures/StartPageState/StartPageSlice';
-import {
-    selectIntroPageLang
-} from '../Data/Feautures/IntroPageState/IntroPageSlice';
+import { selectStartPageParticipians } from '../Data/Feautures/StartPageState/StartPageSlice';
+import { selectIntroPageLang } from '../Data/Feautures/IntroPageState/IntroPageSlice';
 import {
     selectWordPageWordIndexValue,
     wordPageWordIndexValue,
@@ -16,20 +12,30 @@ import './WordsAndSpy.scss';
 import './WordsAndSpyMedia.scss';
 
 
-export default function Words_and_Spy({ ready_array }) {
+export default function Words_and_Spy({
+    // ready_array
+    stored_ready_array
+}) {
 
 
     const dispatch = useDispatch();
 
-    const lang = useSelector(selectIntroPageLang); 
+    const lang = useSelector(selectIntroPageLang);
     const participians = useSelector(selectStartPageParticipians);
-
 
     const word_index = useSelector(selectWordPageWordIndexValue);
     const index = useSelector(selectWordPageIndexValue);
 
+    // localStorage.setItem("ready_array", JSON.stringify(ready_array));
+    // const stored_ready_array = JSON.parse(localStorage.getItem("ready_array"));
 
-    let word = ready_array.map((item, i) => {
+    // console.log(JSON.parse(stored_ready_array));
+
+    // let refresh = window.location.reload();
+
+    // console.log(refresh);
+
+    let word = stored_ready_array.map((item, i) => {
         if (index === i) {
             return (
                 <h1 key={Math.random()} >
@@ -60,9 +66,7 @@ export default function Words_and_Spy({ ready_array }) {
                     onClick={(e) => {
                         e.preventDefault();
                         { word_index % 2 === 1 && dispatch(wordPageIndexValue(index + 1)) }
-                        // { word_index % 2 === 1 && setIndex(index + 1) }
                         dispatch(wordPageWordIndexValue(word_index + 1));
-                        // setWord_index(word_index + 1);
                     }}>
 
                     {
