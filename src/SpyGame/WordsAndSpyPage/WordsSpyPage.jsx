@@ -14,7 +14,7 @@ import './WordsAndSpyMedia.scss';
 
 export default function Words_and_Spy({
     // ready_array
-    stored_ready_array
+    // stored_ready_array
 }) {
 
 
@@ -28,6 +28,8 @@ export default function Words_and_Spy({
 
     // localStorage.setItem("ready_array", JSON.stringify(ready_array));
     // const stored_ready_array = JSON.parse(localStorage.getItem("ready_array"));
+
+    const stored_ready_array = JSON.parse(localStorage.getItem("word_array"));
 
     // console.log(JSON.parse(stored_ready_array));
 

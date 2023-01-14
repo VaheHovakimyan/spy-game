@@ -159,8 +159,15 @@ useEffect(() => {
         })
     })
 
+    // let storebool = localStorage.getItem("word_array");
 
-    localStorage.setItem("word_array", JSON.stringify(word_array));
+    // console.log(storebool);
+
+    // if(storebool !== null){
+        localStorage.setItem("word_array", JSON.stringify(word_array));
+    // }
+
+
 
     setDone_array(word_array);
 

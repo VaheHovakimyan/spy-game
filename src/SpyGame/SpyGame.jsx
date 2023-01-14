@@ -66,13 +66,13 @@ export default function SpyGame() {
 
     // Word array and time (hooks)
 
-    // const ready_array = useWordArray(participians, countSpy, done_array, setDone_array, cycle, lang, categories);
+    const ready_array = useWordArray(participians, countSpy, done_array, setDone_array, cycle, lang, categories);
 
-    // console.log(ready_array);
+    console.log(ready_array);
 
-    // localStorage.setItem("ready_array", JSON.stringify(ready_array));
+    // localStorage.setItem("word_array", JSON.stringify(ready_array));
     
-    const stored_ready_array = JSON.parse(localStorage.getItem("word_array"));
+    // const stored_ready_array = JSON.parse(localStorage.getItem("word_array"));
 
     // console.log(stored_ready_array);
 
@@ -105,7 +105,7 @@ export default function SpyGame() {
                             <WordsAndSpy
                                 page={page}
                                 // ready_array={ready_array}
-                                stored_ready_array={stored_ready_array}
+                                // stored_ready_array={stored_ready_array}
                                 time_value={time_value}
                                 setTime_value={setTime_value}
                             />
