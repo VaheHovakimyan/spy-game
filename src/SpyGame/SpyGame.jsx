@@ -68,15 +68,7 @@ export default function SpyGame() {
 
     const ready_array = useWordArray(participians, countSpy, done_array, setDone_array, cycle, lang, categories);
 
-    console.log(ready_array);
-
-    // localStorage.setItem("word_array", JSON.stringify(ready_array));
-    
-    // const stored_ready_array = JSON.parse(localStorage.getItem("word_array"));
-
-    // console.log(stored_ready_array);
-
-
+    // console.log(ready_array);
 
     const time_current_value = useTimePage(cycle, time_value, setTime_value, time);
 
