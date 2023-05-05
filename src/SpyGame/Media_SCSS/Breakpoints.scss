@@ -1,5 +1,11 @@
+@mixin Fourk_and_more() {
+    @media (max-width: $breakpoint_4k_and_more_desktop){
+        @content;
+    }
+}
+
 @mixin desktop() {
-    @media (max-width: $breakpoint_desktop){
+    @media only screen and(max-width: $breakpoint_desktop){
         @content;
     }
 }

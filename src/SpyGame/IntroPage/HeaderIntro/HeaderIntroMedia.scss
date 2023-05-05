@@ -5,6 +5,25 @@
 
 //Media
 
+@include Fourk_and_more{
+    .Header_intro_main {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 40vw;
+        height: 15vh;
+        padding: 20px 0px 10px 0px;
+
+        .elem {
+            width: 60px;
+            height: 60px;
+            background-color: rgb(134, 165, 255);
+            border-radius: 20px;
+            border: 1.5px rgb(211, 211, 211) solid;
+        }
+    }
+}
+
 @include desktop {
     .Header_intro_main {
         display: flex;

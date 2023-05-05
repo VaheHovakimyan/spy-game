@@ -5,6 +5,33 @@
 
 //Media
 
+@include Fourk_and_more {
+    .intro_page_main {
+        .intro_button {
+            width: 15vw;
+            height: 10vh;
+            user-select: none;
+            font-size: 37px;
+            font-family: cursive;
+            background-color: rgb(25, 25, 25);
+            border: 1px solid white;
+            border-radius: 20px;
+            cursor: pointer;
+
+            .intro_page_link {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .ad {
+            width: 50vw;
+            height: 10vh;
+            margin-top: 10px;
+        }
+    }
+}
+
 @include desktop {
     .intro_page_main {
         display: flex;
@@ -42,27 +69,9 @@
         }
 
         .intro_button {
-            width: 15vw;
-            height: 12vh;
-            user-select: none;
-            font-size: 35px;
-            font-family: cursive;
-            background-color: rgb(25, 25, 25);
-            border: 1px solid white;
-            border-radius: 20px;
-            cursor: pointer;
-
-            .intro_page_link {
-                text-decoration: none;
-                color: white;
-            }
+            font-size: 28px;
         }
 
-        .ad {
-            width: 50vw;
-            height: 10vh;
-            margin-top: 10px;
-        }
     }
 }
 
@@ -399,7 +408,7 @@
                 .languages_buttons {
                     .language_button {
                         width: 70px;
-                        height: 70px; 
+                        height: 70px;
                     }
                 }
             }

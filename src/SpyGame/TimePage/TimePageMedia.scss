@@ -6,6 +6,39 @@
 
 //Media 
 
+@include Fourk_and_more{
+    .button_time {
+        background-color: rgb(20, 20, 20);
+        color: rgb(255, 255, 255);
+        width: 190px;
+        height: 65px;
+        border: 0;
+        border-radius: 10px;
+        font-family: cursive;
+        font-size: 27px;
+        font-weight: 550;
+        margin: 0;
+        padding: 0;
+        text-decoration-line: none;
+        cursor: pointer;
+
+        .time_link {
+            margin: 0px;
+            width: 100%;
+            height: 65px;
+            color: white;
+            text-decoration-line: none;
+
+            .time_link_text {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 65px;
+            }
+        }
+    }
+}
+
 @include desktop {
     .time_page {
         display: flex;

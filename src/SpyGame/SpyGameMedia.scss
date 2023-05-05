@@ -6,7 +6,7 @@
 
 //Media 
 
-@include desktop {
+@include Fourk_and_more {
     .main {
         display: flex;
         justify-content: center;
@@ -20,6 +20,12 @@
         text-align: center;
         margin: 0;
         user-select: none;
+    }
+}
+
+@include desktop {
+    .main {
+        color: white;
     }
 }
 
