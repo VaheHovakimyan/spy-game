@@ -12,7 +12,10 @@ export default function SpyCount() {
 
     const dispatch = useDispatch();
 
-    const lang = useSelector(selectIntroPageLang); 
+    // const lang = useSelector(selectIntroPageLang); 
+
+    let lang = JSON.parse(localStorage.getItem("lang"));
+
     const participians = useSelector(selectStartPageParticipians);
     const countSpy = useSelector(selectStartPageSpy);
 

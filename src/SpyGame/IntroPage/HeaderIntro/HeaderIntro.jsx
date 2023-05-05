@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import {
     selectIntroPageShowInfo,
     introPageShowInfoValue,
@@ -22,7 +22,7 @@ import './HeaderIntroMedia.scss';
 
 
 
-export default function HeaderIntro() {
+export default function HeaderIntro({ lang,setLang }) {
 
     const dispatch = useDispatch();
 
@@ -79,7 +79,9 @@ export default function HeaderIntro() {
                 </div>
 
 
-                <LanguagesComp />
+                <LanguagesComp 
+                    setLang={setLang}
+                />
 
 
             </div>

@@ -25,7 +25,10 @@ export default function StartPage({ page, setPage, ready_array, time_value, setT
     const dispatch = useDispatch();
 
 
-    const lang = useSelector(selectIntroPageLang);
+    // const lang = useSelector(selectIntroPageLang);
+
+    let lang = JSON.parse(localStorage.getItem("lang"));
+
     const participians = useSelector(selectStartPageParticipians);
     const countSpy = useSelector(selectStartPageSpy);
 

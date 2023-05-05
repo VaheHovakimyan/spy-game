@@ -9,17 +9,21 @@ import LoaderComp from '../Categories/LoaderComponent/LoaderComponent';
 
 
 
-export default function Intro_page() {
+export default function Intro_page({ lang,setLang }) {
 
 
-    const lang = useSelector(selectIntroPageLang);
+    // let lang = JSON.parse(localStorage.getItem("lang"));
 
+    console.log(lang);
 
     return (
         <>
             <div className='intro_page_main'>
 
-                <HeaderIntro />
+                <HeaderIntro
+                    lang={lang}
+                    setLang={setLang}
+                />
 
                 <div className='intro_image_title'>
                     <h1 className='intro_page_title'> {lang === 0 ? "Խաղ լրտես" : lang === 1 ? "Игра шпион" : "Spy game"} </h1>

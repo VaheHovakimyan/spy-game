@@ -20,7 +20,10 @@ export default function Words_and_Spy({
 
     const dispatch = useDispatch();
 
-    const lang = useSelector(selectIntroPageLang);
+    // const lang = useSelector(selectIntroPageLang);
+
+    let lang = JSON.parse(localStorage.getItem("lang"));
+
     const participians = useSelector(selectStartPageParticipians);
 
     const word_index = useSelector(selectWordPageWordIndexValue);

@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes,Route } from 'react-router-dom';
 import NotFound from './NotFound/NotFound.jsx';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -26,9 +26,20 @@ import './SpyGameMedia.scss';
 
 export default function SpyGame() {
 
+    let storedLang = JSON.parse(localStorage.getItem("lang"));
+
+
+    if (storedLang === undefined || storedLang === null) {
+        storedLang = 0;
+    }
+
+    const [lang,setLang] = useState(storedLang);
+
+
     // Language value
 
-    const lang = useSelector(selectIntroPageLang);
+    // const lang = useSelector(selectIntroPageLang);
+    // let lang = JSON.parse(localStorage.getItem("lang"));
 
     // Category value
 
@@ -38,17 +49,16 @@ export default function SpyGame() {
 
     // const time_value = useSelector(selectTimePageTimeValue);
 
-    const [time_value, setTime_value] = useState();
-    const [time_animation, setTime_animation] = useState(0);
-    const [deg, setDeg] = useState(0);
-    const [page, setPage] = useState(0);
+    const [time_value,setTime_value] = useState();
+    const [time_animation,setTime_animation] = useState(0);
+    const [deg,setDeg] = useState(0);
+    const [page,setPage] = useState(0);
 
 
     // const time_value = useSelector(selectTimePageTimeValue);
 
     // Word page and array values
-
-    const [done_array, setDone_array] = useState();
+    const [done_array,setDone_array] = useState();
 
     const cycle = useSelector(selectWordPageCycleValue);
 
@@ -56,7 +66,7 @@ export default function SpyGame() {
     // const [index, setIndex] = useState(0);
     // const [cycle, setCycle] = useState(0);
 
-    const [time_bool, setTime_bool] = useState();
+    const [time_bool,setTime_bool] = useState();
 
     // Start page state values
 
@@ -66,11 +76,11 @@ export default function SpyGame() {
 
     // Word array and time (hooks)
 
-    const ready_array = useWordArray(participians, countSpy, done_array, setDone_array, cycle, lang, categories);
+    const ready_array = useWordArray(participians,countSpy,done_array,setDone_array,cycle,lang,categories);
 
     // console.log(ready_array);
 
-    const time_current_value = useTimePage(cycle, time_value, setTime_value, time);
+    const time_current_value = useTimePage(cycle,time_value,setTime_value,time);
 
 
 
@@ -82,15 +92,21 @@ export default function SpyGame() {
 
                     <Routes>
                         <Route path="/" element={
-                            <IntroPage />
+                            <IntroPage
+                                lang={lang}
+                                setLang={setLang}
+                            />
                         } />
                         <Route path='/categories' element={
-                            <Categories />
+                            <Categories
+                                lang={lang}
+                            />
                         } />
                         <Route path="/start_page" element={
                             <StartPage
                                 page={page}
                                 setPage={setPage}
+                                lang={lang}
                             />
                         } />
                         <Route path="/word" element={
@@ -100,6 +116,7 @@ export default function SpyGame() {
                                 // stored_ready_array={stored_ready_array}
                                 time_value={time_value}
                                 setTime_value={setTime_value}
+                                lang={lang}
                             />
                         } />
                         <Route path="/time" element={
@@ -113,9 +130,10 @@ export default function SpyGame() {
                                 setTime_animation={setTime_animation}
                                 deg={deg}
                                 setDeg={setDeg}
+                                lang={lang}
                             />
                         } />
-                        <Route path='*' element={<NotFound />} />
+                        <Route path='*' element={<NotFound lang={lang} />} />
                     </Routes>
 
 

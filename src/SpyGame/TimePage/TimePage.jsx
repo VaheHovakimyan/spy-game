@@ -35,7 +35,10 @@ export default function TimePage({ time_animation, setTime_animation, time_value
     const dispatch = useDispatch();
 
 
-    const lang = useSelector(selectIntroPageLang);
+    // const lang = useSelector(selectIntroPageLang);
+
+    let lang = JSON.parse(localStorage.getItem("lang"));
+
     const participians = useSelector(selectStartPageParticipians);
     const time = useSelector(selectStartPageTime);
 

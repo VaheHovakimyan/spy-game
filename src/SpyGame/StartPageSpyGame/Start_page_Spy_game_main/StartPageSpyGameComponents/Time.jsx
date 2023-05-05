@@ -11,7 +11,10 @@ export default function Time() {
 
     const dispatch = useDispatch();
 
-    const lang = useSelector(selectIntroPageLang); 
+    // const lang = useSelector(selectIntroPageLang);
+    
+    let lang = JSON.parse(localStorage.getItem("lang"));
+    
     const time = useSelector(selectStartPageTime);
 
     return (

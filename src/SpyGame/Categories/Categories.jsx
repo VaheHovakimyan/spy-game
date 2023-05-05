@@ -15,7 +15,8 @@ export default function Categories() {
     const dispatch = useDispatch();
 
     // const categories = useSelector(selectCategoriesPageCategories);
-    const lang = useSelector(selectIntroPageLang);
+    // const lang = useSelector(selectIntroPageLang);
+    let lang = JSON.parse(localStorage.getItem("lang"));
 
 
     return (
