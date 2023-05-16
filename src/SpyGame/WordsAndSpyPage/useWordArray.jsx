@@ -32,6 +32,8 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
     let ran_array = [spy_ran];
     ran_array.length = countSpy;
 
+    
+
     let lrtes_text =  lang === 0 ? "Դուք լրտես եք" :
             lang === 1 ? "Вы шпион" :
                 "You are a spy"
