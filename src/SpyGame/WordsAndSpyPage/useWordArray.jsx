@@ -159,7 +159,7 @@ export default function (participians, countSpy, done_array, setDone_array, cycl
                     word_array[it] = lrtes_text;
                 }
             })
-        })
+        }) 
 
         // let storebool = localStorage.getItem("word_array");
 

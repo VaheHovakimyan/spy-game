@@ -70,7 +70,7 @@ export default function Words_and_Spy({
             <div className='words_and_spy'>
 
                 <div className='text'>
-                    <h1 className='word_text'>{word}</h1>
+                    <div className='word_text'>{word}</div>
                 </div>
 
                 <button

@@ -59,6 +59,7 @@ export default function TimePage({ time_animation, setTime_animation, time_value
     let second = time_value % 60;
 
     // dispatch(timePageTimeAnimationValue(time * 60));
+    
     setTime_animation(time * 60);
     setTime_bool(word_index >= (participians * 2) - 1);
 
